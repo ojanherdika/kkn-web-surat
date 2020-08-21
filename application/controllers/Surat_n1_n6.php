@@ -6,12 +6,13 @@ function __construct() {
     parent::__construct();
     $this->load->library('pdf');
     $this->load->model("M_surat_n1_n6");
+    $this->load->helper('date');
 }
 public function index()
     {
-       
-        $data["surat_n1_n6"] = $this->surat_model->getAll()->result();
-        $this->load->view("user/index.php",$data);   
+    
+        
+        $this->load->view("user",$data);   
     }
     public function add(){
         $nama = $this->input->post('nama');
@@ -19,6 +20,7 @@ public function index()
         $tempat_lahir = $this->input->post('tempat_lahir');
         $binti = $this->input->post('binti');
         $agama=$this->input->post('agama');
+        $tempat_lahir=$this->input->post('tempat_lahir');
         $tanggal_lahir=$this->input->post('tanggal_lahir');
         $pekerjaan=$this->input->post('pekerjaan');
         $kewarganegaraan=$this->input->post('kewarganegaraan');
@@ -85,7 +87,9 @@ public function index()
         $tgl_meninggal=$this->input->post('tgl_meninggal');
         $tempat_meninggal=$this->input->post('tempat_meninggal');
         $nama_surat="Surat N1";
-
+        $status_surat="Pending";
+        $today=mdate('%Y-%m-%d', now());
+        
 		$data = array(
             'nama' => $nama,
             'nik' => $nik,
@@ -157,16 +161,18 @@ public function index()
             'kode_pos_mati' => $kode_pos_mati,
             'tgl_meninggal' => $tgl_meninggal,
             'tempat_meninggal' => $tempat_meninggal,
-            'jenis_surat'=>$nama_surat
+            'jenis_surat'=>$nama_surat,
+            'tgl_ajukan_surat'=>$today,
+            'status_surat'=>$status_surat
 		);
         $this->M_surat_n1_n6->save($data,'surat_n1_n6');
         $this->session->set_flashdata('success', 'Berhasil disimpan');
 		redirect('user/index');
     }
-    function hapus($no_surat){
-		$where = array('no_surat' => $no_surat);
-		$this->surat_model->hapus_data($where,'surat_n1_n6');
-		redirect('admin/SuratKp/index');
+    function hapus($id_surat_n1){
+		$where = array('id_surat_n1' => $id_surat_n1);
+		$this->M_surat_n1_n6->hapus_data($where,'surat_n1_n6');
+		redirect('user/index');
 	}
 
 	function edit_form($no_surat){

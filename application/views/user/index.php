@@ -124,16 +124,20 @@
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Surat N1</td>
-                    <td>02/08/2020</td>
-                    <td><span class="badge badge-success">diterima</span></td>
+                <?php 
+                $no = 1;
+                foreach ($surat_n1_n6 as $surat_n1_n6): ?>
+                    <th scope="row"><?php echo $no++?></th>
+                    <td><?php echo $surat_n1_n6->jenis_surat ?></td>
+                    <td><?php echo $surat_n1_n6->tgl_ajukan_surat ?></td>
+                    <td><span class="badge badge-secondary"><?php echo $surat_n1_n6->status_surat ?></span></td>
                     <td>
                         <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
+                        <a href="<?php echo base_url('Surat_n1_n6/hapus/'.$surat_n1_n6->id_surat_n1)?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-trash"></i> Hapus</a>
                         <button class="btn btn-sm bg-danger text-white"><i class="far fa-times-circle"></i> Batalkan</button>
                     </td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <th scope="row">2</th>
                     <td>Surat N4</td>
                     <td>02/08/2020</td>
@@ -152,7 +156,8 @@
                         <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
                         <button class="btn btn-sm bg-danger text-white"><i class="far fa-times-circle"></i> Batalkan</button>
                     </td>
-                </tr>
+                </tr> -->
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>

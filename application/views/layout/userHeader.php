@@ -11,6 +11,7 @@
     <title><?= $title; ?></title>
 
     <!--stylesheet-->
+    
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url('assets/'); ?>/user/styles/styles.css" rel="stylesheet" type="text/css">
@@ -23,6 +24,29 @@
     <script type="text/javascript" src="<?= base_url('assets/'); ?>/user/scripts/all-plugins.js"></script>
     <script type="text/javascript" src="<?= base_url('assets/'); ?>/user/scripts/plugins-activate.js"></script>
     <script src="<?= base_url('assets/'); ?>/user/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?= base_url('assets/'); ?>/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#provinsi").change(function (){
+                var url = "<?php echo base_url('Wilayah/add_ajax_kab');?>/"+$(this).val();
+                $('#kabupaten').load(url);
+                return false;
+            })
+			
+			$("#kabupaten").change(function (){
+                var url = "<?php echo base_url('Wilayah/add_ajax_kec');?>/"+$(this).val();
+                $('#kecamatan').load(url);
+                return false;
+            })
+			
+			$("#kecamatan").change(function (){
+                var url = "<?php echo base_url('Wilayah/add_ajax_des');?>/"+$(this).val();
+                $('#desa').load(url);
+                return false;
+            })
+        });
+    </script>
+   
 </head>
 
 <body id="page-top">

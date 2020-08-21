@@ -3,16 +3,23 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class User extends CI_Controller
+
 {
+    function __construct() {
+        parent::__construct();
+        $this->load->library('pdf');
+        $this->load->model("M_surat_n1_n6");
+    }
     public function index()
     {
         $data['title'] = 'WEB Persuratan Desa Cinunuk';
-        $data['user'] = $this->db->get_where('user', ['no_nik' =>
-        $this->session->userdata('no_nik')])->row_array();
-
+        // $data['user'] = $this->db->get_where('user', ['no_nik' =>
+        // $this->session->userdata('no_nik')])->row_array();
+        $data["surat_n1_n6"] = $this->M_surat_n1_n6->getAll()->result();
         $this->load->view('layout/userHeader', $data);
-        $this->load->view('user/index', $data);
+        // $this->load->view('user/index', $data);
         $this->load->view('layout/userFooter');
+        $this->load->view('user/index', $data);
     }
 
     public function profil()
