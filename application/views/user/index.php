@@ -134,7 +134,7 @@
                     <td>
                         <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
                         <a href="<?php echo base_url('Surat_n1_n6/hapus/'.$surat_n1_n6->id_surat_n1)?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-trash"></i> Hapus</a>
-                        <a href="<?php echo base_url('/Cetak_n1/index/'.$surat_n1_n6->id_surat_n1)?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-print"></i> Print</a>
+                        <a target="_blank" href="<?php echo base_url('/Cetak_n1/index/'.$surat_n1_n6->id_surat_n1)?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-print"></i> Print</a>
                         <button class="btn btn-sm bg-danger text-white"><i class="far fa-times-circle"></i> Batalkan</button>
                     </td>
                 </tr>

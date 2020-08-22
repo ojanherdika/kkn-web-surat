@@ -12,7 +12,7 @@ class Cetak_n1 extends CI_Controller {
     }
     function index($id_surat_n1){
         $where = array('id_surat_n1' => $id_surat_n1);
-        $data['surat_n1_n6'] = $this->surat_model->get_data($where,'surat_n1_n6')->result();
+        $data['surat_n1'] = $this->M_surat_n1_n6->get_data($where,'surat_n1')->result();
         $this->load->view('user/cetakSurat_n1',$data);
     }
 

@@ -165,7 +165,7 @@ public function index()
             'status_surat'=>$status_surat
         );
 
-        $this->M_surat_n1_n6->save($data,'surat_n1_n6');
+        $this->M_surat_n1_n6->save($data,'surat_n1');
         $this->session->set_flashdata('success', 'Berhasil disimpan');
 		redirect('user/index');
     }
@@ -211,5 +211,7 @@ public function index()
         $this->surat_model->update_data($where,$data,'surat_n1_n6');
         redirect('admin/SuratKp/index');
     }
+
+    
 
 }
