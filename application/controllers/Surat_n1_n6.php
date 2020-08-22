@@ -10,13 +10,12 @@ function __construct() {
 }
 public function index()
     {
-    
-        
+        $data["surat_n1_n6"] = $this->M_surat_n1_n6->getAll()->result();
         $this->load->view("user",$data);   
     }
     public function add(){
         $nama = $this->input->post('nama');
-		$nik = $this->input->post('nik');
+		$no_nik = $this->input->post('no_nik');
         $tempat_lahir = $this->input->post('tempat_lahir');
         $binti = $this->input->post('binti');
         $agama=$this->input->post('agama');
@@ -92,7 +91,7 @@ public function index()
         
 		$data = array(
             'nama' => $nama,
-            'nik' => $nik,
+            'no_nik' => $no_nik,
             'tempat_lahir' => $tempat_lahir,
             'binti' => $binti,
             'agama' => $agama,
@@ -164,7 +163,8 @@ public function index()
             'jenis_surat'=>$nama_surat,
             'tgl_ajukan_surat'=>$today,
             'status_surat'=>$status_surat
-		);
+        );
+
         $this->M_surat_n1_n6->save($data,'surat_n1_n6');
         $this->session->set_flashdata('success', 'Berhasil disimpan');
 		redirect('user/index');

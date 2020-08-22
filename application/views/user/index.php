@@ -21,8 +21,8 @@
             <hr class="bg-light ml-3 mr-3">
         </li>
         <li class="sidebar-nav-item text-white">
-            <img class="img-circle smooth-scroll ml-3 mr-3" src="<?= base_url('assets/'); ?>/user/images/user.jpg" alt="" style="width: 40px; border-radius: 50%;">
-            <strong>Dadan</strong>
+            <img class="img-circle smooth-scroll ml-3 mr-3" src="<?= base_url('assets/'); ?>/user/images/default.jpg" alt="" style="width: 40px; border-radius: 50%;">
+            <strong><?= $user['nama'];?></strong>
         </li>
         <li>
             <hr class="bg-light ml-3 mr-3">
@@ -134,6 +134,7 @@
                     <td>
                         <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
                         <a href="<?php echo base_url('Surat_n1_n6/hapus/'.$surat_n1_n6->id_surat_n1)?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-trash"></i> Hapus</a>
+                        <a href="<?php echo base_url('/Cetak_n1/index/'.$surat_n1_n6->id_surat_n1)?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-print"></i> Print</a>
                         <button class="btn btn-sm bg-danger text-white"><i class="far fa-times-circle"></i> Batalkan</button>
                     </td>
                 </tr>
