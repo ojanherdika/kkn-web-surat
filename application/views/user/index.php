@@ -28,7 +28,7 @@
             <hr class="bg-light ml-3 mr-3">
         </li>
         <li class="sidebar-nav-item">
-            <a class="btn-primary btn-sm ml-3 mb-1 mt-2 text-center p-1 mr-1 col-6" href="<?= base_url('user/profil'); ?>">Ubah Profil</a>
+            <a class="btn-primary btn-sm ml-3 mb-1 mt-2 text-center p-1 mr-1 col-6" href="#">Ubah Profil</a>
             <a class="btn-danger btn-sm ml-3 mb-1 mt-2 text-center p-1 col-6" href="<?= base_url('auth/logout'); ?>">Logout</a>
         </li>
 </nav>

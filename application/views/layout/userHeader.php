@@ -45,28 +45,28 @@
                 return false;
             })
         });
-                        function yesnoCheck(that) {
-                            if (that.value == "cerai_mati") {
-                                document.getElementById("lajang").style.display = "none";
-                                document.getElementById("cerai_hidup").style.display = "none";
-                                document.getElementById("cerai_mati").style.display = "block";
-                            }
-                            else if(that.value == "cerai_hidup"){
-                                document.getElementById("lajang").style.display = "none";
-                                document.getElementById("cerai_hidup").style.display = "block";
-                                document.getElementById("cerai_mati").style.display = "none";
-                            }
-                            else if(that.value == "..."){
-                                document.getElementById("lajang").style.display = "none";
-                                document.getElementById("cerai_hidup").style.display = "none";
-                                document.getElementById("cerai_mati").style.display = "none";
-                            }
-                            else{
-                                document.getElementById("lajang").style.display = "block";
-                                document.getElementById("cerai_hidup").style.display = "none";
-                                document.getElementById("cerai_mati").style.display = "none";
-                            }
-                        }
+            function yesnoCheck(that) {
+                if (that.value == "cerai_mati") {
+                    document.getElementById("lajang").style.display = "none";
+                    document.getElementById("cerai_hidup").style.display = "none";
+                    document.getElementById("cerai_mati").style.display = "block";
+                }
+                else if(that.value == "cerai_hidup"){
+                    document.getElementById("lajang").style.display = "none";
+                    document.getElementById("cerai_hidup").style.display = "block";
+                    document.getElementById("cerai_mati").style.display = "none";
+                }
+                else if(that.value == "..."){
+                    document.getElementById("lajang").style.display = "none";
+                    document.getElementById("cerai_hidup").style.display = "none";
+                    document.getElementById("cerai_mati").style.display = "none";
+                }
+                else{
+                    document.getElementById("lajang").style.display = "block";
+                    document.getElementById("cerai_hidup").style.display = "none";
+                    document.getElementById("cerai_mati").style.display = "none";
+                }
+            }
                         function cetak(that){
                             if(that.value != "Pending"){
                                 document.getELemenById("cetak").style.display = "block";
