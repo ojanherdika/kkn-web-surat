@@ -34,40 +34,27 @@
                             <th scope="col">Pengaju</th>
                             <th scope="col">Tanggal</th>
                             <th scope="col">Status</th>
-                            <th scope="col">Aksi</th>
+                            <th scope="col" class="text-center">Aksi</th>
 
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="col">1.</th>
-                            <th scope="col">001</th>
-                            <th scope="col">Surat Pengantar Nikah</th>
-                            <th scope="col">M Humam Wahisyam</th>
-                            <th scope="col">17/08/20</th>
-                            <th scope="col"><span class="badge badge-warning">Pending <i class="fas fa-exclamation-circle"></i> </span></th>
-                            <th scope="col"><a href="<?= base_url('admin/detail_pengajuan_surat') ?>"> <u> Detail </u> </th>
-                        </tr>
-
-                        <tr>
-                            <th scope="col">2.</th>
-                            <th scope="col">002</th>
-                            <th scope="col">Surat Pengantar Nikah</th>
-                            <th scope="col">Akbar Hidayatullah Harahap</th>
-                            <th scope="col">17/08/20</th>
-                            <th scope="col"><span class="badge badge-success">Disetujui <i class="fas fa-check-circle"></i> </span></th>
-                            <th scope="col"><a href="<?= base_url('admin/detail_pengajuan_surat') ?>"> <u> Detail </u> </th>
-                        </tr>
-
-                        <tr>
-                            <th scope="col">3.</th>
-                            <th scope="col">003</th>
-                            <th scope="col">Surat Pengantar Nikah</th>
-                            <th scope="col">M. Aqil Al-Muhtadi</th>
-                            <th scope="col">17/08/20</th>
-                            <th scope="col"><span class="badge badge-danger">Ditolak <i class="far fa-times-circle"></i> </span></th>
-                            <th scope="col"><a href="<?= base_url('admin/detail_pengajuan_surat') ?>"> <u> Detail </u> </th>
-                        </tr>
+                        <?php
+                        $i = 1;
+                        foreach ($surat_n1 as $surat_n1) : ?>
+                            <tr>
+                                <th scope="col"><?= $i++; ?></th>
+                                <th scope="col"><?= $surat_n1['id_surat_n1']; ?></th>
+                                <th scope="col"><?= $surat_n1['jenis_surat']; ?></th>
+                                <th scope="col"><?= $surat_n1['nama']; ?></th>
+                                <th scope="col"><?= $surat_n1['tgl_ajukan_surat']; ?></th>
+                                <th scope="col"><span class="badge badge-warning"><?= $surat_n1['status_surat']; ?> <i class="fas fa-exclamation-circle"></i> </span></th>
+                                <th scope="col">
+                                    <a href="<?= base_url('Tambah_warga/update') ?>" class="btn btn-success m-1"> <u name="status_surat" id="status_surat" value="Diterima"> Terima </u>
+                                        <a href="<?= base_url('Tambah_warga/update') ?>" class=" btn btn-danger m-1"> <u name="status_surat" id="status_surat" value="Ditolak"> Tolak </u>
+                                </th>
+                            </tr>
+                        <?php endforeach; ?>
 
                     </tbody>
                 </table>

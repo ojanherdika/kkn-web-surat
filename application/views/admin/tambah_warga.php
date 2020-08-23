@@ -11,30 +11,30 @@
 
             <div class="card mb-3">
                 <div class="card-header">
-                    <a href=""><i class="fas fa-arrow-left"></i> Back</a>
+                    <a href="<?= base_url('admin/profile'); ?>"><i class="fas fa-arrow-left"></i> Back</a>
                 </div>
                 <div class="card-body">
 
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form action="<?= base_url('Tambah_warga/add'); ?>" method="post">
                         <div class="form-group">
-                            <label for=".....">No. Kartu Keluarga</label>
-                            <input class="form-control" type="text" name="....." />
+                            <label>No. Kartu Keluarga</label>
+                            <input class="form-control" type="text" name="no_kk" id="no_kk" />
                             <div class="invalid-feedback">
 
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="....">NIK</label>
-                            <input class="form-control" type="text" name="...." />
+                            <label>NIK</label>
+                            <input class="form-control" type="text" name="no_nik" id="no_nik" />
                             <div class="invalid-feedback">
 
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for=".....">Nama Lengkap</label>
-                            <input class="form-control" type="text" name="....." />
+                            <label>Nama Lengkap</label>
+                            <input class="form-control" type="text" name="nama" id="nama" />
                             <div class="invalid-feedback">
 
                             </div>
@@ -44,19 +44,19 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for=".....">RT</label>
+                                    <label>RT</label>
                                     <br>
-                                    <select class="custom-select">
+                                    <select class="custom-select" name="rt" id="rt">
                                         <option value="0">Pilih RT</option>
-                                        <option value="1">RT 01</option>
-                                        <option value="2">RT 02</option>
-                                        <option value="3">RT 03</option>
-                                        <option value="4">RT 04</option>
-                                        <option value="5">RT 05</option>
-                                        <option value="6">RT 06</option>
-                                        <option value="7">RT 07</option>
-                                        <option value="8">RT 08</option>
-                                        <option value="9">RT 09</option>
+                                        <option value="001">RT 001</option>
+                                        <option value="002">RT 002</option>
+                                        <option value="003">RT 003</option>
+                                        <option value="004">RT 004</option>
+                                        <option value="005">RT 005</option>
+                                        <option value="006">RT 006</option>
+                                        <option value="007">RT 007</option>
+                                        <option value="008">RT 008</option>
+                                        <option value="009">RT 009</option>
                                         <option value="10">RT 10</option>
                                         <option value="11">RT 11</option>
                                         <option value="12">RT 12</option>
@@ -69,17 +69,17 @@
                                 <div class="form-group">
                                     <label for=".....">RW</label>
                                     <br>
-                                    <select class="custom-select">
+                                    <select class="custom-select" name="rw" id="rw">
                                         <option value="0">Pilih RW</option>
-                                        <option value="1">RW 01</option>
-                                        <option value="2">RW 02</option>
-                                        <option value="3">RW 03</option>
-                                        <option value="4">RW 04</option>
-                                        <option value="5">RW 05</option>
-                                        <option value="6">RW 06</option>
-                                        <option value="7">RW 07</option>
-                                        <option value="8">RW 08</option>
-                                        <option value="9">RW 09</option>
+                                        <option value="01">RW 01</option>
+                                        <option value="02">RW 02</option>
+                                        <option value="03">RW 03</option>
+                                        <option value="04">RW 04</option>
+                                        <option value="05">RW 05</option>
+                                        <option value="06">RW 06</option>
+                                        <option value="07">RW 07</option>
+                                        <option value="08">RW 08</option>
+                                        <option value="09">RW 09</option>
                                         <option value="10">RW 10</option>
                                         <option value="11">RW 11</option>
                                         <option value="12">RW 12</option>
@@ -106,15 +106,15 @@
                         </div>
 
                         <div class="form-group">
-                            <label for=".....">Alamat</label>
-                            <textarea class="form-control" type="text" name="....." min="0" style="height : 100px"></textarea>
+                            <label>Alamat</label>
+                            <textarea class="form-control" type="text" name="alamat" id="alamat" min="0" style="height : 100px"></textarea>
                             <div class="invalid-feedback">
 
                             </div>
                         </div>
 
 
-                        <input class="btn btn-primary" type="submit" name="btn" value="Simpan" />
+                        <button class="btn btn-primary" type="submit" name="btn" value="Simpan">Simpan</button>
                     </form>
 
                 </div>

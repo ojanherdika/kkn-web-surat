@@ -5,7 +5,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class User extends CI_Controller
 
 {
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
         $this->load->library('pdf');
         $this->load->model("M_surat_n1_n6");
@@ -16,9 +17,9 @@ class User extends CI_Controller
             'title' => 'WEB Persuratan Desa Cinunuk',
             'surat_n1_n6' => $this->M_surat_n1_n6->getAll()->result(),
             'user' => $this->db->get_where('user', ['no_nik' => $this->session->userdata('no_nik')])->row_array(),
-            'data_n1' => $this->db->get_where('surat_n1', ['no_nik' =>$this->session->userdata('no_nik')])->result_array(),
-            'data_n6' => $this->db->get_where('surat_n6', ['no_nik' =>$this->session->userdata('no_nik')])->result_array(),
-            'data_n4'=> $this->db->get_where('surat_n4', ['no_nik' =>$this->session->userdata('no_nik')])->result_array(),
+            'data_n1' => $this->db->get_where('surat_n1', ['no_nik' => $this->session->userdata('no_nik')])->result_array(),
+            'data_n6' => $this->db->get_where('surat_n6', ['no_nik' => $this->session->userdata('no_nik')])->result_array(),
+            'data_n4' => $this->db->get_where('surat_n4', ['no_nik' => $this->session->userdata('no_nik')])->result_array(),
         ];
 
         $this->load->view('layout/userHeader', $data);
