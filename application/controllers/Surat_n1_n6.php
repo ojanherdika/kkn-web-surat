@@ -74,6 +74,7 @@ class Surat_n1_n6 extends CI_Controller
         $status_surat = "Pending";
         $today = mdate('%Y-%m-%d', now());
 
+
         $data = array(
             'nama' => $nama,
             'no_nik' => $no_nik,
@@ -133,7 +134,6 @@ class Surat_n1_n6 extends CI_Controller
         );
 
         $this->M_surat_n1_n6->save($data, 'surat_n1');
-        $this->session->set_dataN1($data);
         $this->session->set_flashdata('success', 'Berhasil disimpan');
         redirect('user/index');
     }

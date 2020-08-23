@@ -67,6 +67,11 @@
                                 document.getElementById("cerai_mati").style.display = "none";
                             }
                         }
+                        function cetak(that){
+                            if(that.value != "Pending"){
+                                document.getELemenById("cetak").style.display = "block";
+                            }
+                        }
     </script>
    
 </head>

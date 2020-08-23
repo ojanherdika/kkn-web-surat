@@ -18,7 +18,7 @@
             </select>
         </div>
         <!-- form n1 lajang -->
-        <form action="<?= base_url('Surat_n1_n6/add'); ?>" method="post">
+        <form action="<?php echo base_url() . 'Surat_n1_n6/add'; ?>" method="post">
             <div class="row text-left" id="lajang" style="display:none;">
                 <div class="col-lg-12">
                     <div class="block-heading">
@@ -148,7 +148,6 @@
                     <div class="container-fluid shadow p-3 mb-5 bg-white rounded mt-4">
                         <p class="text-left" style="font-size: 25px;">Form 2 Status Pernikahan</p>
                         <hr>
-
                         <div class="form-group">
                             <label>Status Pernikahan</label>
                             <input id="sp" name="status_nikah" class="form-control" value="Lajang" readonly>
@@ -434,6 +433,20 @@
         </form>
         <!-- form n1 cerai hidup -->
         <form action="<?= base_url('Surat_n1_n6/add'); ?>'; ?>" method="post">
+            <div class="row text-left" id="cerai_hidup" style="display:none;">
+                <div class="col-lg-12">
+                    <div class="block-heading">
+                        <h2>FORM N1</h2>
+                    </div>
+                    <!-- Isian Form 1-->
+                    <div class="container-fluid shadow p-3  mb-3 bg-white rounded">
+                        <p class="text-left" style="font-size: 25px;">Form 1 Identitas Diri</p>
+                        <hr>
+
+                    </div>
+        </form>
+        <!-- form n1 cerai hidup -->
+        <form action="<?php echo base_url() . 'Surat_n1_n6/add'; ?>" method="post">
             <div class="row text-left" id="cerai_hidup" style="display:none;">
                 <div class="col-lg-12">
                     <div class="block-heading">
@@ -752,107 +765,45 @@
                                 <input type="date" class="form-control" name="tanggal_lahir_ibu" id="tgllhra" placeholder="Masukan Tanggal Lahir Ayah">
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>Pekerjaan</label>
-                                <input type="text" class="form-control" name="pekerjaan_ibu" id="pekerjaana" placeholder="Masukan Tempat Lahir Ayah">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label>Kewarganegaraan</label>
-                                <input type="text" class="form-control" id="kearbga " name="kewarganegaraan_ibu" placeholder="Masukan Tanggal Lahir Ayah">
-                            </div>
-                        </div>
-                        <div class="form-check mb-3 mt-2">
-                            <input type="checkbox" class="form-check-input" id="check">
-                            <label class="form-check-label">Alamat Ibu sama dengan tempat tinggal saya saat ini</label>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>Provinsi</label>
-                                <select id="provinsi" name="provinsi_ibu" class="form-control">
-                                    <option>Jawa Barat</option>
-                                    <option>Jawa Timur</option>
-                                    <option>Jawa Tengah</option>
-                                    <option>Banten</option>
-                                    <option>DKI Jakarta</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label>Kabupaten/Kota</label>
-                                <select id="kabupaten" name="kab_kota_ibu" class="form-control">
-                                    <option>Kota Bandung</option>
-                                    <option>Bandung</option>
-                                    <option>Sumedang</option>
-                                    <option>Majalengka</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>Kecamatan</label>
-                                <select id="kecamatan" name="kecamatan_ibu" class="form-control">
-                                    <option>Cileunyi</option>
-                                    <option>Cicalengka</option>
-                                    <option>Ibun</option>
-                                    <option>Margahayu</option>
-                                    <option>Pangalengan</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label>Kelurahan/Desa</label>
-                                <select id="desa" name="desa_ibu" class="form-control">
-                                    <option>Cinunuk</option>
-                                    <option>Cileunyi</option>
-                                    <option>Cibiru Wetan</option>
-                                    <option>Cimekar</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-3">
-                                <label>RT</label>
-                                <input name="rt_ibu" type="number" class="form-control" id="rt" placeholder="">
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label>RW</label>
-                                <input name="rw_ibu" type="number" class="form-control" id="rw" placeholder="">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label>Kode Pos</label>
-                                <input name="kode_pos_ibu" type="number" class="form-control" id="kodepos" placeholder="Masukan Kode Pos">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Alamat</label>
-                            <textarea name="alamat_ibu" class="form-control" id="alamat" rows="2" placeholder="Masukan Alamat Anda"></textarea>
+                        <!-- end of isian form 3 -->
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-danger mr-2"><i class="fas fa-times mr-2"></i>Batal</button>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalPrint1"><i class="fas fa-send mr-2"></i>Ajukan</button>
                         </div>
                     </div>
-                    <!-- end of isian form 3 -->
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-danger mr-2"><i class="fas fa-times mr-2"></i>Batal</button>
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalPrint"><i class="fas fa-send mr-2"></i>Ajukan</button>
-                    </div>
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="modalPrint" tabindex="-1" role="dialog" aria-labelledby="modalPrint" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <i class="fas fa-send mb-4 mt-4" style="color: green; font-size:44px"></i>
-                                <h5>Apakah anda yakin data anda sudah benar ?</h5>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
-                                <button type="submit" class="btn btn-primary">Yakin</button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalPrint1" tabindex="-1" role="dialog" aria-labelledby="modalPrint" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <i class="fas fa-send mb-4 mt-4" style="color: green; font-size:44px"></i>
+                                    <h5>Apakah anda yakin data anda sudah benar ?</h5>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
+                                    <button type="submit" class="btn btn-primary">Yakin</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-            </div>
+                    </div>
         </form>
         <!-- form n6 cerai mati -->
         <form action="<?= base_url('Surat_n1_n6/coba_n6'); ?>">
+            <div class="row text-left" id="cerai_mati" style="display:none;">
+                <div class="col-lg-12">
+                    <div class="block-heading">
+                        <h2>FORM N6</h2>
+                    </div>
+                    <!-- Isian Form 1-->
+                    <div class="container-fluid shadow p-3  mb-3 bg-white rounded">
+                        <p class="text-left" style="font-size: 25px;">Form 1 Identitas Diri</p>
+                        <hr>
+
+                    </div>
+        </form>
+        <!-- form n6 cerai mati -->
+        <form action="<?php echo base_url() . 'Surat_n6/add'; ?>" method="post">
             <div class="row text-left" id="cerai_mati" style="display:none;">
                 <div class="col-lg-12">
                     <div class="block-heading">
@@ -984,7 +935,7 @@
                         <hr>
                         <div class="form-group">
                             <label>Status Pernikahan</label>
-                            <input id="sp" name="status_nikah" class="form-control" value="Lajang" readonly>
+                            <input id="sp" name="status_nikah" class="form-control" value="Cerai Mati" readonly>
                             </input>
                         </div>
                     </div>
@@ -1008,7 +959,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>NIK</label>
-                                <input class="form-control" name="nik_mati" type="text" placeholder="321213131313" readonly>
+                                <input class="form-control" name="nik_mati" type="text" placeholder="Masukan NIK">
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Agama</label>
@@ -1115,13 +1066,26 @@
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-danger mr-2"><i class="fas fa-times mr-2"></i>Batal</button>
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalPrint"><i class="fas fa-send mr-2"></i>Ajukan</button>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalPrint2"><i class="fas fa-send mr-2"></i>Ajukan</button>
                         </div>
-
                     </div>
                 </div>
-            </div>
-            <!-- end of form N6 -->
+                <!-- Modal -->
+                <div class="modal fade" id="modalPrint2" tabindex="-1" role="dialog" aria-labelledby="modalPrint" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <i class="fas fa-send mb-4 mt-4" style="color: green; font-size:44px"></i>
+                                <h5>Apakah anda yakin data anda sudah benar ?</h5>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
+                                <button type="submit" class="btn btn-primary">Yakin</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end of form N6 -->
         </form>
 
 </section>

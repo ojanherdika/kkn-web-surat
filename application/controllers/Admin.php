@@ -7,12 +7,15 @@ class Admin extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model("M_surat_n1_n6");
     }
     public function index()
     {
         $data['title'] = 'Admin Pages';
-        $data['admin'] = $this->db->get_where('admin-log', ['username' =>
+        $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
+        $data['surat_n1'] = $this->M_surat_n1_n6->getAll()->result_array();
+
 
         $this->load->view('layout/adminHeader', $data);
         $this->load->view('layout/adminSidebar', $data);
@@ -24,7 +27,7 @@ class Admin extends CI_Controller
     public function detail_pengajuan_surat()
     {
         $data['title'] = 'Detail Pengajuan Surat';
-        $data['admin'] = $this->db->get_where('admin-log', ['username' =>
+        $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
 
 
@@ -39,8 +42,9 @@ class Admin extends CI_Controller
     {
 
         $data['title'] = 'Data Warga';
-        $data['admin'] = $this->db->get_where('admin-log', ['username' =>
+        $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
+        $data['user'] = $this->db->query('SELECT * FROM user');
 
         $this->load->view('layout/adminHeader', $data);
         $this->load->view('layout/adminSidebar', $data);
@@ -52,7 +56,7 @@ class Admin extends CI_Controller
     public function detail_warga()
     {
         $data['title'] = 'Detail Warga';
-        $data['admin'] = $this->db->get_where('admin-log', ['username' =>
+        $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
 
 
@@ -65,7 +69,7 @@ class Admin extends CI_Controller
     public function tambah_warga()
     {
         $data['title'] = 'Tambah Warga';
-        $data['admin'] = $this->db->get_where('admin-log', ['username' =>
+        $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
 
         $this->load->view('layout/adminHeader', $data);
@@ -97,7 +101,7 @@ class Admin extends CI_Controller
     public function detail_menu()
     {
         $data['title'] = 'Detail Data Rekap';
-        $data['admin'] = $this->db->get_where('admin-log', ['username' =>
+        $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
 
         $this->load->view('layout/adminHeader', $data);

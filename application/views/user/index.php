@@ -37,7 +37,7 @@
 <section id="Banner" class="content-section">
     <div class="container content-wrap text-center">
         <h1>Selamat Datang</h1>
-        <h3>Fulan bin Fulan</h3>
+        <h3><?= $user['nama']; ?></h3>
         <h3>
             <em>di Website Persuratan Desa Cinunuk</em>
         </h3>
@@ -123,21 +123,36 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <?php
-                    $no = 1;
-                    foreach ($surat_n1_n6 as $surat_n1_n6) : ?>
-                        <th scope="row"><?php echo $no++ ?></th>
-                        <td><?= $dataN1['jenis_surat']; ?></td>
-                        <td><?php echo $surat_n1_n6->tgl_ajukan_surat ?></td>
-                        <td><span class="badge badge-secondary"><?php echo $surat_n1_n6->status_surat ?></span></td>
+                <?php
+                $i = 1;
+                foreach ($data_n1 as $data_n1) : ?>
+                    <tr>
+                        <th scope="row"><?= $i++ ?></th>
+                        <td><?= $data_n1['jenis_surat'] ?></td>
+                        <td><?= $data_n1['tgl_ajukan_surat'] ?></td>
+                        <td><span class="badge badge-secondary"><?= $data_n1['status_surat'] ?></span></td>
                         <td>
                             <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
-                            <a href="<?php echo base_url('Surat_n1_n6/hapus/' . $surat_n1_n6->id_surat_n1) ?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-trash"></i> Hapus</a>
-                            <a target="_blank" href="<?php echo base_url('/Cetak_n1/index/' . $surat_n1_n6->id_surat_n1) ?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-print"></i> Print</a>
+                            <a href="<?php echo base_url('Surat_n1_n6/hapus/' . $data_n1['id_surat_n1']) ?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-trash"></i> Hapus</a>
+                            <a target="_blank" href="<?php echo base_url('/Cetak_n1/index/' . $data_n1['id_surat_n1']) ?>" class="btn btn-sm bg-warning text-white" role="button"><i class="fa fa-print"></i> Print</a>
                             <button class="btn btn-sm bg-danger text-white"><i class="far fa-times-circle"></i> Batalkan</button>
                         </td>
-                </tr>
+                    </tr>
+                <?php endforeach; ?>
+                <?php foreach ($data_n6 as $data_n6) : ?>
+                    <tr>
+                        <th scope="row"><?= $i++ ?></th>
+                        <td><?= $data_n6['jenis_surat'] ?></td>
+                        <td><?= $data_n6['tgl_ajukan_surat'] ?></td>
+                        <td><span class="badge badge-secondary"><?= $data_n6['status_surat'] ?></span></td>
+                        <td>
+                            <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
+                            <a href="<?php echo base_url('Surat_n1_n6/hapus/' . $data_n6['id_surat_n6']) ?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-trash"></i> Hapus</a>
+                            <a target="_blank" href="<?php echo base_url('/Cetak_n1/index/' . $data_n6['id_surat_n6']) ?>" class="btn btn-sm bg-warning text-white" role="button"><i class="fa fa-print"></i> Print</a>
+                            <button class="btn btn-sm bg-danger text-white"><i class="far fa-times-circle"></i> Batalkan</button>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
                 <!-- <tr>
                     <th scope="row">2</th>
                     <td>Surat N4</td>
@@ -158,7 +173,6 @@
                         <button class="btn btn-sm bg-danger text-white"><i class="far fa-times-circle"></i> Batalkan</button>
                     </td>
                 </tr> -->
-            <?php endforeach; ?>
             </tbody>
         </table>
     </div>

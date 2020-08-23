@@ -82,7 +82,7 @@ class Auth extends CI_Controller
         $no_nik = $this->input->post('no_nik');
         $password = $this->input->post('password');
 
-        $user = $this->db->get_where('user', ['no_kk' => $no_kk])->row_array();
+        $user = $this->db->get_where('user', ['no_nik' => $no_nik])->row_array();
         
         //jika usernya ada
         if ($user) {
@@ -90,7 +90,8 @@ class Auth extends CI_Controller
                 if ($password == $user['password']) {
                     $data = [
                         'title' => 'WEB Persuratan Desa Cinunuk',
-                        'no_nik' => $user['no_nik']
+                        'no_nik' => $user['no_nik'],
+                        'nama' => $user['nama']
                     ];
                     $this->session->set_userdata($data);
                     redirect('user');

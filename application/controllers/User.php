@@ -13,18 +13,17 @@ class User extends CI_Controller
     }
     public function index()
     {
-        if (isset($_SESSION['dataN1'])) {
-            echo 'session ada';
-            die();
-        }
-        $data['title'] = 'WEB Persuratan Desa Cinunuk';
-        $data['user'] = $this->db->get_where('user', ['no_nik' =>
-        $this->session->userdata('no_nik')])->row_array();
-        $data["surat_n1_n6"] = $this->M_surat_n1_n6->getAll()->result();
+        $data = [
+            'title' => 'WEB Persuratan Desa Cinunuk',
+            'surat_n1_n6' => $this->M_surat_n1_n6->getAll()->result(),
+            'user' => $this->db->get_where('user', ['no_nik' => $this->session->userdata('no_nik')])->row_array(),
+            'data_n1' => $this->db->get_where('surat_n1', ['no_nik' => $this->session->userdata('no_nik')])->result_array(),
+            'data_n6' => $this->db->get_where('surat_n6', ['no_nik' => $this->session->userdata('no_nik')])->result_array()
+        ];
+
         $this->load->view('layout/userHeader', $data);
         $this->load->view('user/index', $data);
         $this->load->view('layout/userFooter');
-        // $this->load->view('user/index', $data);
     }
 
     public function profil()
