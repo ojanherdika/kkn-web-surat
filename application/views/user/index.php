@@ -148,7 +148,21 @@
                     <td>
                         <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
                         <a href="<?php echo base_url('Surat_n1_n6/hapus/'.$data_n6['id_surat_n6'])?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-trash"></i> Hapus</a>
-                        <a target="_blank" href="<?php echo base_url('/Cetak_n1/index/'.$data_n6['id_surat_n6'])?>" class="btn btn-sm bg-warning text-white" role="button"><i class="fa fa-print"></i> Print</a>
+                        <a target="_blank" href="<?php echo base_url('/Cetak_n6/index/'.$data_n6['id_surat_n6'])?>" class="btn btn-sm bg-warning text-white" role="button"><i class="fa fa-print"></i> Print</a>
+                        <button class="btn btn-sm bg-danger text-white"><i class="far fa-times-circle"></i> Batalkan</button>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+                <?php foreach($data_n4 as $data_n4):?>
+                <tr>
+                    <th scope="row"><?= $i++?></th>
+                    <td><?=$data_n4['jenis_surat'] ?></td>
+                    <td><?= $data_n4['tgl_ajukan_surat'] ?></td>
+                    <td><span class="badge badge-secondary"><?= $data_n4['status_surat'] ?></span></td>
+                    <td>
+                        <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
+                        <a href="<?php echo base_url('Surat_n4/hapus/'.$data_n4['id_surat_n4'])?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-trash"></i> Hapus</a>
+                        <a target="_blank" href="<?php echo base_url('/Cetak_n4/index/'.$data_n4['id_surat_n4'])?>" class="btn btn-sm bg-warning text-white" role="button"><i class="fa fa-print"></i> Print</a>
                         <button class="btn btn-sm bg-danger text-white"><i class="far fa-times-circle"></i> Batalkan</button>
                     </td>
                 </tr>

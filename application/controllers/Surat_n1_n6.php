@@ -136,13 +136,13 @@ public function index()
     }
     function hapus($id_surat_n1){
 		$where = array('id_surat_n1' => $id_surat_n1);
-		$this->M_surat_n1_n6->hapus_data($where,'surat_n1_n6');
+		$this->M_surat_n1_n6->hapus_data($where,'surat_n1');
 		redirect('user/index');
 	}
 
-	function edit_form($no_surat){
-		$where = array('no_surat' => $no_surat);
-        $data['surat_n1_n6'] = $this->surat_model->edit_data($where,'surat_n1_n6')->result();
+	function edit_form($id_surat_n1){
+		$where = array('id_surat_n1' => $no_surat);
+        $data['surat_n1'] = $this->surat_model->edit_data($where,'surat_n1')->result();
 		$this->load->view('admin/edit_form_suratKP',$data);
     }
 
@@ -173,7 +173,7 @@ public function index()
         $where = array(
             'no_surat' => $no_surat
         );
-        $this->surat_model->update_data($where,$data,'surat_n1_n6');
+        $this->M_surat_n1_n6->update_data($where,$data,'surat_n1');
         redirect('admin/SuratKp/index');
     }
 
