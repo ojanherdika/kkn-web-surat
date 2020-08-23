@@ -1,27 +1,26 @@
 <?php 
         function tgl_indo($tanggal){
-            $bulan = array (
-                1 =>   'Januari',
-                'Februari',
-                'Maret',
-                'April',
-                'Mei',
-                'Juni',
-                'Juli',
-                'Agustus',
-                'September',
-                'Oktober',
-                'November',
-                'Desember'
-            );
-            $pecahkan = explode('-', $tanggal);
-            
-            // variabel pecahkan 0 = tanggal
-            // variabel pecahkan 1 = bulan
-            // variabel pecahkan 2 = tahun
+        $bulan = array (
+            1 =>   'Januari',
+            'Februari',
+            'Maret',
+            'April',
+            'Mei',
+            'Juni',
+            'Juli',
+            'Agustus',
+            'September',
+            'Oktober',
+            'November',
+            'Desember'
+        );
+        $pecahkan = explode('-', $tanggal);
         
-            return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
-        }
+        // variabel pecahkan 0 = tanggal
+        // variabel pecahkan 1 = bulan
+        // variabel pecahkan 2 = tahun
+        return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+}
         function getRomawi($bln){
             switch ($bln){
                 case 1: 
@@ -67,22 +66,24 @@
         $pdf = new FPDF('p','mm','A4');
         $pdf->AddPage();
         $pdf->SetTitle('Cetak - Surat N1');
-        $pdf->SetMargins(10, 10 , 10, 10);
+        $pdf->SetMargins(25, 10 , 25);
         $pdf->SetFont('Times','B',12);
-        $pdf->Cell(200,15,'',0,2,'C');
-        $pdf->Cell(200,20,'FORMULIR PENGANTAR NIKAH',0,2,'C');
-        $pdf->Cell(100,5,'KANTOR DESA/KELURAHAN  :  '.$surat->desa,0,2);
-        $pdf->Cell(100,5,'KECAMATAN                                :  '.$surat->kecamatan,0,2,);
-        $pdf->Cell(100,5,'KABUPATEN/KOTA                     :  '.$surat->kab_kota,0,2);
+        $pdf->ln(10);
+        $pdf->Cell(0,10,'FORMULIR PENGANTAR NIKAH',0,2,'C');
+        $pdf->ln();
+        $pdf->Cell(0,5,'KANTOR DESA/KELURAHAN  :  '.$surat->desa,0,2);
+        $pdf->Cell(0,5,'KECAMATAN                                :  '.$surat->kecamatan,0,2,);
+        $pdf->Cell(0,5,'KABUPATEN/KOTA                     :  '.$surat->kab_kota,0,2);
         $pdf->SetFont('Times','BU',12);
         $pdf->ln();
-        $pdf->Cell(200,5,'PENGANTAR NIKAH',0,2,'C'); 
+        $pdf->Cell(0,5,'PENGANTAR NIKAH',0,2,'C'); 
         $pdf->ln(); 
         $pdf->SetFont('Times','B',12);     
         $bulan=mdate('%m', now());
         $romawi = getRomawi($bulan);
         $tahun=mdate('%Y', now());
-        $pdf->Cell(200,1,'Nomor:  '."474.2/"."          /DS/".$romawi."/".$tahun,0,0,'C');
+        $today=mdate('%Y-%m-%d', now());
+        $pdf->Cell(0,1,'Nomor:  '."474.2/"."          /DS/".$romawi."/".$tahun,0,0,'C');
         $pdf->ln(10);
         $pdf->SetFont('Times','',12);
         $pdf->Cell(20,5,'Yang bertanda tangan di bawah ini menjelaskan dengan sesungguhnya bahwa:',0,0);
@@ -93,7 +94,7 @@
         $pdf->ln();
         $pdf->Cell(20,5,'3. Jenis Kelamin:'.$surat->jenis_kelamin,0,0);
         $pdf->ln();
-        $pdf->Cell(20,5,'4. Tempat dan tanggal lahir:'.$surat->tempat_lahir.", ".tgl_indo($surat->tanggal_lahir),0,0);
+        $pdf->Cell(20,5,'4. Tempat dan tanggal lahir : '.$surat->tempat_lahir.", ".tgl_indo($surat->tanggal_lahir),0,0);
         $pdf->ln();
         $pdf->Cell(20,5,'5. Kewarganegaraan:'.$surat->kewarganegaraan,0,0);
         $pdf->ln();
@@ -101,7 +102,7 @@
         $pdf->ln();
         $pdf->Cell(20,5,'7. Pekerjaan:'.$surat->pekerjaan,0,0);
         $pdf->ln();
-        $pdf->Cell(20,5,'8. Alamat:'.$surat->alamat,0,0);
+        $pdf->Cell(20,5,'8. Alamat:'.$surat->alamat." RT ".$surat->rt." RW ".$surat->rw,0,0);
         $pdf->ln();
         $pdf->Cell(20,5,'9. Status Pernikahan:'.$surat->status_nikah,0,0);
         $pdf->ln(10);
@@ -137,9 +138,21 @@
         $pdf->ln();
         $pdf->Cell(20,5,'Alamat:',0,0);
         $pdf->ln(10);
-        $pdf->Cell(20,5,'Demikian, surat pengantar ini dibuat dengan mengingat sumpah jabatan dan untuk',0,0);
+        $pdf->Cell(20,5,'Demikian, surat pengantar ini dibuat dengan mengingat sumpah jabatan dan untuk dipergunkaan',0,0);
         $pdf->ln();
-        $pdf->Cell(20,5,'dipergunkaan sebagaimana mestinya.',0,0);
+        $pdf->Cell(20,5,'sebagaimana mestinya.',0,0);
+        $pdf->ln();
+        $pdf->setY(235);
+        $pdf->setX(122);
+        $pdf->Cell(20,5,"Bandung, ".tgl_indo($today),0,0,'L');
+        $pdf->ln();
+        $pdf->setY(240);
+        $pdf->setX(122);
+        $pdf->Cell(20,5,"Kepala Desa/Lurah",0,0,'L');
+        $pdf->setY(260);
+        $pdf->setX(122);
+        $pdf->Cell(20,5,"H.Sesep Ruhiat",0,0,'L');
     }
+    
         $pdf->Output();
 ?>

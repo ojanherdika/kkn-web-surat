@@ -18,7 +18,7 @@
                 </select>
         </div>
         <!-- form n1 lajang -->
-    <form action="<?php echo base_url().'Surat_n1_n6/coba_n1'; ?>" method="post">
+    <form action="<?php echo base_url().'Surat_n1_n6/add'; ?>" method="post">
         <div class="row text-left" id="lajang" style="display:none;">
             <div class="col-lg-12">
                 <div class="block-heading">
@@ -148,7 +148,6 @@
                     <div class="container-fluid shadow p-3 mb-5 bg-white rounded mt-4">
                     <p class="text-left" style="font-size: 25px;">Form 2 Status Pernikahan</p>
                     <hr>
-                    
                         <div class="form-group">
                             <label>Status Pernikahan</label>
                             <input id="sp" name="status_nikah" class="form-control" value="Lajang" readonly>
@@ -433,7 +432,7 @@
         </div>
     </form>
     <!-- form n1 cerai hidup -->
-    <form action="<?php echo base_url().'Surat_n1_n6/coba_n1'; ?>" method="post">
+    <form action="<?php echo base_url().'Surat_n1_n6/add'; ?>" method="post">
         <div class="row text-left" id="cerai_hidup" style="display:none;">
             <div class="col-lg-12">
                 <div class="block-heading">
@@ -830,11 +829,11 @@
                 <!-- end of isian form 3 -->
                 <div class="text-center">
                             <button type="submit" class="btn btn-danger mr-2"><i class="fas fa-times mr-2"></i>Batal</button>
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalPrint"><i class="fas fa-send mr-2"></i>Ajukan</button>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalPrint1"><i class="fas fa-send mr-2"></i>Ajukan</button>
                         </div>
             </div>
             <!-- Modal -->
-            <div class="modal fade" id="modalPrint" tabindex="-1" role="dialog" aria-labelledby="modalPrint" aria-hidden="true">
+            <div class="modal fade" id="modalPrint1" tabindex="-1" role="dialog" aria-labelledby="modalPrint" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
@@ -852,7 +851,7 @@
         </div>
     </form>
     <!-- form n6 cerai mati -->
-    <form action="<?= base_url('Surat_n1_n6/coba_n6');?>">
+    <form action="<?php echo base_url().'Surat_n6/add';?>" method="post">
         <div class="row text-left" id="cerai_mati" style="display:none;">
             <div class="col-lg-12">
             <div class="block-heading">
@@ -984,7 +983,7 @@
                     <hr>
                         <div class="form-group">
                             <label>Status Pernikahan</label>
-                            <input id="sp" name="status_nikah" class="form-control" value="Lajang" readonly>
+                            <input id="sp" name="status_nikah" class="form-control" value="Cerai Mati" readonly>
                             </input>
                         </div>                    
                 </div>
@@ -1008,7 +1007,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>NIK</label>
-                                <input class="form-control" name="nik_mati" type="text" placeholder="321213131313" readonly>
+                                <input class="form-control" name="nik_mati" type="text" placeholder="Masukan NIK" >
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Agama</label>
@@ -1115,9 +1114,23 @@
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-danger mr-2"><i class="fas fa-times mr-2"></i>Batal</button>
-                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalPrint"><i class="fas fa-send mr-2"></i>Ajukan</button>
+                            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalPrint2"><i class="fas fa-send mr-2"></i>Ajukan</button>
                         </div>
-                    
+                </div>
+            </div>
+             <!-- Modal -->
+             <div class="modal fade" id="modalPrint2" tabindex="-1" role="dialog" aria-labelledby="modalPrint" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <i class="fas fa-send mb-4 mt-4" style="color: green; font-size:44px"></i>
+                            <h5>Apakah anda yakin data anda sudah benar ?</h5>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
+                            <button type="submit" class="btn btn-primary">Yakin</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
