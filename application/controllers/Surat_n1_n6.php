@@ -1,95 +1,80 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Surat_n1_n6 extends CI_Controller {
-function __construct() {
-    parent::__construct();
-    $this->load->library('pdf');
-    $this->load->model("M_surat_n1_n6");
-    $this->load->helper('date');
-}
-public function index()
+class Surat_n1_n6 extends CI_Controller
+{
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->library('pdf');
+        $this->load->model("M_surat_n1_n6");
+        $this->load->helper('date');
+    }
+    public function index()
     {
         $data["surat_n1_n6"] = $this->M_surat_n1_n6->getAll()->result();
-        $this->load->view("user",$data);   
+        $this->load->view("user", $data);
     }
-    public function add(){
+    public function add()
+    {
         $nama = $this->input->post('nama');
-		$no_nik = $this->input->post('no_nik');
+        $no_nik = $this->input->post('no_nik');
         $tempat_lahir = $this->input->post('tempat_lahir');
         $binti = $this->input->post('binti');
-        $agama=$this->input->post('agama');
-        $tempat_lahir=$this->input->post('tempat_lahir');
-        $tanggal_lahir=$this->input->post('tanggal_lahir');
-        $pekerjaan=$this->input->post('pekerjaan');
-        $kewarganegaraan=$this->input->post('kewarganegaraan');
-        $provinsi=$this->input->post('provinsi');
-        $kab_kota=$this->input->post('kab_kota');
-        $kecamatan=$this->input->post('kecamatan');
-        $desa=$this->input->post('desa');
-        $rt=$this->input->post('rt');
-        $rw=$this->input->post('rw');
-        $kode_pos=$this->input->post('kecamatan');
-        $alamat=$this->input->post('alamat');
-        $status_nikah=$this->input->post('status_nikah');
-        $nama_suami_istri=$this->input->post('nama_suami_istri');
-        $nama_ayah=$this->input->post('nama_ayah');
-        $binti_ayah=$this->input->post('binti_ayah');
-        $status_hidup_ayah=$this->input->post('status_hidup_ayah');
-        $nik_ayah=$this->input->post('nik_ayah');
-        $agama_ayah=$this->input->post('agama_ayah');
-        $tempat_lahir_ayah=$this->input->post('tempat_lahir_ayah');
-        $tanggal_lahir_ayah=$this->input->post('tanggal_lahir_ayah');
-        $pekerjaan_ayah=$this->input->post('pekerjaan_ayah');
-        $kewarganegaraan_ayah=$this->input->post('kewarganegaraan_ayah');
-        $alamat_ayah=$this->input->post('alamat_ayah');
-        $provinsi_ayah=$this->input->post('provinsi_ayah');
-        $kab_kota_ayah=$this->input->post('kab_kota_ayah');
-        $rt_ayah=$this->input->post('rt_ayah');
-        $rw_ayah=$this->input->post('rw_ayah');
-        $kode_pos_ayah=$this->input->post('kode_pos_ayah');
-        $nama_ibu=$this->input->post('nama_ibu');
-        $binti_ibu=$this->input->post('binti_ibu');
-        $status_hidup_ibu=$this->input->post('status_hidup_ibu');
-        $nik_ibu=$this->input->post('nik_ibu');
-        $agama_ibu=$this->input->post('agama_ibu');
-        $tempat_lahir_ibu=$this->input->post('tempat_lahir_ibu');
-        $tanggal_lahir_ibu=$this->input->post('tanggal_lahir_ibu');
-        $pekerjaan_ibu=$this->input->post('pekerjaan_ibu');
-        $kewarganegaraan_ibu=$this->input->post('kewarganegaraan_ibu');
-        $alamat_ibu=$this->input->post('alamat_ibu');
-        $provinsi_ibu=$this->input->post('provinsi_ibu');
-        $kab_kota_ibu=$this->input->post('kab_kota_ibu');
-        $kecamatan_ibu=$this->input->post('kecamatan_ibu');
-        $desa_ibu=$this->input->post('desa_ibu');
-        $desa_ayah=$this->input->post('desa_ayah');
-        $rt_ibu=$this->input->post('rt_ibu');
-        $rw_ibu=$this->input->post('rw_ibu');
-        $kode_pos_ibu=$this->input->post('kode_pos_ibu');
-        $jenis_kelamin=$this->input->post('jenis_kelamin');
-        $nama_mati=$this->input->post('nama_mati');
-        $binti_mati=$this->input->post('binti_mati');
-        $nik_mati=$this->input->post('nik_mati');
-        $tempat_lahir_mati=$this->input->post('tempat_lahir_mati');
-        $tanggal_lahir_mati=$this->input->post('tanggal_lahir_mati');
-        $kewarganegaraan_mati=$this->input->post('kewarganegaraan_mati');
-        $agama_mati=$this->input->post('agama_mati');
-        $pekerjaan_mati=$this->input->post('pekerjaan_mati');
-        $alamat_mati=$this->input->post('alamat_mati');
-        $provinsi_mati=$this->input->post('provinsi_mati');
-        $kab_kota_mati=$this->input->post('kab_kota_mati');
-        $kecamatan_mati=$this->input->post('kecamatan_mati');
-        $desa_mati=$this->input->post('desa_mati');
-        $rt_mati=$this->input->post('rt_mati');
-        $rw_mati=$this->input->post('rw_mati');
-        $kode_pos_mati=$this->input->post('kode_pos_mati');
-        $tgl_meninggal=$this->input->post('tgl_meninggal');
-        $tempat_meninggal=$this->input->post('tempat_meninggal');
-        $nama_surat="Surat N1";
-        $status_surat="Pending";
-        $today=mdate('%Y-%m-%d', now());
-        
-		$data = array(
+        $agama = $this->input->post('agama');
+        $tempat_lahir = $this->input->post('tempat_lahir');
+        $tanggal_lahir = $this->input->post('tanggal_lahir');
+        $pekerjaan = $this->input->post('pekerjaan');
+        $kewarganegaraan = $this->input->post('kewarganegaraan');
+        $provinsi = $this->input->post('provinsi');
+        $kab_kota = $this->input->post('kab_kota');
+        $kecamatan = $this->input->post('kecamatan');
+        $desa = $this->input->post('desa');
+        $rt = $this->input->post('rt');
+        $rw = $this->input->post('rw');
+        $kode_pos = $this->input->post('kecamatan');
+        $alamat = $this->input->post('alamat');
+        $status_nikah = $this->input->post('status_nikah');
+        $nama_suami_istri = $this->input->post('nama_suami_istri');
+        $nama_ayah = $this->input->post('nama_ayah');
+        $binti_ayah = $this->input->post('binti_ayah');
+        $status_hidup_ayah = $this->input->post('status_hidup_ayah');
+        $nik_ayah = $this->input->post('nik_ayah');
+        $agama_ayah = $this->input->post('agama_ayah');
+        $tempat_lahir_ayah = $this->input->post('tempat_lahir_ayah');
+        $tanggal_lahir_ayah = $this->input->post('tanggal_lahir_ayah');
+        $pekerjaan_ayah = $this->input->post('pekerjaan_ayah');
+        $kewarganegaraan_ayah = $this->input->post('kewarganegaraan_ayah');
+        $alamat_ayah = $this->input->post('alamat_ayah');
+        $provinsi_ayah = $this->input->post('provinsi_ayah');
+        $kab_kota_ayah = $this->input->post('kab_kota_ayah');
+        $rt_ayah = $this->input->post('rt_ayah');
+        $rw_ayah = $this->input->post('rw_ayah');
+        $kode_pos_ayah = $this->input->post('kode_pos_ayah');
+        $nama_ibu = $this->input->post('nama_ibu');
+        $binti_ibu = $this->input->post('binti_ibu');
+        $status_hidup_ibu = $this->input->post('status_hidup_ibu');
+        $nik_ibu = $this->input->post('nik_ibu');
+        $agama_ibu = $this->input->post('agama_ibu');
+        $tempat_lahir_ibu = $this->input->post('tempat_lahir_ibu');
+        $tanggal_lahir_ibu = $this->input->post('tanggal_lahir_ibu');
+        $pekerjaan_ibu = $this->input->post('pekerjaan_ibu');
+        $kewarganegaraan_ibu = $this->input->post('kewarganegaraan_ibu');
+        $alamat_ibu = $this->input->post('alamat_ibu');
+        $provinsi_ibu = $this->input->post('provinsi_ibu');
+        $kab_kota_ibu = $this->input->post('kab_kota_ibu');
+        $kecamatan_ibu = $this->input->post('kecamatan_ibu');
+        $desa_ibu = $this->input->post('desa_ibu');
+        $desa_ayah = $this->input->post('desa_ayah');
+        $rt_ibu = $this->input->post('rt_ibu');
+        $rw_ibu = $this->input->post('rw_ibu');
+        $kode_pos_ibu = $this->input->post('kode_pos_ibu');
+        $jenis_kelamin = $this->input->post('jenis_kelamin');
+        $nama_surat = "Surat N1";
+        $status_surat = "Pending";
+        $today = mdate('%Y-%m-%d', now());
+
+        $data = array(
             'nama' => $nama,
             'no_nik' => $no_nik,
             'tempat_lahir' => $tempat_lahir,
@@ -142,61 +127,47 @@ public function index()
             'rw_ibu' => $rw_ibu,
             'kode_pos_ibu' => $kode_pos_ibu,
             'jenis_kelamin' => $jenis_kelamin,
-            'nama_mati' => $nama_mati,
-            'binti_mati' => $binti_mati,
-            'nik_mati' => $nik_mati,
-            'tempat_lahir_mati' => $tempat_lahir_mati,
-            'tanggal_lahir_mati' => $tanggal_lahir_mati,
-            'kewarganegaraan_mati' => $kewarganegaraan_mati,
-            'agama_mati' => $agama_mati,
-            'pekerjaan_mati' => $pekerjaan_mati,
-            'alamat_mati' => $alamat_mati,
-            'provinsi_mati' => $provinsi_mati,
-            'kab_kota_mati' => $kab_kota_mati,
-            'kecamatan_mati' => $kecamatan_mati,
-            'desa_mati' => $desa_mati,
-            'rt_mati' => $rt_mati,
-            'rw_mati' => $rw_mati,
-            'kode_pos_mati' => $kode_pos_mati,
-            'tgl_meninggal' => $tgl_meninggal,
-            'tempat_meninggal' => $tempat_meninggal,
-            'jenis_surat'=>$nama_surat,
-            'tgl_ajukan_surat'=>$today,
-            'status_surat'=>$status_surat
+            'jenis_surat' => $nama_surat,
+            'tgl_ajukan_surat' => $today,
+            'status_surat' => $status_surat
         );
 
-        $this->M_surat_n1_n6->save($data,'surat_n1');
+        $this->M_surat_n1_n6->save($data, 'surat_n1');
+        $this->session->set_dataN1($data);
         $this->session->set_flashdata('success', 'Berhasil disimpan');
-		redirect('user/index');
+        redirect('user/index');
     }
-    function hapus($id_surat_n1){
-		$where = array('id_surat_n1' => $id_surat_n1);
-		$this->M_surat_n1_n6->hapus_data($where,'surat_n1_n6');
-		redirect('user/index');
-	}
-
-	function edit_form($no_surat){
-		$where = array('no_surat' => $no_surat);
-        $data['surat_n1_n6'] = $this->surat_model->edit_data($where,'surat_n1_n6')->result();
-		$this->load->view('admin/edit_form_suratKP',$data);
+    function hapus($id_surat_n1)
+    {
+        $where = array('id_surat_n1' => $id_surat_n1);
+        $this->M_surat_n1_n6->hapus_data($where, 'surat_n1_n6');
+        redirect('user/index');
     }
 
-    function update(){
+    function edit_form($no_surat)
+    {
+        $where = array('no_surat' => $no_surat);
+        $data['surat_n1_n6'] = $this->surat_model->edit_data($where, 'surat_n1_n6')->result();
+        $this->load->view('admin/edit_form_suratKP', $data);
+    }
+
+    function update()
+    {
         $no_surat = $this->input->post('no_surat');
-		$tanggal_surat = $this->input->post('tanggal_surat');
+        $tanggal_surat = $this->input->post('tanggal_surat');
         $nama_intansi = $this->input->post('nama_intansi');
         $alamat_intansi = $this->input->post('alamat_intansi');
-        $nama_lengkap=$this->input->post('nama_lengkap');
-        $nim=$this->input->post('nim');
-        $jurusan=$this->input->post('jurusan');
-        $semester=$this->input->post('semester');
-        $lamanya=$this->input->post('lamanya');
-        $mulai_tgl=$this->input->post('mulai_tgl');
-        $akhir_tgl=$this->input->post('akhir_tgl');
-		$data = array(
-			'tanggal_surat' => $tanggal_surat,
+        $nama_lengkap = $this->input->post('nama_lengkap');
+        $nim = $this->input->post('nim');
+        $jurusan = $this->input->post('jurusan');
+        $semester = $this->input->post('semester');
+        $lamanya = $this->input->post('lamanya');
+        $mulai_tgl = $this->input->post('mulai_tgl');
+        $akhir_tgl = $this->input->post('akhir_tgl');
+        $data = array(
+            'tanggal_surat' => $tanggal_surat,
             'nama_intansi' => $nama_intansi,
-            'alamat_intansi'=>$alamat_intansi,
+            'alamat_intansi' => $alamat_intansi,
             'nama_lengkap' => $nama_lengkap,
             'nim' => $nim,
             'jurusan' => $jurusan,
@@ -204,14 +175,11 @@ public function index()
             'lamanya' => $lamanya,
             'mulai_tgl' => $mulai_tgl,
             'akhir_tgl' => $akhir_tgl,
-			);
+        );
         $where = array(
             'no_surat' => $no_surat
         );
-        $this->surat_model->update_data($where,$data,'surat_n1_n6');
+        $this->surat_model->update_data($where, $data, 'surat_n1_n6');
         redirect('admin/SuratKp/index');
     }
-
-    
-
 }

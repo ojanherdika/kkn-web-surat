@@ -5,13 +5,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class User extends CI_Controller
 
 {
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
         $this->load->library('pdf');
         $this->load->model("M_surat_n1_n6");
     }
     public function index()
     {
+        if (isset($_SESSION['dataN1'])) {
+            echo 'session ada';
+            die();
+        }
         $data['title'] = 'WEB Persuratan Desa Cinunuk';
         $data['user'] = $this->db->get_where('user', ['no_nik' =>
         $this->session->userdata('no_nik')])->row_array();
