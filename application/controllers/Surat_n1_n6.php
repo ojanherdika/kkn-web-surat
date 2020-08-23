@@ -144,10 +144,10 @@ class Surat_n1_n6 extends CI_Controller
         redirect('user/index');
     }
 
-    function edit_form($no_surat)
+    function edit_form($id_surat_n1)
     {
-        $where = array('no_surat' => $no_surat);
-        $data['surat_n1_n6'] = $this->surat_model->edit_data($where, 'surat_n1_n6')->result();
+        $where = array('id_surat_n1' => $id_surat_n1);
+        $data['surat_n1'] = $this->surat_model->edit_data($where, 'surat_n1')->result();
         $this->load->view('admin/edit_form_suratKP', $data);
     }
 
@@ -179,7 +179,7 @@ class Surat_n1_n6 extends CI_Controller
         $where = array(
             'no_surat' => $no_surat
         );
-        $this->surat_model->update_data($where, $data, 'surat_n1_n6');
+        $this->M_surat_n1_n6->update_data($where, $data, 'surat_n1');
         redirect('admin/SuratKp/index');
     }
 }
