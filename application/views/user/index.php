@@ -147,7 +147,7 @@
                         <td><span class="badge badge-secondary"><?= $data_n6['status_surat'] ?></span></td>
                         <td>
                             <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
-                            <a href="<?php echo base_url('Surat_n1_n6/hapus/' . $data_n6['id_surat_n6']) ?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-trash"></i> Hapus</a>
+                            <a href="<?php echo base_url('Surat_n1_n6/hapusn6/' . $data_n6['id_surat_n6']) ?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-trash"></i> Hapus</a>
                             <a target="_blank" href="<?php echo base_url('/Cetak_n6/index/' . $data_n6['id_surat_n6']) ?>" class="btn btn-sm bg-warning text-white" role="button"><i class="fa fa-print"></i> Print</a>
                             <button class="btn btn-sm bg-danger text-white"><i class="far fa-times-circle"></i> Batalkan</button>
                         </td>

@@ -14,6 +14,106 @@
                 <div class="block-heading">
                         <h2>FORM N6</h2>
                     </div>
+                    <!-- Isian Form 1-->
+                    <div class="container-fluid shadow p-3  mb-3 bg-white rounded">
+                        <p class="text-left" style="font-size: 25px;">Form 1 Identitas Diri</p>
+                        <hr>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Nama</label>
+                                <input type="text" name="nama" class="form-control" id="nama" value="<?= $n1['nama']; ?>"   placeholder="Masukan Nama anda" readonly>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Bin/Binti</label>
+                                <input type="text" name="binti" value="<?= $n1['binti']; ?>"  readonly class="form-control" id="bin" placeholder="Masukan Bin/Binti">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>NIK</label>
+                                <input class="form-control" name="no_nik" value="<?= $n1['no_nik']; ?>" type="text" placeholder="Masukan nik anda" readonly>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Agama</label>
+                                <select name="agama" id="agama" class="form-control" readonly>
+                                    <option selected><?= $n1['agama']; ?></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Tempat Lahir</label>
+                                <input type="text" name="tempat_lahir" value="<?= $n1['tempat_lahir']; ?>" readonly class="form-control" id="tempat" placeholder="Masukan Tempat Lahir Anda">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>Tanggal Lahir</label>
+                                <input type="date" name="tanggal_lahir" value="<?= $n1['tanggal_lahir']; ?>" readonly class="form-control" id="tgl">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>Jenis Kelamin</label>
+                                <select name="jenis_kelamin" readonly id="jk" class="form-control">
+                                <option selected><?= $n1['jenis_kelamin']; ?></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Pekerjaan</label>
+                            <input type="text" name="pekerjaan" value="<?= $n1['pekerjaan']; ?>" readonly class="form-control" id="pekerjaan" placeholder="Masukan Pekerjaan Anda">
+                        </div>
+                        <div class="form-group">
+                            <label>Kewarganegaraan</label>
+                            <input type="text" name="kewarganegaraan" value="<?= $n1['kewarganegaraan']; ?>" readonly  class="form-control" id="kewarganegaraan" placeholder="Masukan Kewarganegaraan Anda">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Provinsi</label>
+                                <select readonly id="provinsi" name="provinsi" class="form-control">
+                                    <option><?= $n1['provinsi']; ?></option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Kabupaten/Kota</label>
+                                <select readonly id="kabupaten" name="kab_kota" class="form-control">
+                                <option><?= $n1['kab_kota']; ?></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Kecamatan</label>
+                                <select readonly id="kecamatan" name="kecamatan" class="form-control">
+                                <option><?= $n1['kecamatan']; ?></option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Kelurahan/Desa</label>
+                                <select readonly id="desa" name="desa" class="form-control">
+                                <option><?= $n1['desa']; ?></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label>RT</label>
+                                <input type="number" value="<?= $n1['rt']; ?>" readonly name="rt" class="form-control" id="rt" placeholder="">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label>RW</label>
+                                <input type="number" name="rw" value="<?= $n1['rw']; ?>" readonly class="form-control" id="rw" placeholder="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Kode Pos</label>
+                                <input type="number" name="kode_pos" value="<?= $n1['kode_pos']; ?>" readonly class="form-control" id="kodepos" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Alamat</label>
+                            <textarea  class="form-control" name="alamat" id="alamat"  readonly rows="2" placeholder=""> <?= $n1['alamat']; ?></textarea>
+                        </div>
+
+                    </div>
+                    <!-- end of isian form 1 -->
                             <!-- Form N6 -->
                     <div class="container-fluid shadow p-3  mb-3 bg-white rounded mt-4" >
                         <p class="text-left" style="font-size: 25px;">Form 3 Surat Kematian</p>

@@ -32,7 +32,7 @@ class Surat_n1_n6 extends CI_Controller
         $desa = $this->input->post('desa');
         $rt = $this->input->post('rt');
         $rw = $this->input->post('rw');
-        $kode_pos = $this->input->post('kecamatan');
+        $kode_pos = $this->input->post('kode_pos');
         $alamat = $this->input->post('alamat');
         $status_nikah = $this->input->post('status_nikah');
         $nama_suami_istri = $this->input->post('nama_suami_istri');
@@ -90,7 +90,7 @@ class Surat_n1_n6 extends CI_Controller
             'desa' => $desa,
             'rt' => $rt,
             'rw' => $rw,
-            'kode_pos' => $kecamatan,
+            'kode_pos' => $kode_pos,
             'alamat' => $alamat,
             'status_nikah' => $status_nikah,
             'nama_suami_istri' => $nama_suami_istri,
@@ -141,6 +141,12 @@ class Surat_n1_n6 extends CI_Controller
     {
         $where = array('id_surat_n1' => $id_surat_n1);
         $this->M_surat_n1_n6->hapus_data($where, 'surat_n1');
+        redirect('user/index');
+    }
+    function hapusn6($id_surat_n6)
+    {
+        $where = array('id_surat_n6' => $id_surat_n6);
+        $this->M_surat_n1_n6->hapus_data($where, 'surat_n6');
         redirect('user/index');
     }
 

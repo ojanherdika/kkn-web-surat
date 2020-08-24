@@ -25,8 +25,8 @@
                                     <input type="text" class="form-control" id="nama" placeholder="Masukan Nama anda" name="nama">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label>Bin/Binti</label>
-                                    <input type="text" class="form-control" id="bin" placeholder="Masukan Bin/Binti" name="binti">
+                                    <label>Bin</label>
+                                    <input type="text" class="form-control" id="bin" placeholder="Masukan Bin" name="binti">
                                 </div>
                             </div>
                             <div class="form-row">
@@ -145,8 +145,8 @@
                                     <input type="text" name="nama_calon" class="form-control" id="nama" placeholder="Masukan Nama anda">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label>Bin/Binti</label>
-                                    <input type="text" name="binti_calon" class="form-control" id="bin" placeholder="Masukan Bin/Binti">
+                                    <label>Bin</label>
+                                    <input type="text" name="binti_calon" class="form-control" id="bin" placeholder="Masukan Bin">
                                 </div>
                             </div>
                             <div class="form-row">

@@ -30,7 +30,7 @@ public function add(){
         $desa=$this->input->post('desa');
         $rt=$this->input->post('rt');
         $rw=$this->input->post('rw');
-        $kode_pos=$this->input->post('kecamatan');
+        $kode_pos=$this->input->post('kode_pos');
         $alamat=$this->input->post('alamat');
         $jenis_kelamin=$this->input->post('jenis_kelamin');
         $nama_calon=$this->input->post('nama_calon');
@@ -69,7 +69,7 @@ public function add(){
             'desa' => $desa,
             'rt' => $rt,
             'rw' => $rw,
-            'kode_pos' => $kecamatan,
+            'kode_pos' => $kode_pos,
             'alamat' => $alamat,
             'jenis_kelamin' => $jenis_kelamin,
             'nama_calon' => $nama_calon,
