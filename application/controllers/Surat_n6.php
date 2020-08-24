@@ -30,7 +30,7 @@ public function add(){
     $desa = $this->input->post('desa');
     $rt = $this->input->post('rt');
     $rw = $this->input->post('rw');
-    $kode_pos = $this->input->post('kecamatan');
+    $kode_pos = $this->input->post('kode_pos');
     $alamat = $this->input->post('alamat');
     $status_nikah = $this->input->post('status_nikah');
     $nama_suami_istri = $this->input->post('nama_suami_istri');
@@ -87,7 +87,7 @@ public function add(){
             'desa' => $desa,
             'rt' => $rt,
             'rw' => $rw,
-            'kode_pos' => $kecamatan,
+            'kode_pos' => $kode_pos,
             'alamat' => $alamat,
             'status_nikah' => $status_nikah,
             'nama_suami_istri' => $nama_suami_istri,
@@ -136,6 +136,24 @@ public function add(){
 		
     }
     function add1(){
+
+        $nama = $this->input->post('nama');
+        $no_nik = $this->input->post('no_nik');
+        $tempat_lahir = $this->input->post('tempat_lahir');
+        $binti = $this->input->post('binti');
+        $agama = $this->input->post('agama');
+        $tempat_lahir = $this->input->post('tempat_lahir');
+        $tanggal_lahir = $this->input->post('tanggal_lahir');
+        $pekerjaan = $this->input->post('pekerjaan');
+        $kewarganegaraan = $this->input->post('kewarganegaraan');
+        $provinsi = $this->input->post('provinsi');
+        $kab_kota = $this->input->post('kab_kota');
+        $kecamatan = $this->input->post('kecamatan');
+        $desa = $this->input->post('desa');
+        $rt = $this->input->post('rt');
+        $rw = $this->input->post('rw');
+        $kode_pos = $this->input->post('kode_pos');
+        $alamat = $this->input->post('alamat');
         $nama_mati=$this->input->post('nama_mati');
         $binti_mati=$this->input->post('binti_mati');
         $nik_mati=$this->input->post('nik_mati');
@@ -159,6 +177,22 @@ public function add(){
         $today=mdate('%Y-%m-%d', now());
         
 		$data = array(
+            'nama' => $nama,
+            'no_nik' => $no_nik,
+            'tempat_lahir' => $tempat_lahir,
+            'binti' => $binti,
+            'agama' => $agama,
+            'tanggal_lahir' => $tanggal_lahir,
+            'pekerjaan' => $pekerjaan,
+            'kewarganegaraan' => $kewarganegaraan,
+            'provinsi' => $provinsi,
+            'kab_kota' => $kab_kota,
+            'kecamatan' => $kecamatan,
+            'desa' => $desa,
+            'rt' => $rt,
+            'rw' => $rw,
+            'kode_pos' => $kode_pos,
+            'alamat' => $alamat,
             'nama_mati' => $nama_mati,
             'binti_mati' => $binti_mati,
             'nik_mati' => $nik_mati,
