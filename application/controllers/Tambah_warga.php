@@ -3,6 +3,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Tambah_warga extends CI_Controller
 {
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->library('pdf');
+        $this->load->model("M_surat_n1_n6");
+        $this->load->helper('date');
+    }
 
     public function add()
     {
@@ -27,11 +34,15 @@ class Tambah_warga extends CI_Controller
 
         redirect('admin');
     }
-    public function update()
+    public function update($id_surat_n1)
     {
-        $status = $this->input->post('status_surat');
-        $data['status_surat'] = $status;
-        $this->db->replace('surat_n1', $data);
+        $where = array(
+            'id_surat_n1' => $id_surat_n1
+        );
+        $data = array(
+            'status_surat' => "Diterima",
+        );
+        $this->M_surat_n1_n6->update_data($where, $data, 'surat_n1');
         redirect('admin');
     }
 }
