@@ -48,13 +48,21 @@
                                 <th scope="col"><?= $surat_n1['jenis_surat']; ?></th>
                                 <th scope="col"><?= $surat_n1['nama']; ?></th>
                                 <th scope="col"><?= $surat_n1['tgl_ajukan_surat']; ?></th>
-                                <th scope="col"><span class="badge badge-warning"><?= $surat_n1['status_surat']; ?> <i class="fas fa-exclamation-circle"></i> </span></th>
-                                <th scope="col">
-                                    <a href="<?= base_url('Tambah_warga/update') ?>" class="btn btn-success m-1"> <u name="status_surat" id="status_surat" value="Diterima"> Terima </u>
-                                        <a href="<?= base_url('Tambah_warga/update') ?>" class="btn btn-success m-1" style="display:none;"> <u name="status_surat" id="status_surat" value="Print"> Print </u>
-
-                                            <a href="<?= base_url('Tambah_warga/update') ?>" class=" btn btn-danger m-1"> <u name="status_surat" id="status_surat" value="Ditolak"> Tolak </u>
+                                <th scope="col" value="<?= $surat_n1['status_surat']; ?>"><span class="badge badge-<?= ($surat_n1['status_surat'] == 'Diterima') ? 'success' : (($surat_n1['status_surat'] == 'Ditolak') ? 'danger' : 'warning') ?>">
+                                        <?= $surat_n1['status_surat']; ?> <i class="fas fa-exclamation-circle"></i> </span>
                                 </th>
+                                <?php
+                                if ($surat_n1['status_surat'] == 'Pending') : ?>
+                                    <th scope="col" id="acc_surat">
+                                        <a href="<?= base_url('Tambah_warga/update_n1_terima/' . $surat_n1['id_surat_n1']) ?>" class="btn btn-success m-1" name="status_surat" id="status_surat"><u> Terima </u>
+                                            <a href="<?= base_url('Tambah_warga/update_n1_tolak/' . $surat_n1['id_surat_n1']) ?>" class=" btn btn-danger m-1" name="status_surat" id="status_surat"> <u> Tolak </u>
+                                    </th>
+                                <?php elseif ($surat_n1['status_surat'] == 'Diterima') : ?>
+                                    <th scope="col" id="acc_surat">
+                                        <a href="<?= base_url('/Cetak_n1/index/' . $surat_n1['id_surat_n1']); ?>" class="btn btn-success m-1" name="print" id="print"><u> Print </u> </th>
+                                <?php else : ?>
+                                    <th></th>
+                                <?php endif; ?>
                             </tr>
                         <?php endforeach; ?>
 

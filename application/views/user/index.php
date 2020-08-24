@@ -28,7 +28,7 @@
             <hr class="bg-light ml-3 mr-3">
         </li>
         <li class="sidebar-nav-item">
-            <a class="btn-primary btn-sm ml-3 mb-1 mt-2 text-center p-1 mr-1 col-6" href="<?= base_url('user/profil'); ?>">Ubah Profil</a>
+            <a class="btn-primary btn-sm ml-3 mb-1 mt-2 text-center p-1 mr-1 col-6" href="#">Ubah Profil</a>
             <a class="btn-danger btn-sm ml-3 mb-1 mt-2 text-center p-1 col-6" href="<?= base_url('auth/logout'); ?>">Logout</a>
         </li>
 </nav>
@@ -130,7 +130,7 @@
                         <th scope="row"><?= $i++ ?></th>
                         <td><?= $data_n1['jenis_surat'] ?></td>
                         <td><?= $data_n1['tgl_ajukan_surat'] ?></td>
-                        <td><span class="badge badge-secondary"><?= $data_n1['status_surat'] ?></span></td>
+                        <td><span class="badge badge-<?= ($data_n1['status_surat'] == 'Diterima') ? 'success' : (($data_n1['status_surat'] == 'Ditolak') ? 'danger' : 'warning'); ?>"><?= $data_n1['status_surat'] ?></span></td>
                         <td>
                             <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
                             <a href="<?php echo base_url('Surat_n1_n6/hapus/' . $data_n1['id_surat_n1']) ?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-trash"></i> Hapus</a>
@@ -144,7 +144,7 @@
                         <th scope="row"><?= $i++ ?></th>
                         <td><?= $data_n6['jenis_surat'] ?></td>
                         <td><?= $data_n6['tgl_ajukan_surat'] ?></td>
-                        <td><span class="badge badge-secondary"><?= $data_n6['status_surat'] ?></span></td>
+                        <td><span class="badge badge-<?= ($data_n6['status_surat'] == 'Diterima') ? 'success' : (($data_n6['status_surat'] == 'Ditolak') ? 'danger' : 'warning'); ?>"><?= $data_n6['status_surat'] ?></span></td>
                         <td>
                             <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
                             <a href="<?php echo base_url('Surat_n1_n6/hapus/' . $data_n6['id_surat_n6']) ?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-trash"></i> Hapus</a>
@@ -158,7 +158,7 @@
                         <th scope="row"><?= $i++ ?></th>
                         <td><?= $data_n4['jenis_surat'] ?></td>
                         <td><?= $data_n4['tgl_ajukan_surat'] ?></td>
-                        <td><span class="badge badge-secondary"><?= $data_n4['status_surat'] ?></span></td>
+                        <td><span class="badge badge-<?= ($data_n4['status_surat'] == 'Diterima') ? 'success' : (($data_n4['status_surat'] == 'Ditolak') ? 'danger' : 'warning'); ?>"><?= $data_n4['status_surat'] ?></span></td>
                         <td>
                             <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
                             <a href="<?php echo base_url('Surat_n4/hapus/' . $data_n4['id_surat_n4']) ?>" class="btn btn-sm bg-danger text-white" role="button" title="Hapus Data"><i class="fa fa-trash"></i> Hapus</a>

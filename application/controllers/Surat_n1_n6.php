@@ -140,7 +140,7 @@ class Surat_n1_n6 extends CI_Controller
     function hapus($id_surat_n1)
     {
         $where = array('id_surat_n1' => $id_surat_n1);
-        $this->M_surat_n1_n6->hapus_data($where, 'surat_n1_n6');
+        $this->M_surat_n1_n6->hapus_data($where, 'surat_n1');
         redirect('user/index');
     }
 

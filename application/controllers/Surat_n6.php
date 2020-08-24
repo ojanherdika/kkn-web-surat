@@ -16,24 +16,126 @@ public function index()
 public function add(){
        
     $nama = $this->input->post('nama');
-		$no_nik = $this->input->post('no_nik');
-        $tempat_lahir = $this->input->post('tempat_lahir');
-        $binti = $this->input->post('binti');
-        $agama=$this->input->post('agama');
-        $tempat_lahir=$this->input->post('tempat_lahir');
-        $tanggal_lahir=$this->input->post('tanggal_lahir');
-        $pekerjaan=$this->input->post('pekerjaan');
-        $kewarganegaraan=$this->input->post('kewarganegaraan');
-        $provinsi=$this->input->post('provinsi');
-        $kab_kota=$this->input->post('kab_kota');
-        $kecamatan=$this->input->post('kecamatan');
-        $desa=$this->input->post('desa');
-        $rt=$this->input->post('rt');
-        $rw=$this->input->post('rw');
-        $kode_pos=$this->input->post('kecamatan');
-        $alamat=$this->input->post('alamat');
-        $status_nikah=$this->input->post('status_nikah');
-        $jenis_kelamin=$this->input->post('jenis_kelamin');
+    $no_nik = $this->input->post('no_nik');
+    $tempat_lahir = $this->input->post('tempat_lahir');
+    $binti = $this->input->post('binti');
+    $agama = $this->input->post('agama');
+    $tempat_lahir = $this->input->post('tempat_lahir');
+    $tanggal_lahir = $this->input->post('tanggal_lahir');
+    $pekerjaan = $this->input->post('pekerjaan');
+    $kewarganegaraan = $this->input->post('kewarganegaraan');
+    $provinsi = $this->input->post('provinsi');
+    $kab_kota = $this->input->post('kab_kota');
+    $kecamatan = $this->input->post('kecamatan');
+    $desa = $this->input->post('desa');
+    $rt = $this->input->post('rt');
+    $rw = $this->input->post('rw');
+    $kode_pos = $this->input->post('kecamatan');
+    $alamat = $this->input->post('alamat');
+    $status_nikah = $this->input->post('status_nikah');
+    $nama_suami_istri = $this->input->post('nama_suami_istri');
+    $nama_ayah = $this->input->post('nama_ayah');
+    $binti_ayah = $this->input->post('binti_ayah');
+    $status_hidup_ayah = $this->input->post('status_hidup_ayah');
+    $nik_ayah = $this->input->post('nik_ayah');
+    $agama_ayah = $this->input->post('agama_ayah');
+    $tempat_lahir_ayah = $this->input->post('tempat_lahir_ayah');
+    $tanggal_lahir_ayah = $this->input->post('tanggal_lahir_ayah');
+    $pekerjaan_ayah = $this->input->post('pekerjaan_ayah');
+    $kewarganegaraan_ayah = $this->input->post('kewarganegaraan_ayah');
+    $alamat_ayah = $this->input->post('alamat_ayah');
+    $provinsi_ayah = $this->input->post('provinsi_ayah');
+    $kab_kota_ayah = $this->input->post('kab_kota_ayah');
+    $rt_ayah = $this->input->post('rt_ayah');
+    $rw_ayah = $this->input->post('rw_ayah');
+    $kode_pos_ayah = $this->input->post('kode_pos_ayah');
+    $nama_ibu = $this->input->post('nama_ibu');
+    $binti_ibu = $this->input->post('binti_ibu');
+    $status_hidup_ibu = $this->input->post('status_hidup_ibu');
+    $nik_ibu = $this->input->post('nik_ibu');
+    $agama_ibu = $this->input->post('agama_ibu');
+    $tempat_lahir_ibu = $this->input->post('tempat_lahir_ibu');
+    $tanggal_lahir_ibu = $this->input->post('tanggal_lahir_ibu');
+    $pekerjaan_ibu = $this->input->post('pekerjaan_ibu');
+    $kewarganegaraan_ibu = $this->input->post('kewarganegaraan_ibu');
+    $alamat_ibu = $this->input->post('alamat_ibu');
+    $provinsi_ibu = $this->input->post('provinsi_ibu');
+    $kab_kota_ibu = $this->input->post('kab_kota_ibu');
+    $kecamatan_ibu = $this->input->post('kecamatan_ibu');
+    $desa_ibu = $this->input->post('desa_ibu');
+    $desa_ayah = $this->input->post('desa_ayah');
+    $rt_ibu = $this->input->post('rt_ibu');
+    $rw_ibu = $this->input->post('rw_ibu');
+    $kode_pos_ibu = $this->input->post('kode_pos_ibu');
+    $jenis_kelamin = $this->input->post('jenis_kelamin');
+    $nama_surat = "Surat N1";
+    $status_surat = "Pending";
+    $today = mdate('%Y-%m-%d', now());
+        
+		$data = array(
+            'nama' => $nama,
+            'no_nik' => $no_nik,
+            'tempat_lahir' => $tempat_lahir,
+            'binti' => $binti,
+            'agama' => $agama,
+            'tanggal_lahir' => $tanggal_lahir,
+            'pekerjaan' => $pekerjaan,
+            'kewarganegaraan' => $kewarganegaraan,
+            'provinsi' => $provinsi,
+            'kab_kota' => $kab_kota,
+            'kecamatan' => $kecamatan,
+            'desa' => $desa,
+            'rt' => $rt,
+            'rw' => $rw,
+            'kode_pos' => $kecamatan,
+            'alamat' => $alamat,
+            'status_nikah' => $status_nikah,
+            'nama_suami_istri' => $nama_suami_istri,
+            'nama_ayah' => $nama_ayah,
+            'binti_ayah' => $binti_ayah,
+            'status_hidup_ayah' => $status_hidup_ayah,
+            'nik_ayah' => $nik_ayah,
+            'agama_ayah' => $agama_ayah,
+            'tempat_lahir_ayah' => $tempat_lahir_ayah,
+            'tanggal_lahir_ayah' => $tanggal_lahir_ayah,
+            'pekerjaan_ayah' => $pekerjaan_ayah,
+            'kewarganegaraan_ayah' => $kewarganegaraan_ayah,
+            'alamat_ayah' => $alamat_ayah,
+            'provinsi_ayah' => $provinsi_ayah,
+            'kab_kota_ayah' => $kab_kota_ayah,
+            'rt_ayah' => $rt_ayah,
+            'rw_ayah' => $rw_ayah,
+            'kode_pos_ayah' => $kode_pos_ayah,
+            'nama_ibu' => $nama_ibu,
+            'binti_ibu' => $binti_ibu,
+            'status_hidup_ibu' => $status_hidup_ibu,
+            'nik_ibu' => $nik_ibu,
+            'agama_ibu' => $agama_ibu,
+            'tempat_lahir_ibu' => $tempat_lahir_ibu,
+            'tanggal_lahir_ibu' => $tanggal_lahir_ibu,
+            'pekerjaan_ibu' => $pekerjaan_ibu,
+            'kewarganegaraan_ibu' => $kewarganegaraan_ibu,
+            'alamat_ibu' => $alamat_ibu,
+            'provinsi_ibu' => $provinsi_ibu,
+            'kab_kota_ibu' => $kab_kota_ibu,
+            'kecamatan_ibu' => $kecamatan_ibu,
+            'desa_ibu' => $desa_ibu,
+            'desa_ayah' => $desa_ayah,
+            'rt_ibu' => $rt_ibu,
+            'rw_ibu' => $rw_ibu,
+            'kode_pos_ibu' => $kode_pos_ibu,
+            'jenis_kelamin' => $jenis_kelamin,
+            'jenis_surat' => $nama_surat,
+            'tgl_ajukan_surat' => $today,
+            'status_surat' => $status_surat
+        );
+
+        $this->M_surat_n1_n6->save($data,'surat_n1');
+        $this->session->set_flashdata('success', 'Berhasil disimpan');
+        redirect('user/p_n6'); 
+		
+    }
+    function add1(){
         $nama_mati=$this->input->post('nama_mati');
         $binti_mati=$this->input->post('binti_mati');
         $nik_mati=$this->input->post('nik_mati');
@@ -57,24 +159,6 @@ public function add(){
         $today=mdate('%Y-%m-%d', now());
         
 		$data = array(
-            'nama' => $nama,
-            'no_nik' => $no_nik,
-            'tempat_lahir' => $tempat_lahir,
-            'binti' => $binti,
-            'agama' => $agama,
-            'tanggal_lahir' => $tanggal_lahir,
-            'pekerjaan' => $pekerjaan,
-            'kewarganegaraan' => $kewarganegaraan,
-            'provinsi' => $provinsi,
-            'kab_kota' => $kab_kota,
-            'kecamatan' => $kecamatan,
-            'desa' => $desa,
-            'rt' => $rt,
-            'rw' => $rw,
-            'kode_pos' => $kecamatan,
-            'alamat' => $alamat,
-            'status_nikah' => $status_nikah,
-            'jenis_kelamin' => $jenis_kelamin,
             'nama_mati' => $nama_mati,
             'binti_mati' => $binti_mati,
             'nik_mati' => $nik_mati,
@@ -101,7 +185,6 @@ public function add(){
         $this->M_surat_n1_n6->save($data,'surat_n6');
         $this->session->set_flashdata('success', 'Berhasil disimpan');
         redirect('user'); 
-		
     }
     function hapus($id_surat_n1){
 		$where = array('id_surat_n1' => $id_surat_n1);

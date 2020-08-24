@@ -62,4 +62,13 @@ class User extends CI_Controller
         $this->load->view('user/n5', $data);
         $this->load->view('layout/userFooter');
     }
+    public function p_n6()
+    {
+        $data['title'] = 'WEB Persuratan Desa Cinunuk | N6';
+        $data['user'] = $this->db->get_where('user', ['no_nik' =>
+        $this->session->userdata('no_nik')])->row_array();
+        $this->load->view('layout/userHeader', $data);
+        $this->load->view('user/n6', $data);
+        $this->load->view('layout/userFooter');
+    }
 }
