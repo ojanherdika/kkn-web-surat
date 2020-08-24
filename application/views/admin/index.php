@@ -51,7 +51,9 @@
                                 <th scope="col"><span class="badge badge-warning"><?= $surat_n1['status_surat']; ?> <i class="fas fa-exclamation-circle"></i> </span></th>
                                 <th scope="col">
                                     <a href="<?= base_url('Tambah_warga/update') ?>" class="btn btn-success m-1"> <u name="status_surat" id="status_surat" value="Diterima"> Terima </u>
-                                        <a href="<?= base_url('Tambah_warga/update') ?>" class=" btn btn-danger m-1"> <u name="status_surat" id="status_surat" value="Ditolak"> Tolak </u>
+                                        <a href="<?= base_url('Tambah_warga/update') ?>" class="btn btn-success m-1" style="display:none;"> <u name="status_surat" id="status_surat" value="Print"> Print </u>
+
+                                            <a href="<?= base_url('Tambah_warga/update') ?>" class=" btn btn-danger m-1"> <u name="status_surat" id="status_surat" value="Ditolak"> Tolak </u>
                                 </th>
                             </tr>
                         <?php endforeach; ?>
