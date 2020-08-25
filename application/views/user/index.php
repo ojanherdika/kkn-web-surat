@@ -161,17 +161,11 @@
                         <th scope="row"><?= $i++ ?></th>
                         <td><?= $data_n4['jenis_surat'] ?></td>
                         <td><?= $data_n4['tgl_ajukan_surat'] ?></td>
-                        <td><span class="badge badge-<?= ($data_n4['status_surat'] == 'Diterima') ? 'success' : (($data_n4['status_surat'] == 'Ditolak') ? 'danger' : 'warning'); ?>"><?= $data_n4['status_surat'] ?></span></td>
-                        <?php if ($data_n4['status_surat'] == 'Diterima') : ?>
-                            <td>
-                                <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
-                                <a target="_blank" href="<?php echo base_url('/Cetak_n4/index/' . $data_n4['id_surat_n4']) ?>" class="btn btn-sm bg-warning text-white" role="button"><i class="fa fa-print"></i> Print</a>
-                            </td>
-                        <?php else : ?>
-                            <td>
-                                <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
-                            </td>
-                        <?php endif; ?>
+                        <td><span class="badge badge-success"><?= $data_n4['status_surat'] ?></span></td>
+                        <td>
+                            <a target="_blank" href="<?php echo base_url('/Cetak_n4/index/' . $data_n4['id_surat_n4']) ?>" class="btn btn-sm bg-warning text-white" role="button"><i class="fa fa-print"></i> Print</a>
+                        </td>
+
                     </tr>
                 <?php endforeach; ?>
                 <?php foreach ($data_n5 as $data_n5) : ?>
@@ -179,18 +173,10 @@
                         <th scope="row"><?= $i++ ?></th>
                         <td><?= $data_n5['jenis_surat'] ?></td>
                         <td><?= $data_n5['tgl_ajukan_surat'] ?></td>
-                        <td><span class="badge badge-<?= ($data_n5['status_surat'] == 'Diterima') ? 'success' : (($data_n5['status_surat'] == 'Ditolak' || $data_n5['status_surat'] == 'Dibatalkan') ? 'danger' : 'warning'); ?>"><?= $data_n5['status_surat'] ?></span></td>
-                        <?php if ($data_n5['status_surat'] == 'Diterima') : ?>
-                            <td>
-                                <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
-                                <a target="_blank" href="<?php echo base_url('/Cetak_n4/index/' . $data_n5['id_surat_n4']) ?>" class="btn btn-sm bg-warning text-white" role="button"><i class="fa fa-print"></i> Print</a>
-                            </td>
-                        <?php elseif ($data_n5['status_surat'] == 'Pending') : ?>
-                            <td>
-                                <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
-                                <a href="<?= base_url('Tambah_warga/'); ?>" class="btn btn-sm bg-danger text-white"><i class="fas fa-window-close"></i> Batalkan</a>
-                            </td>
-                        <?php endif; ?>
+                        <td><span class="badge badge-success"><?= $data_n5['status_surat'] ?></span></td>
+                        <td>
+                            <a target="_blank" href="<?php echo base_url('/Cetak_n5/index/' . $data_n5['id_surat_n5']) ?>" class="btn btn-sm bg-warning text-white" role="button"><i class="fa fa-print"></i> Print</a>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
                 <!-- <tr>
