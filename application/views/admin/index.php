@@ -48,7 +48,7 @@
                                 <th scope="col"><?= $surat_n1['jenis_surat']; ?></th>
                                 <th scope="col"><?= $surat_n1['nama']; ?></th>
                                 <th scope="col"><?= $surat_n1['tgl_ajukan_surat']; ?></th>
-                                <th scope="col" value="<?= $surat_n1['status_surat']; ?>"><span class="badge badge-<?= ($surat_n1['status_surat'] == 'Diterima') ? 'success' : (($surat_n1['status_surat'] == 'Ditolak') ? 'danger' : 'warning') ?>">
+                                <th scope="col" value="<?= $surat_n1['status_surat']; ?>"><span class="badge badge-<?= ($surat_n1['status_surat'] == 'Diterima') ? 'success' : (($surat_n1['status_surat'] == 'Ditolak' || $surat_n1['status_surat'] == 'Dibatalkan') ? 'danger' : 'warning') ?>">
                                         <?= $surat_n1['status_surat']; ?> <i class="fas fa-exclamation-circle"></i> </span>
                                 </th>
                                 <?php
