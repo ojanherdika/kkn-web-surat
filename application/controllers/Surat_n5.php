@@ -80,7 +80,7 @@ public function add(){
         $rw_calon=$this->input->post('rw_calon');
         $kode_pos_calon=$this->input->post('kode_pos_calon');
         $nama_surat="Surat N5";
-        $status_surat="Pending";
+        $status_surat="Diajukan";
         $today=mdate('%Y-%m-%d', now());
         
 		$data = array(

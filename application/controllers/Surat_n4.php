@@ -51,7 +51,7 @@ public function add(){
         $kode_pos_calon=$this->input->post('kode_pos_calon');
         $jenis_kelamin_calon=$this->input->post('jenis_kelamin_calon');
         $nama_surat="Surat N4";
-        $status_surat="Pending";
+        $status_surat="Diajukan";
         $today=mdate('%Y-%m-%d', now());
         
 		$data = array(
