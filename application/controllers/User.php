@@ -20,6 +20,7 @@ class User extends CI_Controller
             'data_n1' => $this->db->get_where('surat_n1', ['no_nik' => $this->session->userdata('no_nik')])->result_array(),
             'data_n6' => $this->db->get_where('surat_n6', ['no_nik' => $this->session->userdata('no_nik')])->result_array(),
             'data_n4' => $this->db->get_where('surat_n4', ['no_nik' => $this->session->userdata('no_nik')])->result_array(),
+            'data_n5' => $this->db->get_where('surat_n5', ['no_nik' => $this->session->userdata('no_nik')])->result_array(),
         ];
 
         $this->load->view('layout/userHeader', $data);

@@ -443,7 +443,6 @@
                     <div class="container-fluid shadow p-3  mb-3 bg-white rounded">
                         <p class="text-left" style="font-size: 25px;">Form 1 Identitas Diri</p>
                         <hr>
-                        
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label>Nama</label>
