@@ -59,7 +59,7 @@
                                     </th>
                                 <?php elseif ($surat_n1['status_surat'] == 'Diterima') : ?>
                                     <th scope="col" id="acc_surat">
-                                        <a href="<?= base_url('/Cetak_n1/index/' . $surat_n1['id_surat_n1']); ?>" class="btn btn-success m-1" name="print" id="print"><u> Print </u> </th>
+                                        <a href="<?= base_url('/Cetak_n1/index/' . $surat_n1['id_surat_n1']); ?>" class="btn btn-success m-1 " name="print" id="print"><u> Print </u> </th>
                                 <?php else : ?>
                                     <th></th>
                                 <?php endif; ?>
