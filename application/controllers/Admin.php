@@ -22,7 +22,7 @@ class Admin extends CI_Controller
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
         $this->load->view('admin/index', $data);
-        $this->load->view('layout/adminFooter',);
+        $this->load->view('layout/adminFooter');
     }
 
     public function detail_pengajuan_surat()
@@ -36,7 +36,7 @@ class Admin extends CI_Controller
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
         $this->load->view('admin/detail_surat', $data);
-        $this->load->view('layout/adminFooter',);
+        $this->load->view('layout/adminFooter');
     }
 
     public function profile()
@@ -51,7 +51,7 @@ class Admin extends CI_Controller
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
         $this->load->view('admin/profilPage', $data);
-        $this->load->view('layout/adminFooter',);
+        $this->load->view('layout/adminFooter');
     }
 
     public function detail_warga()
@@ -65,7 +65,7 @@ class Admin extends CI_Controller
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
         $this->load->view('admin/detail_warga', $data);
-        $this->load->view('layout/adminFooter',);
+        $this->load->view('layout/adminFooter');
     }
     public function tambah_warga()
     {

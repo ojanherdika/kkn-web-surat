@@ -45,6 +45,26 @@ class Tambah_warga extends CI_Controller
         $this->M_surat_n1_n6->update_data($where, $data, 'surat_n1');
         redirect('admin');
     }
+    public function update_n6_terima($id_surat_n6){
+        $where = array(
+            'id_surat_n6' => $id_surat_n6
+        );
+        $data = array(
+            'status_surat' => "Diterima",
+        );
+        $this->M_surat_n1_n6->update_data($where, $data, 'surat_n6');
+        redirect('admin');
+    }
+    public function update_n6_tolak($id_surat_n6){
+        $where = array(
+            'id_surat_n6' => $id_surat_n6
+        );
+        $data = array(
+            'status_surat' => "Ditolak",
+        );
+        $this->M_surat_n1_n6->update_data($where, $data, 'surat_n6');
+        redirect('admin');
+    }
     public function update_n1_tolak($id_surat_n1)
     {
         $where = array(
