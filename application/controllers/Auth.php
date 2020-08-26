@@ -9,7 +9,6 @@ class Auth extends CI_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model("M_surat_n1_n6");
-        
     }
     public function index()
     {
@@ -30,7 +29,6 @@ class Auth extends CI_Controller
             //validasi sukses
             $this->_login();
         }
-        
     }
     public function adlog()
     {
@@ -83,7 +81,7 @@ class Auth extends CI_Controller
         $password = $this->input->post('password');
 
         $user = $this->db->get_where('user', ['no_nik' => $no_nik])->row_array();
-        
+
         //jika usernya ada
         if ($user) {
             if ($no_nik == $user['no_nik']) {
@@ -93,9 +91,9 @@ class Auth extends CI_Controller
                         'no_nik' => $user['no_nik'],
                         'nama' => $user['nama']
                     ];
+                    $_SESSION["login"] = true;
                     $this->session->set_userdata($data);
                     redirect('user');
-                    
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert
                     alert-danger" role="alert">Password anda salah</div>');

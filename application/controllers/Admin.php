@@ -8,6 +8,7 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         $this->load->model("M_surat_n1_n6");
+        $this->load->model('M_surat_n6');
     }
     public function index()
     {
@@ -15,7 +16,7 @@ class Admin extends CI_Controller
         $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
         $data['surat_n1'] = $this->M_surat_n1_n6->getAll()->result_array();
-
+        $data['surat_n6'] = $this->M_surat_n6->getN6()->result_array();
 
         $this->load->view('layout/adminHeader', $data);
         $this->load->view('layout/adminSidebar', $data);
@@ -44,7 +45,7 @@ class Admin extends CI_Controller
         $data['title'] = 'Data Warga';
         $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
-        $data['user'] = $this->db->query('SELECT * FROM user');
+        $data['user'] = $this->M_surat_n6->getUser()->result_array();
 
         $this->load->view('layout/adminHeader', $data);
         $this->load->view('layout/adminSidebar', $data);

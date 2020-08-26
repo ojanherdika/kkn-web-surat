@@ -153,7 +153,7 @@ class Surat_n5 extends CI_Controller
             'kode_pos_calon' => $kode_pos_calon,
             'jenis_surat' => $nama_surat,
             'tgl_ajukan_surat' => $today,
-            'status_surat' => "Diajukan"
+            'status_surat' => $status_surat
         );
         $this->M_surat_n1_n6->save($data, 'surat_n5');
         $this->session->set_flashdata('success', 'Berhasil disimpan');

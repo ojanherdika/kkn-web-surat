@@ -99,19 +99,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="col">1.</th>
-                            <th scope="col">3213213232</th>
-                            <th scope="col">9932132112</th>
-                            <th scope="col">Antonius Bagas Dwitomo</th>
-                            <th scope="col">Komplek Vijaya Kusuma blok K no 9</th>
-                            <th scope="col">
-                                <a style="-moz-tab-size: 2;" href="<?= base_url('admin/detail_warga') ?>"> <u> Detail </u> </a>
-                                &emsp;
-                                <a style="-moz-tab-size: 2; color: red"><u> Hapus </u></a> <!-- fungsi hapus belum masuk controller -->
-                            </th>
-                        </tr>
-
+                        <?php
+                        $i = 1;
+                        foreach ($user as $user) : ?>
+                            <tr>
+                                <th scope="col"><?php $i++ ?></th>
+                                <th scope="col"><?= $user['no_kk']; ?></th>
+                                <th scope="col"><?= $user['no_nik']; ?></th>
+                                <th scope="col"><?= $user['nama']; ?></th>
+                                <th scope="col"><?= $user['alamat']; ?></th>
+                                <th scope="col">
+                                    <a style="-moz-tab-size: 2;" href="<?= base_url('admin/detail_warga') ?>"> <u> Detail </u> </a>
+                                    &emsp;
+                                    <a style="-moz-tab-size: 2; color: red"><u> Hapus </u></a> <!-- fungsi hapus belum masuk controller -->
+                                </th>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
