@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Agu 2020 pada 19.10
+-- Waktu pembuatan: 25 Agu 2020 pada 20.48
 -- Versi server: 10.1.28-MariaDB
 -- Versi PHP: 7.3.12
 
@@ -114,11 +114,8 @@ CREATE TABLE `surat_n1` (
 --
 
 INSERT INTO `surat_n1` (`id_surat_n1`, `nama`, `no_nik`, `tempat_lahir`, `binti`, `agama`, `tanggal_lahir`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `rt`, `rw`, `kode_pos`, `alamat`, `status_nikah`, `nama_suami_istri`, `nama_ayah`, `binti_ayah`, `status_hidup_ayah`, `nik_ayah`, `agama_ayah`, `tempat_lahir_ayah`, `tanggal_lahir_ayah`, `pekerjaan_ayah`, `kewarganegaraan_ayah`, `alamat_ayah`, `provinsi_ayah`, `kab_kota_ayah`, `rt_ayah`, `rw_ayah`, `kode_pos_ayah`, `nama_ibu`, `binti_ibu`, `status_hidup_ibu`, `nik_ibu`, `agama_ibu`, `tempat_lahir_ibu`, `tanggal_lahir_ibu`, `pekerjaan_ibu`, `kewarganegaraan_ibu`, `alamat_ibu`, `provinsi_ibu`, `kab_kota_ibu`, `kecamatan_ibu`, `desa_ibu`, `desa_ayah`, `rt_ibu`, `rw_ibu`, `kode_pos_ibu`, `jenis_kelamin`, `jenis_surat`, `status_surat`, `tgl_ajukan_surat`) VALUES
-(16, 'Fauzan', '3204051109000001', '', '', 'Islam', '0000-00-00', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 'Cileunyi', '', 'Lajang', NULL, '', '', 'Masih Hidup', '', 'Islam', '', '0000-00-00', '', '', '', 'Jawa Barat', 'Kota Bandung', '', '', '', '', '', 'Masih Hidup', '', 'Islam', '', '0000-00-00', '', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', 'Cinunuk', '', '', '', 'Laki-Laki', 'Surat N1', 'Pending', '2020-08-23'),
-(17, '', '1234', '', '', 'Islam', '0000-00-00', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 'Cileunyi', '', 'Lajang', NULL, '', '', 'Masih Hidup', '', 'Islam', '', '0000-00-00', '', '', '', 'Jawa Barat', 'Kota Bandung', '', '', '', '', '', 'Masih Hidup', '', 'Islam', '', '0000-00-00', '', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', 'Cinunuk', '', '', '', 'Laki-Laki', 'Surat N1', 'Pending', '2020-08-23'),
-(18, '', '1234', '', '', 'Islam', '0000-00-00', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 'Cileunyi', '', 'Cerai Hidup', '', '', '', 'Masih Hidup', '', 'Islam', '', '0000-00-00', '', '', '', 'Jawa Barat', 'Kota Bandung', '', '', '', '', '', 'Masih Hidup', '', 'Islam', '', '0000-00-00', '', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', 'Cinunuk', '', '', '', 'Laki-Laki', 'Surat N1', 'Pending', '2020-08-23'),
-(19, 'ojankun', '1234', 'Bandung', 'Atu Bagus Asep', 'Islam', '2020-08-23', 'asd', 'asd', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '12', '12', 'Cileunyi', 'asd', 'Lajang', NULL, 'Atu Bagus', 'Uun', 'Masih Hidup', '12', 'Islam', 'Bandung', '0000-00-00', 'asd', 'Warga Negara Indonesia', 'asd', 'Jawa Barat', 'Kota Bandung', '12', '12', '12', 'Ai Herawati', 'Uun', 'Masih Hidup', '12', 'Islam', 'Bandung', '0000-00-00', 'Ibu Rumah Tangga', 'Warga Negara Indonesia', '12', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', 'Cinunuk', '12', '12', '12', 'Laki-Laki', 'Surat N1', 'Pending', '2020-08-23'),
-(20, '', '1234', '', '', 'Islam', '0000-00-00', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 'Cileunyi', '', 'Cerai Hidup', '', '', '', 'Masih Hidup', '', 'Islam', '', '0000-00-00', '', '', '', 'Jawa Barat', 'Kota Bandung', '', '', '', '', '', 'Masih Hidup', '', 'Islam', '', '0000-00-00', '', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', 'Cinunuk', '', '', '', 'Laki-Laki', 'Surat N1', 'Pending', '2020-08-23');
+(16, 'Fauzan', '3204051109000001', '', '', 'Islam', '0000-00-00', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 'Cileunyi', '', 'Lajang', NULL, '', '', 'Masih Hidup', '', 'Islam', '', '0000-00-00', '', '', '', 'Jawa Barat', 'Kota Bandung', '', '', '', '', '', 'Masih Hidup', '', 'Islam', '', '0000-00-00', '', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', 'Cinunuk', '', '', '', 'Laki-Laki', 'Surat N1', 'Diterima', '2020-08-23'),
+(28, 'Fauzan Herdika Tubagus Putra', '1234', 'Bandung', 'Atu Bagus Asep', 'Islam', '1999-10-16', 'Mahasiswa', 'Warga Negara Indonesia', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '12', '12', '12', 'Komplek Permata Biru blok AG no 68', 'Cerai Mati', 'Jubaedah', 'Atu Bagus', 'Uun', 'Masih Hidup', '12', 'Islam', 'Bandung', '2020-08-24', 'Pegawai BUMN', 'Warga Negara Indonesia', 'Komplek Permata Biru blok AG no 68', 'Jawa Barat', 'Kota Bandung', '12', '12', '12', 'Ai Herawati', 'Uun', 'Masih Hidup', '12', 'Islam', 'Bandung', '2020-08-24', 'Ibu Rumah Tangga', 'Warga Negara Indonesia', 'Komplek Permata Biru blok AG no 68', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', 'Cinunuk', '12', '12', '12', 'Laki-Laki', 'Surat N1', 'Diterima', '2020-08-24');
 
 -- --------------------------------------------------------
 
@@ -172,8 +169,92 @@ CREATE TABLE `surat_n4` (
 --
 
 INSERT INTO `surat_n4` (`id_surat_n4`, `nama`, `no_nik`, `tanggal_lahir`, `binti`, `agama`, `tempat_lahir`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `rt`, `rw`, `kode_pos`, `alamat`, `jenis_kelamin`, `nama_calon`, `nik_calon`, `jenis_kelamin_calon`, `tempat_lahir_calon`, `tanggal_lahir_calon`, `kewarganegaraan_calon`, `agama_calon`, `pekerjaan_calon`, `alamat_calon`, `provinsi_calon`, `kab_kota_calon`, `tgl_ajukan_surat`, `kecamatan_calon`, `desa_calon`, `rt_calon`, `rw_calon`, `kode_pos_calon`, `jenis_surat`, `status_surat`, `binti_calon`) VALUES
-(1, 'Fauzan Herdika Tubagus Putra', '1234', '2020-08-23', 'Atu Bagus Asep', 'Islam', 'Bandung', 'Mahasiswa', 'Warga Negara Indonesia', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '12', '12', 'Cileunyi', 'PB', 'Laki-Laki', NULL, '123123', 'Laki-Laki', 'Banding', '2020-08-23', NULL, 'Islam', 'asd', 'asdasd', 'Jawa Barat', 'Kota Bandung', '2020-08-23', 'Cileunyi', 'Cinunuk', '12', '12', '12', 'Surat N4', 'Pending', 'asd'),
-(2, 'ojan', '1234', '2020-08-23', 'Atu Bagus Asep', 'Islam', 'asd', 'asd', 'asd', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '12', '12', 'Cileunyi', 'asd', 'Laki-Laki', 'asd', 'asd', 'Laki-Laki', 'asd', '2020-08-23', 'asd', 'Islam', 'asd', 'asd', 'Jawa Barat', 'Kota Bandung', '2020-08-23', 'Cileunyi', 'Cinunuk', '12', '12', '12', 'Surat N4', 'Pending', 'asd');
+(1, 'Fauzan Herdika Tubagus Putra', '1234', '2020-08-23', 'Atu Bagus Asep', 'Islam', 'Bandung', 'Mahasiswa', 'Warga Negara Indonesia', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '12', '12', 'Cileunyi', 'PB', 'Laki-Laki', 'aweu', '123123', 'Laki-Laki', 'Banding', '2020-08-23', 'asdasd', 'Islam', 'asd', 'asdasd', 'Jawa Barat', 'Kota Bandung', '2020-08-23', 'Cileunyi', 'Cinunuk', '12', '12', '12', 'Surat N4', 'Diajukan', 'asd'),
+(2, 'ojan', '1234', '2020-08-23', 'Atu Bagus Asep', 'Islam', 'asd', 'asd', 'asd', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '12', '12', 'Cileunyi', 'asd', 'Laki-Laki', 'asd', 'asd', 'Laki-Laki', 'asd', '2020-08-23', 'asd', 'Islam', 'asd', 'asd', 'Jawa Barat', 'Kota Bandung', '2020-08-23', 'Cileunyi', 'Cinunuk', '12', '12', '12', 'Surat N4', 'Diajukan', 'asd');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `surat_n5`
+--
+
+CREATE TABLE `surat_n5` (
+  `id_surat_n5` int(50) NOT NULL,
+  `nama_ayah` varchar(50) DEFAULT NULL,
+  `binti_ayah` varchar(50) DEFAULT NULL,
+  `agama_ayah` varchar(50) DEFAULT NULL,
+  `tempat_lahir_ayah` varchar(50) DEFAULT NULL,
+  `tanggal_lahir_ayah` date DEFAULT NULL,
+  `pekerjaan_ayah` varchar(50) DEFAULT NULL,
+  `alamat_ayah` varchar(50) DEFAULT NULL,
+  `provinsi_ayah` varchar(50) DEFAULT NULL,
+  `kab_kota_ayah` varchar(50) DEFAULT NULL,
+  `rt_ayah` varchar(50) DEFAULT NULL,
+  `rw_ayah` varchar(50) DEFAULT NULL,
+  `kode_pos_ayah` varchar(50) DEFAULT NULL,
+  `kewarganegaraan_ayah` varchar(50) DEFAULT NULL,
+  `nama_ibu` varchar(50) DEFAULT NULL,
+  `binti_ibu` varchar(50) DEFAULT NULL,
+  `nik_ibu` varchar(50) DEFAULT NULL,
+  `agama_ibu` varchar(50) DEFAULT NULL,
+  `tempat_lahir_ibu` varchar(50) DEFAULT NULL,
+  `tanggal_lahir_ibu` date DEFAULT NULL,
+  `pekerjaan_ibu` varchar(50) DEFAULT NULL,
+  `kewarganegaraan_ibu` varchar(50) DEFAULT NULL,
+  `alamat_ibu` varchar(50) DEFAULT NULL,
+  `provinsi_ibu` varchar(50) DEFAULT NULL,
+  `kab_kota_ibu` varchar(50) DEFAULT NULL,
+  `kecamatan_ibu` varchar(50) DEFAULT NULL,
+  `desa_ibu` varchar(50) DEFAULT NULL,
+  `rt_ibu` varchar(50) DEFAULT NULL,
+  `rw_ibu` varchar(50) DEFAULT NULL,
+  `kode_pos_ibu` varchar(50) DEFAULT NULL,
+  `nama` varchar(50) DEFAULT NULL,
+  `no_nik` varchar(50) DEFAULT NULL,
+  `tempat_lahir` varchar(50) DEFAULT NULL,
+  `binti` varchar(50) DEFAULT NULL,
+  `agama` varchar(50) DEFAULT NULL,
+  `tanggal_lahir` date DEFAULT NULL,
+  `pekerjaan` varchar(50) DEFAULT NULL,
+  `kewarganegaraan` varchar(50) DEFAULT NULL,
+  `provinsi` varchar(50) DEFAULT NULL,
+  `kab_kota` varchar(50) DEFAULT NULL,
+  `kecamatan` varchar(50) DEFAULT NULL,
+  `desa` varchar(50) DEFAULT NULL,
+  `rt` varchar(50) DEFAULT NULL,
+  `rw` varchar(50) DEFAULT NULL,
+  `kode_pos` varchar(50) DEFAULT NULL,
+  `alamat` varchar(50) DEFAULT NULL,
+  `nama_calon` varchar(50) DEFAULT NULL,
+  `binti_calon` varchar(50) DEFAULT NULL,
+  `nik_calon` varchar(50) DEFAULT NULL,
+  `tempat_lahir_calon` varchar(50) DEFAULT NULL,
+  `tanggal_lahir_calon` date DEFAULT NULL,
+  `kewarganegaraan_calon` varchar(50) DEFAULT NULL,
+  `agama_calon` varchar(50) DEFAULT NULL,
+  `pekerjaan_calon` varchar(50) DEFAULT NULL,
+  `alamat_calon` varchar(50) DEFAULT NULL,
+  `provinsi_calon` varchar(50) DEFAULT NULL,
+  `kab_kota_calon` varchar(50) DEFAULT NULL,
+  `kecamatan_calon` varchar(50) DEFAULT NULL,
+  `desa_calon` varchar(50) DEFAULT NULL,
+  `rt_calon` varchar(50) DEFAULT NULL,
+  `rw_calon` varchar(50) DEFAULT NULL,
+  `kode_pos_calon` varchar(50) DEFAULT NULL,
+  `jenis_surat` varchar(50) DEFAULT NULL,
+  `tgl_ajukan_surat` date DEFAULT NULL,
+  `status_surat` varchar(50) DEFAULT NULL,
+  `kecamatan_ayah` varchar(50) DEFAULT NULL,
+  `desa_ayah` varchar(50) DEFAULT NULL,
+  `nik_ayah` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `surat_n5`
+--
+
+INSERT INTO `surat_n5` (`id_surat_n5`, `nama_ayah`, `binti_ayah`, `agama_ayah`, `tempat_lahir_ayah`, `tanggal_lahir_ayah`, `pekerjaan_ayah`, `alamat_ayah`, `provinsi_ayah`, `kab_kota_ayah`, `rt_ayah`, `rw_ayah`, `kode_pos_ayah`, `kewarganegaraan_ayah`, `nama_ibu`, `binti_ibu`, `nik_ibu`, `agama_ibu`, `tempat_lahir_ibu`, `tanggal_lahir_ibu`, `pekerjaan_ibu`, `kewarganegaraan_ibu`, `alamat_ibu`, `provinsi_ibu`, `kab_kota_ibu`, `kecamatan_ibu`, `desa_ibu`, `rt_ibu`, `rw_ibu`, `kode_pos_ibu`, `nama`, `no_nik`, `tempat_lahir`, `binti`, `agama`, `tanggal_lahir`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `rt`, `rw`, `kode_pos`, `alamat`, `nama_calon`, `binti_calon`, `nik_calon`, `tempat_lahir_calon`, `tanggal_lahir_calon`, `kewarganegaraan_calon`, `agama_calon`, `pekerjaan_calon`, `alamat_calon`, `provinsi_calon`, `kab_kota_calon`, `kecamatan_calon`, `desa_calon`, `rt_calon`, `rw_calon`, `kode_pos_calon`, `jenis_surat`, `tgl_ajukan_surat`, `status_surat`, `kecamatan_ayah`, `desa_ayah`, `nik_ayah`) VALUES
+(5, 'Atu Bagus', 'Uun', 'Islam', 'Bandung', '2020-08-24', 'Pegawai BUMN', 'asdasdadsasd', 'Jawa Barat', 'Kota Bandung', '123123', '123123', '1233123', 'asdasd', 'Ai Herawati', 'Uun', '123123', 'Islam', 'Bandung', '2020-08-23', 'Ibu Rumah Tangga', 'Warga Negara Indonesia', 'asdasfasd', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '123123', '12312', '123123', 'Fauzan Herdika Tubagus Putra', '1234', 'Bandung', 'Atu Bagus Asep', 'Islam', '2020-08-25', 'Mahasiswa', 'Warga Negara Indonesia', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '123124', '123123', '123124', 'asdasd', 'asd', 'asd', '123123123', 'Bandung', '2020-08-22', 'asd', 'Islam', 'aslkdjaskld', 'asdads', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '12312', '12312', '123123', 'Surat N5', '2020-08-25', 'Diajukan', 'Cileunyi', 'Cinunuk', '1231231241');
 
 -- --------------------------------------------------------
 
@@ -221,15 +302,16 @@ CREATE TABLE `surat_n6` (
   `tempat_meninggal` varchar(50) DEFAULT NULL,
   `jenis_surat` varchar(50) DEFAULT NULL,
   `tgl_ajukan_surat` varchar(50) DEFAULT NULL,
-  `status_surat` varchar(50) DEFAULT NULL
+  `status_surat` varchar(50) DEFAULT NULL,
+  `nama_suami_istri` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `surat_n6`
 --
 
-INSERT INTO `surat_n6` (`id_surat_n6`, `nama`, `no_nik`, `tempat_lahir`, `binti`, `agama`, `tanggal_lahir`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `rt`, `rw`, `kode_pos`, `alamat`, `status_nikah`, `jenis_kelamin`, `nama_mati`, `binti_mati`, `nik_mati`, `tempat_lahir_mati`, `tanggal_lahir_mati`, `kewarganegaraan_mati`, `agama_mati`, `pekerjaan_mati`, `alamat_mati`, `provinsi_mati`, `kab_kota_mati`, `kecamatan_mati`, `desa_mati`, `rt_mati`, `rw_mati`, `kode_pos_mati`, `tgl_meninggal`, `tempat_meninggal`, `jenis_surat`, `tgl_ajukan_surat`, `status_surat`) VALUES
-(1, '', '1234', '', '', 'Islam', '0000-00-00', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 'Cileunyi', '', 'Cerai Mati', 'Laki-Laki', 'saha we atuhlah', '', '', '', '0000-00-00', '', 'Islam', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', '', '0000-00-00', 'Rumah', 'Surat N6', '2020-08-23', 'Pending');
+INSERT INTO `surat_n6` (`id_surat_n6`, `nama`, `no_nik`, `tempat_lahir`, `binti`, `agama`, `tanggal_lahir`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `rt`, `rw`, `kode_pos`, `alamat`, `status_nikah`, `jenis_kelamin`, `nama_mati`, `binti_mati`, `nik_mati`, `tempat_lahir_mati`, `tanggal_lahir_mati`, `kewarganegaraan_mati`, `agama_mati`, `pekerjaan_mati`, `alamat_mati`, `provinsi_mati`, `kab_kota_mati`, `kecamatan_mati`, `desa_mati`, `rt_mati`, `rw_mati`, `kode_pos_mati`, `tgl_meninggal`, `tempat_meninggal`, `jenis_surat`, `tgl_ajukan_surat`, `status_surat`, `nama_suami_istri`) VALUES
+(3, 'Fauzan Herdika Tubagus Putra', '1234', 'Bandung', 'Atu Bagus Asep', 'Islam', '1999-10-16', 'Mahasiswa', 'Warga Negara Indonesia', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '12', '12', '12', ' Komplek Permata Biru blok AG no 68', NULL, NULL, 'saha we atuhlah', 'sahawelah', '12', 'Bandung', '2020-08-24', 'Warga Negara Indonesia', 'Islam', 'Mahasiswa', 'Surga', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '12', '12', '12', '2020-08-24', 'Rumah', 'Surat N6', '2020-08-24', 'Pending', NULL);
 
 -- --------------------------------------------------------
 
@@ -241,22 +323,36 @@ CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `no_kk` bigint(20) NOT NULL,
   `no_nik` bigint(16) NOT NULL,
-  `nama` varchar(255) DEFAULT NULL,
+  `nama` varchar(128) NOT NULL,
   `password` varchar(256) NOT NULL,
-  `image` varchar(128) NOT NULL,
-  `role_id` int(11) NOT NULL,
-  `is_active` int(1) NOT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL
+  `agama` varchar(20) NOT NULL,
+  `tempat_lahir` varchar(20) NOT NULL,
+  `tanggal_lahir` varchar(40) NOT NULL,
+  `jenis_kelamin` varchar(15) NOT NULL,
+  `pekerjaan` varchar(50) NOT NULL,
+  `kewarganegaraan` varchar(30) NOT NULL,
+  `provinsi` varchar(40) NOT NULL,
+  `kab_kota` varchar(50) NOT NULL,
+  `kecamatan` varchar(50) NOT NULL,
+  `desa` varchar(50) NOT NULL,
+  `RT` varchar(7) NOT NULL,
+  `RW` varchar(7) NOT NULL,
+  `kode_pos` int(10) NOT NULL,
+  `alamat` varchar(128) NOT NULL,
+  `status_nikah` varchar(25) NOT NULL,
+  `status_keluarga` varchar(25) NOT NULL,
+  `nama_ayah` varchar(50) NOT NULL,
+  `nama_ibu` varchar(50) NOT NULL,
+  `image` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `user`
 --
 
-INSERT INTO `user` (`id`, `no_kk`, `no_nik`, `nama`, `password`, `image`, `role_id`, `is_active`, `created_at`, `updated_at`) VALUES
-(1, 3204052504054481, 3204051109000001, 'Fauzan', 'Changeme1', 'default.jpg', 2, 1, '2020-08-05 19:47:42', NULL),
-(2, 1234, 1234, 'ojan', 'Changeme1', 'default.jpg', 1, 1, NULL, NULL);
+INSERT INTO `user` (`id`, `no_kk`, `no_nik`, `nama`, `password`, `agama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `RT`, `RW`, `kode_pos`, `alamat`, `status_nikah`, `status_keluarga`, `nama_ayah`, `nama_ibu`, `image`) VALUES
+(1, 3204052504054481, 3204051109000001, 'Fauzan', 'Changeme1', 'Islam', '', '', 'Laki-Laki', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 0, '', 'lajang', 'kepala_keluarga', '', '', 'default.jpg'),
+(2, 1234, 1234, 'Fauzan Herdika Tubagus Putra', 'Gilardino29', 'Islam', '', '', 'Laki-Laki', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 0, '', 'lajang', 'kepala_keluarga', '', '', 'default.jpg');
 
 -- --------------------------------------------------------
 
@@ -87530,6 +87626,12 @@ ALTER TABLE `surat_n4`
   ADD PRIMARY KEY (`id_surat_n4`);
 
 --
+-- Indeks untuk tabel `surat_n5`
+--
+ALTER TABLE `surat_n5`
+  ADD PRIMARY KEY (`id_surat_n5`);
+
+--
 -- Indeks untuk tabel `surat_n6`
 --
 ALTER TABLE `surat_n6`
@@ -87581,7 +87683,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT untuk tabel `surat_n1`
 --
 ALTER TABLE `surat_n1`
-  MODIFY `id_surat_n1` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_surat_n1` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT untuk tabel `surat_n4`
@@ -87590,16 +87692,22 @@ ALTER TABLE `surat_n4`
   MODIFY `id_surat_n4` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT untuk tabel `surat_n5`
+--
+ALTER TABLE `surat_n5`
+  MODIFY `id_surat_n5` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT untuk tabel `surat_n6`
 --
 ALTER TABLE `surat_n6`
-  MODIFY `id_surat_n6` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_surat_n6` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

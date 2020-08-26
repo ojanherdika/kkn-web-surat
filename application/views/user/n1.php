@@ -985,7 +985,11 @@
                                 <label>Status Pernikahan</label>
                                 <input id="sp" name="status_nikah" class="form-control" value="Cerai Mati" readonly>
                                 </input>
-                            </div>                    
+                            </div>   
+                            <div class="form-group";">
+                                <label>Nama Suami/Istri Terdahulu</label>
+                                <input type="text" name="nama_suami_istri" class="form-control" placeholder="Masukan Nama Istri/Suami terdahulu">
+                            </div>                 
                     </div>
                     <!-- end of isian form 2 -->
                     <!-- Isian Form 3-->

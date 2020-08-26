@@ -154,6 +154,7 @@ public function add(){
         $rw = $this->input->post('rw');
         $kode_pos = $this->input->post('kode_pos');
         $alamat = $this->input->post('alamat');
+        $nama_suami_istri=$this->input->post('nama_suami_istri');
         $nama_mati=$this->input->post('nama_mati');
         $binti_mati=$this->input->post('binti_mati');
         $nik_mati=$this->input->post('nik_mati');
