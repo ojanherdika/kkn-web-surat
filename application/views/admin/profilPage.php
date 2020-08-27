@@ -110,23 +110,15 @@
                         $i = 1;
                         foreach ($user as $user) : ?>
                             <tr>
-<<<<<<< Updated upstream
-                                <th scope="col"><?= $i++ ?></th>
-=======
                                 <th scope="col"><?= $i++; ?></th>
->>>>>>> Stashed changes
                                 <th scope="col"><?= $user['no_kk']; ?></th>
                                 <th scope="col"><?= $user['no_nik']; ?></th>
                                 <th scope="col"><?= $user['nama']; ?></th>
 								<th scope="col"><?= $user['RT']; ?></th>
                                 <th scope="col"><?= $user['RW']; ?></th>
                                 <th scope="col">
-<<<<<<< Updated upstream
-                                    <a style="-moz-tab-size: 2;" href="<?= base_url('admin/detail_warga') ?>" class = "btn btn-success m-1 "> Detail</a>
-=======
                                     <a style="-moz-tab-size: 2;" href="<?php echo base_url('admin/detail_warga' .$user->id); ?>"> <u> Detail </u> </a>
                                     
->>>>>>> Stashed changes
                                     &emsp;
                                     <a style="-moz-tab-size: 2;" class = "btn btn-danger m-1 "> Hapus </a> <!-- fungsi hapus belum masuk controller -->
                                 </th>
