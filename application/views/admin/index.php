@@ -1,5 +1,14 @@
-<!-- Begin Page Content -->
-<div class="container-fluid">
+<html>
+	<head>
+		<meta charset="urf-8">
+		<link rel = "stylesheet" href= "https://stackpath.bootsrapcdn.com/bootsrap/4.5.2/css/bootsrap.min.css">
+		<link rel = "stylesheet" href= "https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+		
+	</head>
+	
+	<body>
+		
+	<div class="container-fluid">
     <!-- Page Heading -->
     <!-- Search form -->
 
@@ -9,23 +18,8 @@
 
         <div class="card-body">
             <h1 class="h3 mb-4 text-gray-800">SURAT N1</h1>
-            <div class="row">
-                <div class="col-md-7">
-                    <div> &nbsp; </div>
-                </div>
-                &emsp;&emsp;&emsp;&emsp;&emsp;
-                <div class="col-md-0.2">
-                    <p> Cari : </p>
-                </div>
-
-                <div class="col-md-3">
-                    <input class="form-control" type="text" aria-label="Search">
-                </div>
-            </div>
-
-            <br>
             <div class="table-responsive">
-                <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-striped table bordered mydatatable" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
 
@@ -60,7 +54,7 @@
                                     </th>
                                 <?php elseif ($surat_n1['status_surat'] == 'Diterima') : ?>
                                     <th scope="col" id="acc_surat">
-                                        <a target="_blank"  href="<?= base_url('/Cetak_n1/index/' . $surat_n1['id_surat_n1']); ?>" class="btn btn-success m-1 " name="print" id="print"><u> Print </u> </th>
+                                        <a target="_blank"  href="<?= base_url('/Cetak_n1/index/' . $surat_n1['id_surat_n1']); ?>" class="btn btn-success m-1 " name="print" id="print"> Print <i class="fas fa-print"></i>  </th>
                                 <?php else : ?>
                                     <th></th>
                                 <?php endif; ?>
@@ -80,16 +74,7 @@
         <div class="card-body">
             <h1 class="h3 mb-4 text-gray-800">SURAT N6</h1>
 
-            <div class="row">
-
-                <div class="col-md-7">
-                    <div> &nbsp; </div>
-                </div>
-                &emsp;&emsp;&emsp;&emsp;&emsp;
-                <div class="col-md-0.2">
-                    <p> Cari : </p>
-                </div>
-                <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+                <table class="table	table-striped table bordered mydatatable" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
 
@@ -119,12 +104,12 @@
                                 <?php
                                 if ($surat_n6['status_surat'] == 'Pending') : ?>
                                     <th scope="col" id="acc_surat">
-                                        <a href="<?= base_url('Tambah_warga/update_n6_terima/' . $surat_n6['id_surat_n6']) ?>" class="btn btn-success m-1" name="status_surat" id="status_surat"><u> Terima </u>
-                                            <a href="<?= base_url('Tambah_warga/update_n6_tolak/' . $surat_n6['id_surat_n6']) ?>" class=" btn btn-danger m-1" name="status_surat" id="status_surat"> <u> Tolak </u>
+                                        <a href="<?= base_url('Tambah_warga/update_n6_terima/' . $surat_n6['id_surat_n6']) ?>" class="btn btn-success m-1" name="status_surat" id="status_surat"> Terima </a>
+                                            <a href="<?= base_url('Tambah_warga/update_n6_tolak/' . $surat_n6['id_surat_n6']) ?>" class=" btn btn-danger m-1" name="status_surat" id="status_surat"> Tolak </a>
                                     </th>
                                 <?php elseif ($surat_n6['status_surat'] == 'Diterima') : ?>
                                     <th scope="col" id="acc_surat">
-                                        <a target="_blank"  href="<?= base_url('/Cetak_n6/index/' . $surat_n6['id_surat_n6']); ?>" class="btn btn-success m-1 " name="print" id="print"><u> Print </u> </th>
+                                        <a target="_blank"  href="<?= base_url('/Cetak_n6/index/' . $surat_n6['id_surat_n6']); ?>" class="btn btn-success m-1 " name="print" id="print"> Print <i class="fas fa-print"></i>  </th>
                                 <?php else : ?>
                                     <th></th>
                                 <?php endif; ?>
@@ -133,19 +118,6 @@
 
                     </tbody>
                 </table>
-                <div class="col-md-3">
-                    <input class="form-control" type="text" aria-label="Search">
-                </div>
-            </div>
-
-            <br>
-            <div class="card mb-3">
-
-                <div class="card-body">
-                    <div class="table-responsive">
-
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -157,3 +129,18 @@
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
+		
+    <script src = "https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src = "https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+	<script src = "https://stachpath.bootsrapcdn.com/bootsrap/4.5.2/js/bootsrap.min.js"></script>
+	<script src = "https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+	<script>
+		$('.mydatatable').DataTable();
+	</script>
+    
+    
+
+	</body>
+</html>
+

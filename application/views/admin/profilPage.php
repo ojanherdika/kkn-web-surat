@@ -1,3 +1,14 @@
+<html>
+	<head>
+		<meta charset="urf-8">
+		<link rel = "stylesheet" href= "https://stackpath.bootsrapcdn.com/bootsrap/4.5.2/css/bootsrap.min.css">
+		<link rel = "stylesheet" href= "https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+		
+	</head>
+	
+	<body>
+
+
 <!--Begin Page Content -->
 <div class="container-fluid">
     <!-- Page Heading -->
@@ -15,7 +26,6 @@
 
         <div class="col-md-2">
             <select class="custom-select">
-                <option value="0">Seluruh RW</option>
                 <option value="1">RW 01</option>
                 <option value="2">RW 02</option>
                 <option value="3">RW 03</option>
@@ -45,7 +55,11 @@
                 <option value="27">RW 27</option>
                 <option value="28">RW 28</option>
                 <option value="29">RW 29</option>
-                <option value="30">Seluruh RT</option>
+            </select>
+        </div>
+		
+		  <div class="col-md-2">
+            <select class="custom-select">
                 <option value="31">RT 01</option>
                 <option value="32">RT 02</option>
                 <option value="33">RT 03</option>
@@ -67,14 +81,6 @@
             <button type="button" class="btn btn-primary"> Tampil </button>
         </div>
 
-        <div class="col-md-1"></div>
-        <div class="col-md-0.2">
-            <p> Cari : </p>
-        </div>
-        <div class="col-md-3">
-            <input class="form-control" type="text" aria-label="Search">
-        </div>
-
     </div>
 
 
@@ -85,7 +91,7 @@
     <div class="card mb-3">
         <div class="card-body">
             <div class="table-responsive" style="overflow-x: hidden;">
-                <table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
+                <table class="table  table-striped table bordered mydatatable" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
 
@@ -93,7 +99,8 @@
                             <th scope="col">No.KK</th>
                             <th scope="col">NIK</th>
                             <th scope="col">Nama</th>
-                            <th scope="col">Alamat</th>
+							<th scope="col">RT</th>
+							<th scope="col">RW</th>
                             <th scope="col">Aksi</th>
 
                         </tr>
@@ -103,15 +110,25 @@
                         $i = 1;
                         foreach ($user as $user) : ?>
                             <tr>
-                                <th scope="col"><?php $i++ ?></th>
+<<<<<<< Updated upstream
+                                <th scope="col"><?= $i++ ?></th>
+=======
+                                <th scope="col"><?= $i++; ?></th>
+>>>>>>> Stashed changes
                                 <th scope="col"><?= $user['no_kk']; ?></th>
                                 <th scope="col"><?= $user['no_nik']; ?></th>
                                 <th scope="col"><?= $user['nama']; ?></th>
-                                <th scope="col"><?= $user['alamat']; ?></th>
+								<th scope="col"><?= $user['RT']; ?></th>
+                                <th scope="col"><?= $user['RW']; ?></th>
                                 <th scope="col">
-                                    <a style="-moz-tab-size: 2;" href="<?= base_url('admin/detail_warga') ?>"> <u> Detail </u> </a>
+<<<<<<< Updated upstream
+                                    <a style="-moz-tab-size: 2;" href="<?= base_url('admin/detail_warga') ?>" class = "btn btn-success m-1 "> Detail</a>
+=======
+                                    <a style="-moz-tab-size: 2;" href="<?php echo base_url('admin/detail_warga' .$user->id); ?>"> <u> Detail </u> </a>
+                                    
+>>>>>>> Stashed changes
                                     &emsp;
-                                    <a style="-moz-tab-size: 2; color: red"><u> Hapus </u></a> <!-- fungsi hapus belum masuk controller -->
+                                    <a style="-moz-tab-size: 2;" class = "btn btn-danger m-1 "> Hapus </a> <!-- fungsi hapus belum masuk controller -->
                                 </th>
                             </tr>
                         <?php endforeach; ?>
@@ -127,3 +144,17 @@
 <!-- /.container-fluid -->
 
 </div>
+
+    <script src = "https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src = "https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+	<script src = "https://stachpath.bootsrapcdn.com/bootsrap/4.5.2/js/bootsrap.min.js"></script>
+	<script src = "https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+	<script>
+		$('.mydatatable').DataTable();
+	</script>
+    
+    
+
+	</body>
+</html>

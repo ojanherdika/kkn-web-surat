@@ -67,6 +67,22 @@ class Admin extends CI_Controller
         $this->load->view('admin/detail_warga', $data);
         $this->load->view('layout/adminFooter');
     }
+
+    public function edit_detail_warga($id)
+    {
+        $where = array('id' => $id);
+        //$data['user'] = $this->mo_barang->edit_barang($where, 'tb_barang')->result();
+        $data['title'] = 'Edit Detail Warga';
+        $data['admin'] = $this->db->get_where('admin', ['username' =>
+        $this->session->userdata('username')])->row_array();
+
+        $this->load->view('layout/adminHeader', $data);
+        $this->load->view('layout/adminSidebar', $data);
+        $this->load->view('layout/adminTopbar', $data);
+        $this->load->view('admin/edit_detail_warga', $data);
+        $this->load->view('layout/adminFooter');
+    }
+
     public function tambah_warga()
     {
         $data['title'] = 'Tambah Warga';
@@ -80,13 +96,23 @@ class Admin extends CI_Controller
         $this->load->view('layout/adminFooter');
     }
 
-    public function edit()
+    public function data_admin()
     {
-        $data['title'] = 'Data Warga';
+        $data['title'] = 'Data Admin';
         $this->load->view('layout/adminHeader', $data);
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
-        $this->load->view('admin/edit', $data);
+        $this->load->view('admin/data_admin', $data);
+        $this->load->view('layout/adminFooter');
+    }
+
+    public function detail_admin()
+    {
+        $data['title'] = 'Detail Data Admin';
+        $this->load->view('layout/adminHeader', $data);
+        $this->load->view('layout/adminSidebar', $data);
+        $this->load->view('layout/adminTopbar', $data);
+        $this->load->view('admin/detail_admin', $data);
         $this->load->view('layout/adminFooter');
     }
 

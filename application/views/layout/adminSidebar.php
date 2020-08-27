@@ -34,7 +34,7 @@
 
 	<!-- Nav Item - Profile -->
 	<li class="nav-item">
-		<a class="nav-link" href="<?= base_url('admin/edit'); ?>">
+		<a class="nav-link" href="<?= base_url('admin/data_admin'); ?>">
 			<i class="fas fa-fw fa-user" style="color: #000000"></i>
 			<span style="color: #000000">Data Admin</span></a>
 	</li>

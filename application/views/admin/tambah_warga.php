@@ -40,23 +40,162 @@
                             </div>
                         </div>
 
+                        <div class="row">
+                            <div class="col-md-6">
+                                    <label for="....">Jenis Kelamin</label>
+                                    <select class="custom-select" id="jenis_kelamin" name="jenis_kelamin">
+                                        <option value="0">Pilih Jenis Kelamin</option>
+                                        <option value="Laki-Laki">Laki-Laki</option>
+                                        <option value="Perempuan">Perempuan</option>
+                                    </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                    <label for="....">Agama</label>
+                                    <select class="custom-select" id="agama" name="agama">
+                                        <option value="0">Pilih Agama</option>
+                                        <option value="Islam">Islam</option>
+                                        <option value="Kristen">Kristen</option>
+                                        <option value="Katholik">Katholik</option>
+                                        <option value="Hindu">Hindu</option>
+                                        <option value="Budha">Budha</option>
+                                        <option value="Kepercayaan Pribadi">Kepercayaan Pribadi</option>
+                                    </select>
+                            </div>
+                            <div class="invalid-feedback">
+
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="....">Tempat Lahir</label>
+                                    <input class="form-control type="text"
+                                        id="tempat_lahir" name="tempat_lahir" />
+                                    <div class="invalid-feedback">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="....">Tanggal Lahir</label>
+                                    <input class="form-control type="date"
+                                        name="tanggal_lahir" id="tanggal_lahir" />
+                                    <div class="invalid-feedback">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="form-group">
+                                    <label for=".....">Pendidikan</label>
+                                    <select class="custom-select" id="pendidikan" name="pendidikan">
+                                        <option value="0">Pilih Pendidikan</option>
+                                        <option value="Belum Sekolah">Belum Sekolah</option>
+                                        <option value="Belum Tamat SD Sederajat">Belum Tamat SD Sederajat</option>
+                                        <option value="SD Sederajat">SD Sederajat</option>
+                                        <option value="SLTP Sederajat">SLTP Sederajat</option>
+                                        <option value="SLTA Sederajat">SLTA Sederajat</option>
+                                        <option value="Diploma IV / Strata I">Diploma IV / Strata I</option>
+                                        <option value="Akademi / Diploma III">Akademi / Diploma III</option>
+                                        <option value="Diploma I / II">Diploma I / II</option>
+                                        <option value="Strata II">Strata II</option>
+                                        <option value="Strata III">Strata III</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        
+                                    </div>
+                            </div>
+                           
+
+                            <div class="form-group">
+                                <label for=".....">Pekerjaan</label>
+                                <input class="form-control type="text"
+                                    name="pekerjaan" id="pekerjaan" />
+                                <div class="invalid-feedback">
+                                </div>
+                            </div>
+                         
+                        <div class="form-group">
+                            <label for=".....">Kewarganegaraan</label>
+                             <select class="custom-select" id="kewarganegaraan" name="kewarganegaraan">
+                                <option value="0">Pilih Kewarganegaraan</option>
+                                <option value="WNI">Warga Negara Indonesia (WNI)</option>
+                                <option value="WNA">Warga Negara Asing (WNA)</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                
+                            </div>
+                        </div>
 
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
+                                    <label for="....">Provinsi</label>
+                                    <input class="form-control type="text"
+                                        name="provinsi" id="provinsi" />
+                                    <div class="invalid-feedback">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="....">Kabupaten/Kota</label>
+                                    <input class="form-control type="text"
+                                        name="kab_kota" id="kab_kota" />
+                                    <div class="invalid-feedback">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="....">Kecamatan</label>
+                                    <input class="form-control type="text"
+                                        name="kecamatan" id="kecamatan" />
+                                    <div class="invalid-feedback">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="....">Desa</label>
+                                    <input class="form-control type="text"
+                                        name="desa" id="desa" />
+                                    <div class="invalid-feedback">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
                                     <label>RT</label>
                                     <br>
-                                    <select class="custom-select" name="rt" id="rt">
+                                    <select class="custom-select" name="RT" id="RT">
                                         <option value="0">Pilih RT</option>
-                                        <option value="001">RT 001</option>
-                                        <option value="002">RT 002</option>
-                                        <option value="003">RT 003</option>
-                                        <option value="004">RT 004</option>
-                                        <option value="005">RT 005</option>
-                                        <option value="006">RT 006</option>
-                                        <option value="007">RT 007</option>
-                                        <option value="008">RT 008</option>
-                                        <option value="009">RT 009</option>
+                                        <option value="1">RT 001</option>
+                                        <option value="2">RT 002</option>
+                                        <option value="3">RT 003</option>
+                                        <option value="4">RT 004</option>
+                                        <option value="5">RT 005</option>
+                                        <option value="6">RT 006</option>
+                                        <option value="7">RT 007</option>
+                                        <option value="8">RT 008</option>
+                                        <option value="9">RT 009</option>
                                         <option value="10">RT 10</option>
                                         <option value="11">RT 11</option>
                                         <option value="12">RT 12</option>
@@ -65,11 +204,11 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <label for=".....">RW</label>
                                     <br>
-                                    <select class="custom-select" name="rw" id="rw">
+                                    <select class="custom-select" name="RW" id="RW">
                                         <option value="0">Pilih RW</option>
                                         <option value="01">RW 01</option>
                                         <option value="02">RW 02</option>
@@ -103,6 +242,16 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="....">Kode Pos</label>
+                                    <input class="form-control type="text"
+                                        name="kode_pos" id="kode_pos" />
+                                    <div class="invalid-feedback">
+                                        
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -110,6 +259,64 @@
                             <textarea class="form-control" type="text" name="alamat" id="alamat" min="0" style="height : 100px"></textarea>
                             <div class="invalid-feedback">
 
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for=".....">Kepala Keluarga</label>
+                            <input class="form-control type="text"
+                                name="kepala_keluarga" id="kepala_keluarga" />
+                            <div class="invalid-feedback">
+                               
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for=".....">Status Pernikahan</label>
+                            <select class="custom-select" id="status_nikah" name="status_nikah">
+                                <option value="0">Pilih Status</option>
+                                <option value="Belum Kawin">Belum Kawin</option>
+                                <option value="Cerai Hidup">Cerai Hidup</option>
+                                <option value="Cerai Mati">Cerai Mati</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for=".....">Status Hubungan dalam Keluarga</label>
+                            <select class="custom-select" id="status_keluarga" name="status_keluarga">
+                                <option value="0">Pilih Status</option>
+                                <option value="Kepala Keluarga">Kepala Keluarga</option>
+                                <option value="Istri">Istri</option>
+                                <option value="Anak">Anak</option>
+                                <option value="Cucu">Cucu</option>
+                                <option value="Orang Tua">Orang Tua</option>
+                                <option value="Mertua">Mertua</option>
+                                <option value="Family Lain">Family Lain</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="....">Nama Ayah</label>
+                                    <input class="form-control type="text"
+                                        name="nama_ayah" id="nama_ayah" />
+                                    <div class="invalid-feedback">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="....">Nama Ibu</label>
+                                    <input class="form-control type="text"
+                                        name="nama_ibu" id="nama_ibu" />
+                                    <div class="invalid-feedback">
+                                    
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
