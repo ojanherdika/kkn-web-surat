@@ -9,6 +9,7 @@ class Admin extends CI_Controller
         parent::__construct();
         $this->load->model("M_surat_n1_n6");
         $this->load->model('M_surat_n6');
+        $this->load->model('Usermodel');
     }
     public function index()
     {
@@ -54,12 +55,13 @@ class Admin extends CI_Controller
         $this->load->view('layout/adminFooter');
     }
 
-    public function detail_warga()
+    public function detail_warga($id)
     {
         $data['title'] = 'Detail Warga';
         $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
-
+        $where = array('id' => $id);
+        $data['user'] = $this->Usermodel->get_data($where,'user')->result();
 
         $this->load->view('layout/adminHeader', $data);
         $this->load->view('layout/adminSidebar', $data);
@@ -71,7 +73,7 @@ class Admin extends CI_Controller
     public function edit_detail_warga($id)
     {
         $where = array('id' => $id);
-        //$data['user'] = $this->mo_barang->edit_barang($where, 'tb_barang')->result();
+        $data['user'] = $this->Usermodel->get_data_($where,'user')->result();
         $data['title'] = 'Edit Detail Warga';
         $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
@@ -138,5 +140,12 @@ class Admin extends CI_Controller
         $this->load->view('layout/adminTopbar', $data);
         $this->load->view('admin/detail_menu', $data);
         $this->load->view('layout/adminFooter');
+    }
+
+    public function hapus_warga($id)
+    {
+        $where = array('id' => $id);
+        $this->Usermodel->hapus_warga($where, 'user');
+        redirect('admin/profile');
     }
 }

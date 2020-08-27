@@ -45,7 +45,7 @@
 						<th scope="col">Dadan Nazril</th>
 						<th scope="col">Komplek Permata Biru blok V no 119 RT 04 RW 14</th>
 						<th scope="col">
-							<a href="<?= base_url('admin/detail_admin')?>"> <u> Detail </u> </a>
+							<a class = "btn btn-info m-1 " href="<?= base_url('admin/detail_admin')?>"> Detail </a>
 						</th>
 
 					</tbody>
