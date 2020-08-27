@@ -93,6 +93,8 @@ class Admin extends CI_Controller
     public function menu()
     {
         $data['title'] = 'Data Rekap';
+        $data['surat_n1'] = $this->M_surat_n1_n6->getAll()->result_array();
+        $data['surat_n6'] = $this->M_surat_n6->getN6()->result_array();
         $this->load->view('layout/adminHeader', $data);
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);

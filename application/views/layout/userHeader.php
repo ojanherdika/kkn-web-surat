@@ -1,3 +1,9 @@
+<?php
+if (!isset($_SESSION["login"])) {
+    redirect('auth/index');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

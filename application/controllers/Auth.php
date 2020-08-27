@@ -49,6 +49,7 @@ class Auth extends CI_Controller
     }
     private function ad_login()
     {
+        session_start();
         $username = $this->input->post('username');
         $password = $this->input->post('password');
 
@@ -61,6 +62,7 @@ class Auth extends CI_Controller
                     'title' => 'Admin Pages',
                     'username' => $admin['username']
                 ];
+                $_SESSION["admin"] = true;
                 $this->session->set_userdata($data);
                 redirect('admin');
             } else {
@@ -76,7 +78,7 @@ class Auth extends CI_Controller
     }
     private function _login()
     {
-        $no_kk = $this->input->post('no_kk');
+        session_start();
         $no_nik = $this->input->post('no_nik');
         $password = $this->input->post('password');
 
@@ -113,16 +115,22 @@ class Auth extends CI_Controller
 
     public function logout()
     {
+        session_start();
         $this->session->unset_userdata('no_nik');
         $this->session->set_flashdata('message', '<div class="alert
         alert-warning" role="alert">Anda sudah logout!</div>');
         redirect('auth');
+        session_unset();
+        session_destroy();
     }
     public function adlogout()
     {
+        session_start();
         $this->session->unset_userdata('username');
         $this->session->set_flashdata('message', '<div class="alert
         alert-warning" role="alert">Anda sudah logout!</div>');
         redirect('auth/adlog');
+        session_unset();
+        session_destroy();
     }
 }

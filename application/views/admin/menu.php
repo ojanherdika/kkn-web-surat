@@ -49,28 +49,36 @@
                         </tr>
                     </thead>
                     <tbody>
-
-                        <tr>
-                            <th scope="col">1.</th>
-                            <th scope="col">001</th>
-                            <th scope="col">Surat Pengantar Nikah</th>
-                            <th scope="col">Akbar Hidayatullah Harahap</th>
-                            <th scope="col">17/08/20</th>
-                            <th scope="col"><span class="badge badge-success">Disetujui <i class="fas fa-check-circle"></i> </span></th>
-                            <th scope="col"> <a href="<?= base_url('admin/detail_menu') ?>"> <u> Detail </u>
-                            </th>
-                        </tr>
-
-                        <tr>
-                            <th scope="col">3.</th>
-                            <th scope="col">002</th>
-                            <th scope="col">Surat Pengantar Nikah</th>
-                            <th scope="col">M. Aqil Al-Muhtadi</th>
-                            <th scope="col">17/08/20</th>
-                            <th scope="col"><span class="badge badge-danger">Ditolak <i class="far fa-times-circle"></i> </span></th>
-                            <th scope="col"> <a href="<?= base_url('admin/detail_menu') ?>"> <u> Detail </u>
-                            </th>
-                        </tr>
+                        <?php
+                        $i = 1;
+                        foreach ($surat_n1 as $surat_n1) : ?>
+                            <tr>
+                                <th scope="col"><?= $i++; ?></th>
+                                <th scope="col"><?= $surat_n1['id_surat_n1']; ?></th>
+                                <th scope="col"><?= $surat_n1['jenis_surat']; ?></th>
+                                <th scope="col"><?= $surat_n1['nama']; ?></th>
+                                <th scope="col"><?= $surat_n1['tgl_ajukan_surat']; ?></th>
+                                <th scope="col"><span class="badge badge-<?= ($surat_n1['status_surat'] == "Disetujui") ? 'success' : (($surat_n1['status_surat'] == 'Ditolak') ? 'danger' : 'warning');  ?>">
+                                        <?= $surat_n1['status_surat']; ?> <i class="fas fa-check-circle"></i> </span></th>
+                                <th scope="col"> <a href="<?= base_url('admin/detail_menu') ?>"> <u> Detail </u>
+                                </th>
+                            </tr>
+                        <?php endforeach; ?>
+                        <?php
+                        $i = 1;
+                        foreach ($surat_n6 as $surat_n6) : ?>
+                            <tr>
+                                <th scope="col"><?= $i++; ?></th>
+                                <th scope="col"><?= $surat_n6['id_surat_n6']; ?></th>
+                                <th scope="col"><?= $surat_n6['jenis_surat']; ?></th>
+                                <th scope="col"><?= $surat_n6['nama']; ?></th>
+                                <th scope="col"><?= $surat_n6['tgl_ajukan_surat']; ?></th>
+                                <th scope="col"><span class="badge badge-<?= ($surat_n6['status_surat'] == "Disetujui") ? 'success' : (($surat_n6['status_surat'] == 'Ditolak') ? 'danger' : 'warning');  ?>">
+                                        <?= $surat_n6['status_surat']; ?> <i class="fas fa-check-circle"></i> </span></th>
+                                <th scope="col"> <a href="<?= base_url('admin/detail_menu') ?>"> <u> Detail </u>
+                                </th>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
