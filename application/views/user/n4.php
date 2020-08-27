@@ -2,8 +2,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light ddn-bg-gradient">
         <div class="container p-1">
-            <a href="index.html"><img src="images/logo.png" alt="" style="width: 34px; height: auto;"></a>
-            <a href="index.html" class="btn float-right bg-primary btn-sm text-white"><strong><i class="fas fa-home mr-1"></i>Beranda</strong></a>
+            <a href="<?= base_url('user'); ?>"><img src="images/logo.png" alt="" style="width: 34px; height: auto;"></a>
+            <a href="<?= base_url('user'); ?>" class="btn float-right bg-primary btn-sm text-white"><strong><i class="fas fa-home mr-1"></i>Beranda</strong></a>
         </div>
     </nav>
 
@@ -269,7 +269,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-danger" data-dismiss="modal">Tidak</button>
-                                <button type="button" class="btn btn-primary">Yakin</button>
+                                <button type="submit" class="btn btn-primary">Yakin</button>
                             </div>
                         </div>
                     </div>
@@ -280,24 +280,6 @@
     </section>
 
     <footer class="footer text-center">
-        <div class="container">
-            <!-- <ul class="list-inline">
-            <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white mr-3" href="javascript:void(0)">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white mr-3" href="javascript:void(0)">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white" href="javascript:void(0)">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-            </li>
-        </ul> -->
             <p class="text-muted small mb-0">Copyright © KKN UIN Bandung 2020</p>
             <p class="text-muted small mb-0">Desa Cinunuk Kec.Cileunyi Kab.Bandung</p>
         </div>

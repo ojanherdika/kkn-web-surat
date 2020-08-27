@@ -21,7 +21,7 @@
         <li>
             <hr class="bg-light ml-3 mr-3">
         </li>
-        <li class="sidebar-nav-item text-white">
+        <li class="sidebar-nav-item text-white text-center">
             <img class="img-circle smooth-scroll ml-3 mr-3" src="<?= base_url('assets/'); ?>/user/images/default.jpg" alt="" style="width: 40px; border-radius: 50%;">
             <strong><?= $user['nama']; ?></strong>
         </li>
@@ -223,7 +223,7 @@
                 •	Pasfoto 2x3 = 3 lembar berlatar belakang biru <br>
                 •	pasfoto 3x4 = 4 lembar berlatar belakang biru <br>
                 •	Surat pernyataan belum pernah menikah (Bagi Anda yang belum pernah menikah ) <br>
-                •	Surat Izin Orang tua (Bagi anda yang masih dibawah umur, Laki-laki < 25th | Perempuan < 21th) <a href="<?= base_url('user/p_n1'); ?>">buat N5</a> <br>
+                •	Surat Izin Orang tua (Bagi anda yang masih dibawah umur, Laki-laki < 25th | Perempuan < 21th) <a href="<?= base_url('user/p_n5'); ?>">buat N5</a> <br>
                 •	Fotokopi Akta Cerai (Bagi Anda yang berstatus pernikahan Cerai Hidup ) <br>
                 •	Fotokopi Akta Kematian (Bagi Anda yang berstatus pernikahan Cerai Mati ) <br><br>
 
