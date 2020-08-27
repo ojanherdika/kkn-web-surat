@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Agu 2020 pada 20.48
--- Versi server: 10.1.28-MariaDB
--- Versi PHP: 7.3.12
+-- Generation Time: Aug 27, 2020 at 06:18 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sipena`
+-- Database: `id11163292_sipena`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -38,7 +37,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `image`, `created_at`, `updated_at`) VALUES
@@ -47,7 +46,7 @@ INSERT INTO `admin` (`id`, `username`, `password`, `image`, `created_at`, `updat
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `surat_n1`
+-- Table structure for table `surat_n1`
 --
 
 CREATE TABLE `surat_n1` (
@@ -110,7 +109,7 @@ CREATE TABLE `surat_n1` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `surat_n1`
+-- Dumping data for table `surat_n1`
 --
 
 INSERT INTO `surat_n1` (`id_surat_n1`, `nama`, `no_nik`, `tempat_lahir`, `binti`, `agama`, `tanggal_lahir`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `rt`, `rw`, `kode_pos`, `alamat`, `status_nikah`, `nama_suami_istri`, `nama_ayah`, `binti_ayah`, `status_hidup_ayah`, `nik_ayah`, `agama_ayah`, `tempat_lahir_ayah`, `tanggal_lahir_ayah`, `pekerjaan_ayah`, `kewarganegaraan_ayah`, `alamat_ayah`, `provinsi_ayah`, `kab_kota_ayah`, `rt_ayah`, `rw_ayah`, `kode_pos_ayah`, `nama_ibu`, `binti_ibu`, `status_hidup_ibu`, `nik_ibu`, `agama_ibu`, `tempat_lahir_ibu`, `tanggal_lahir_ibu`, `pekerjaan_ibu`, `kewarganegaraan_ibu`, `alamat_ibu`, `provinsi_ibu`, `kab_kota_ibu`, `kecamatan_ibu`, `desa_ibu`, `desa_ayah`, `rt_ibu`, `rw_ibu`, `kode_pos_ibu`, `jenis_kelamin`, `jenis_surat`, `status_surat`, `tgl_ajukan_surat`) VALUES
@@ -120,7 +119,7 @@ INSERT INTO `surat_n1` (`id_surat_n1`, `nama`, `no_nik`, `tempat_lahir`, `binti`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `surat_n4`
+-- Table structure for table `surat_n4`
 --
 
 CREATE TABLE `surat_n4` (
@@ -165,7 +164,7 @@ CREATE TABLE `surat_n4` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `surat_n4`
+-- Dumping data for table `surat_n4`
 --
 
 INSERT INTO `surat_n4` (`id_surat_n4`, `nama`, `no_nik`, `tanggal_lahir`, `binti`, `agama`, `tempat_lahir`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `rt`, `rw`, `kode_pos`, `alamat`, `jenis_kelamin`, `nama_calon`, `nik_calon`, `jenis_kelamin_calon`, `tempat_lahir_calon`, `tanggal_lahir_calon`, `kewarganegaraan_calon`, `agama_calon`, `pekerjaan_calon`, `alamat_calon`, `provinsi_calon`, `kab_kota_calon`, `tgl_ajukan_surat`, `kecamatan_calon`, `desa_calon`, `rt_calon`, `rw_calon`, `kode_pos_calon`, `jenis_surat`, `status_surat`, `binti_calon`) VALUES
@@ -175,7 +174,7 @@ INSERT INTO `surat_n4` (`id_surat_n4`, `nama`, `no_nik`, `tanggal_lahir`, `binti
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `surat_n5`
+-- Table structure for table `surat_n5`
 --
 
 CREATE TABLE `surat_n5` (
@@ -250,7 +249,7 @@ CREATE TABLE `surat_n5` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `surat_n5`
+-- Dumping data for table `surat_n5`
 --
 
 INSERT INTO `surat_n5` (`id_surat_n5`, `nama_ayah`, `binti_ayah`, `agama_ayah`, `tempat_lahir_ayah`, `tanggal_lahir_ayah`, `pekerjaan_ayah`, `alamat_ayah`, `provinsi_ayah`, `kab_kota_ayah`, `rt_ayah`, `rw_ayah`, `kode_pos_ayah`, `kewarganegaraan_ayah`, `nama_ibu`, `binti_ibu`, `nik_ibu`, `agama_ibu`, `tempat_lahir_ibu`, `tanggal_lahir_ibu`, `pekerjaan_ibu`, `kewarganegaraan_ibu`, `alamat_ibu`, `provinsi_ibu`, `kab_kota_ibu`, `kecamatan_ibu`, `desa_ibu`, `rt_ibu`, `rw_ibu`, `kode_pos_ibu`, `nama`, `no_nik`, `tempat_lahir`, `binti`, `agama`, `tanggal_lahir`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `rt`, `rw`, `kode_pos`, `alamat`, `nama_calon`, `binti_calon`, `nik_calon`, `tempat_lahir_calon`, `tanggal_lahir_calon`, `kewarganegaraan_calon`, `agama_calon`, `pekerjaan_calon`, `alamat_calon`, `provinsi_calon`, `kab_kota_calon`, `kecamatan_calon`, `desa_calon`, `rt_calon`, `rw_calon`, `kode_pos_calon`, `jenis_surat`, `tgl_ajukan_surat`, `status_surat`, `kecamatan_ayah`, `desa_ayah`, `nik_ayah`) VALUES
@@ -259,7 +258,7 @@ INSERT INTO `surat_n5` (`id_surat_n5`, `nama_ayah`, `binti_ayah`, `agama_ayah`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `surat_n6`
+-- Table structure for table `surat_n6`
 --
 
 CREATE TABLE `surat_n6` (
@@ -307,7 +306,7 @@ CREATE TABLE `surat_n6` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `surat_n6`
+-- Dumping data for table `surat_n6`
 --
 
 INSERT INTO `surat_n6` (`id_surat_n6`, `nama`, `no_nik`, `tempat_lahir`, `binti`, `agama`, `tanggal_lahir`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `rt`, `rw`, `kode_pos`, `alamat`, `status_nikah`, `jenis_kelamin`, `nama_mati`, `binti_mati`, `nik_mati`, `tempat_lahir_mati`, `tanggal_lahir_mati`, `kewarganegaraan_mati`, `agama_mati`, `pekerjaan_mati`, `alamat_mati`, `provinsi_mati`, `kab_kota_mati`, `kecamatan_mati`, `desa_mati`, `rt_mati`, `rw_mati`, `kode_pos_mati`, `tgl_meninggal`, `tempat_meninggal`, `jenis_surat`, `tgl_ajukan_surat`, `status_surat`, `nama_suami_istri`) VALUES
@@ -316,7 +315,7 @@ INSERT INTO `surat_n6` (`id_surat_n6`, `nama`, `no_nik`, `tempat_lahir`, `binti`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -327,10 +326,12 @@ CREATE TABLE `user` (
   `password` varchar(256) NOT NULL,
   `agama` varchar(20) NOT NULL,
   `tempat_lahir` varchar(20) NOT NULL,
-  `tanggal_lahir` varchar(40) NOT NULL,
+  `tanggal_lahir` date NOT NULL,
   `jenis_kelamin` varchar(15) NOT NULL,
+  `pendidikan` varchar(50) NOT NULL,
   `pekerjaan` varchar(50) NOT NULL,
   `kewarganegaraan` varchar(30) NOT NULL,
+  `kepala_keluarga` varchar(128) NOT NULL,
   `provinsi` varchar(40) NOT NULL,
   `kab_kota` varchar(50) NOT NULL,
   `kecamatan` varchar(50) NOT NULL,
@@ -347,17 +348,17 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `no_kk`, `no_nik`, `nama`, `password`, `agama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `RT`, `RW`, `kode_pos`, `alamat`, `status_nikah`, `status_keluarga`, `nama_ayah`, `nama_ibu`, `image`) VALUES
-(1, 3204052504054481, 3204051109000001, 'Fauzan', 'Changeme1', 'Islam', '', '', 'Laki-Laki', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 0, '', 'lajang', 'kepala_keluarga', '', '', 'default.jpg'),
-(2, 1234, 1234, 'Fauzan Herdika Tubagus Putra', 'Gilardino29', 'Islam', '', '', 'Laki-Laki', '', '', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 0, '', 'lajang', 'kepala_keluarga', '', '', 'default.jpg');
+INSERT INTO `user` (`id`, `no_kk`, `no_nik`, `nama`, `password`, `agama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `kewarganegaraan`, `kepala_keluarga`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `RT`, `RW`, `kode_pos`, `alamat`, `status_nikah`, `status_keluarga`, `nama_ayah`, `nama_ibu`, `image`) VALUES
+(1, 3204050000000000, 3204050000000000, 'Fauzan', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-Laki', '', '', '', '0', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 0, '', 'lajang', 'kepala_keluarga', '', '', 'default.jpg'),
+(2, 1234, 1234, 'Fauzan Herdika Tubagus Putra', 'Gilardino29', 'Islam', '', '0000-00-00', 'Laki-Laki', '', '', '', '0', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 0, '', 'lajang', 'kepala_keluarga', '', '', 'default.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `wilayah_desa`
+-- Table structure for table `wilayah_desa`
 --
 
 CREATE TABLE `wilayah_desa` (
@@ -367,7 +368,7 @@ CREATE TABLE `wilayah_desa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `wilayah_desa`
+-- Dumping data for table `wilayah_desa`
 --
 
 INSERT INTO `wilayah_desa` (`id`, `kecamatan_id`, `nama`) VALUES
@@ -80138,7 +80139,7 @@ INSERT INTO `wilayah_desa` (`id`, `kecamatan_id`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `wilayah_kabupaten`
+-- Table structure for table `wilayah_kabupaten`
 --
 
 CREATE TABLE `wilayah_kabupaten` (
@@ -80148,7 +80149,7 @@ CREATE TABLE `wilayah_kabupaten` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `wilayah_kabupaten`
+-- Dumping data for table `wilayah_kabupaten`
 --
 
 INSERT INTO `wilayah_kabupaten` (`id`, `provinsi_id`, `nama`) VALUES
@@ -80313,7 +80314,7 @@ INSERT INTO `wilayah_kabupaten` (`id`, `provinsi_id`, `nama`) VALUES
 ('3201', '32', 'Kab. Bogor'),
 ('3202', '32', 'Kab. Sukabumi'),
 ('3203', '32', 'Kab. Cianjur'),
-('3204', '32', 'Bandung'),
+('3204', '32', 'Kab. Bandung'),
 ('3205', '32', 'Kab. Garut'),
 ('3206', '32', 'Kab. Tasikmalaya'),
 ('3207', '32', 'Kab. Ciamis'),
@@ -80655,7 +80656,7 @@ INSERT INTO `wilayah_kabupaten` (`id`, `provinsi_id`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `wilayah_kecamatan`
+-- Table structure for table `wilayah_kecamatan`
 --
 
 CREATE TABLE `wilayah_kecamatan` (
@@ -80665,7 +80666,7 @@ CREATE TABLE `wilayah_kecamatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `wilayah_kecamatan`
+-- Dumping data for table `wilayah_kecamatan`
 --
 
 INSERT INTO `wilayah_kecamatan` (`id`, `kabupaten_id`, `nama`) VALUES
@@ -87555,7 +87556,7 @@ INSERT INTO `wilayah_kecamatan` (`id`, `kabupaten_id`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `wilayah_provinsi`
+-- Table structure for table `wilayah_provinsi`
 --
 
 CREATE TABLE `wilayah_provinsi` (
@@ -87564,7 +87565,7 @@ CREATE TABLE `wilayah_provinsi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `wilayah_provinsi`
+-- Dumping data for table `wilayah_provinsi`
 --
 
 INSERT INTO `wilayah_provinsi` (`id`, `nama`) VALUES
@@ -87608,106 +87609,106 @@ INSERT INTO `wilayah_provinsi` (`id`, `nama`) VALUES
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `surat_n1`
+-- Indexes for table `surat_n1`
 --
 ALTER TABLE `surat_n1`
   ADD PRIMARY KEY (`id_surat_n1`) USING BTREE;
 
 --
--- Indeks untuk tabel `surat_n4`
+-- Indexes for table `surat_n4`
 --
 ALTER TABLE `surat_n4`
   ADD PRIMARY KEY (`id_surat_n4`);
 
 --
--- Indeks untuk tabel `surat_n5`
+-- Indexes for table `surat_n5`
 --
 ALTER TABLE `surat_n5`
   ADD PRIMARY KEY (`id_surat_n5`);
 
 --
--- Indeks untuk tabel `surat_n6`
+-- Indexes for table `surat_n6`
 --
 ALTER TABLE `surat_n6`
   ADD PRIMARY KEY (`id_surat_n6`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `no_kk` (`no_kk`),
-  ADD UNIQUE KEY `no_nik` (`no_nik`);
+  ADD UNIQUE KEY `no_nik` (`no_nik`),
+  ADD KEY `no_kk` (`no_kk`) USING BTREE;
 
 --
--- Indeks untuk tabel `wilayah_desa`
+-- Indexes for table `wilayah_desa`
 --
 ALTER TABLE `wilayah_desa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `wilayah_kabupaten`
+-- Indexes for table `wilayah_kabupaten`
 --
 ALTER TABLE `wilayah_kabupaten`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `wilayah_kecamatan`
+-- Indexes for table `wilayah_kecamatan`
 --
 ALTER TABLE `wilayah_kecamatan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `wilayah_provinsi`
+-- Indexes for table `wilayah_provinsi`
 --
 ALTER TABLE `wilayah_provinsi`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `surat_n1`
+-- AUTO_INCREMENT for table `surat_n1`
 --
 ALTER TABLE `surat_n1`
   MODIFY `id_surat_n1` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
--- AUTO_INCREMENT untuk tabel `surat_n4`
+-- AUTO_INCREMENT for table `surat_n4`
 --
 ALTER TABLE `surat_n4`
   MODIFY `id_surat_n4` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `surat_n5`
+-- AUTO_INCREMENT for table `surat_n5`
 --
 ALTER TABLE `surat_n5`
   MODIFY `id_surat_n5` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `surat_n6`
+-- AUTO_INCREMENT for table `surat_n6`
 --
 ALTER TABLE `surat_n6`
   MODIFY `id_surat_n6` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1196;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

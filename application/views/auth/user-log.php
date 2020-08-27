@@ -9,14 +9,14 @@
             <form class="user form-signin text-left" action="<?php base_url('auth'); ?>" method="POST">
 
                 <div class="form-label-group">
-                <input type="no_kk" class="form-control " name="no_kk" id="no_kk" placeholder="Masukkan No. KK" value="<?= set_value('no_kk'); ?>" required autofocus>
-                    <label for="no_nkk">Masukan No. KK</label>
+                    <input type="no_kk" class="form-control" name="no_kk" id="no_kk" placeholder="Masukkan No. KK">
+                    <label for="no_kk">Masukan No. KK</label>
                     <div class="error-message">
                             <?= form_error('no_kk', '<small 
                                         class="text-danger">', '</small>'); ?>
                     </div>
                 </div>
-
+        
                 <div class="form-label-group">
                 <input type="no_nik" class="form-control " name="no_nik" id="no_nik" placeholder="Masukkan NIK" value="<?= set_value('no_nik'); ?>">
                     <label for="no_nik">Masukan NIK</label>

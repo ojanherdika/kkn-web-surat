@@ -14,4 +14,9 @@ class M_surat_n6 extends CI_Model
     {
         return $this->db->get('user');
     }
+
+    function getAdmin()
+    {
+        return $this->db->get('admin');
+    }
 }
