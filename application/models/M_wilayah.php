@@ -12,6 +12,27 @@ class M_wilayah extends CI_Model {
         $this->db->from('wilayah_provinsi');
         $query = $this->db->get();
         return $query->result();
-}
+	}
+
+	 function get_all_kabupaten() {
+        $this->db->select('*');
+        $this->db->from('wilayah_kabupaten');
+        $query = $this->db->get();
+        return $query->result();
+	}
+
+	 function get_all_kecamatan() {
+        $this->db->select('*');
+        $this->db->from('wilayah_kecamatan');
+        $query = $this->db->get();
+        return $query->result();
+	}
+
+	 function get_all_desa() {
+        $this->db->select('*');
+        $this->db->from('wilayah_desa');
+        $query = $this->db->get();
+        return $query->result();
+	}
 }
 ?>
