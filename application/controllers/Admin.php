@@ -77,7 +77,7 @@ class Admin extends CI_Controller
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
         $this->load->view('admin/tambah_warga', $data);
-        $this->load->view('layout/adminFooter',);
+        $this->load->view('layout/adminFooter');
     }
 
     public function edit()
@@ -87,7 +87,7 @@ class Admin extends CI_Controller
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
         $this->load->view('admin/edit', $data);
-        $this->load->view('layout/adminFooter',);
+        $this->load->view('layout/adminFooter');
     }
 
     public function menu()
@@ -97,7 +97,7 @@ class Admin extends CI_Controller
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
         $this->load->view('admin/menu', $data);
-        $this->load->view('layout/adminFooter',);
+        $this->load->view('layout/adminFooter');
     }
     public function detail_menu()
     {
@@ -109,6 +109,6 @@ class Admin extends CI_Controller
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
         $this->load->view('admin/detail_menu', $data);
-        $this->load->view('layout/adminFooter',);
+        $this->load->view('layout/adminFooter');
     }
 }
