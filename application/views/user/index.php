@@ -19,11 +19,18 @@
         </li>
         <br><br><br>
         <li>
-            <hr class="bg-light ml-3 mr-3">
+            <hr class="bg-light ml-3 mr-3 p-0">
         </li>
         <li class="sidebar-nav-item text-white text-center">
+        <div class="row">
+        <div class="col-md-3 col-lg-3 p-0">
             <img class="img-circle smooth-scroll ml-3 mr-3" src="<?= base_url('assets/'); ?>user/images/default.jpg" alt="" style="width: 40px; border-radius: 50%;">
+            
+            </div>
+            <div class="col-md-9 col-lg-9 text-left p-0 mr-10">
             <strong><?= $user['nama']; ?></strong>
+            </div>
+        </div>
         </li>
         <li>
             <hr class="bg-light ml-3 mr-3">

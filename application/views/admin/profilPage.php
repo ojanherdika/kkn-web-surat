@@ -77,25 +77,17 @@
                     <option value="44">RT 14</option>
                 </select>
             </div>
-
             <div class="col-md-1">
                 <button type="button" class="btn btn-primary"> Tampil </button>
             </div>
-
         </div>
-
-
-
         <br>
-
-
         <div class="card mb-3">
             <div class="card-body">
                 <div class="table-responsive" style="overflow-x: hidden;">
                     <table class="table  table-striped table bordered mydatatable" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-
                                 <th scope="col">No</th>
                                 <th scope="col">No.KK</th>
                                 <th scope="col">NIK</th>
@@ -103,7 +95,6 @@
                                 <th scope="col">RT</th>
                                 <th scope="col">RW</th>
                                 <th scope="col">Aksi</th>
-
                             </tr>
                         </thead>
                         <tbody>
@@ -118,10 +109,9 @@
                                     <th scope="col"><?= $user['RT']; ?></th>
                                     <th scope="col"><?= $user['RW']; ?></th>
                                     <th scope="col">
-                                        <a style="-moz-tab-size: 2;" class="btn btn-primary text-white" href="<?php echo base_url('admin/detail_warga/' . $user['id']); ?>"> <u> Detail </u> </a>
-
+                                        <a style="-moz-tab-size: 2;" class="btn btn-sm btn-primary text-white" href="<?php echo base_url('admin/detail_warga/' . $user['id']); ?>"> <u> Detail </u> </a>
                                         &emsp;
-                                        <a style="-moz-tab-size: 2;" class="btn btn-danger m-1 text-white "> Hapus </a> <!-- fungsi hapus belum masuk controller -->
+                                        <a style="-moz-tab-size: 2;" class="btn btn-sm btn-danger m-1 text-white "> Hapus </a> <!-- fungsi hapus belum masuk controller -->
                                     </th>
                                 </tr>
                             <?php endforeach; ?>
@@ -130,12 +120,6 @@
                 </div>
             </div>
         </div>
-
-
-
-    </div>
-    <!-- /.container-fluid -->
-
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
