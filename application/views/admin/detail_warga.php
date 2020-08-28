@@ -243,27 +243,26 @@
                         <?php endforeach; ?>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <a class="btn btn-primary m-1" href="<?= base_url('admin/profile'); ?>">Batal</a>
                                 &emsp;
-                                <a class="btn btn-success m-1 " onclick="" class="btn btn-small" data-toggle="modal" data-target="#staticModal" data-popup="tooltip" data-placement="top" title="Simpan Data"> Simpan </a>
+                                <a class="btn btn-success m-1 text-white" type="button" data-toggle="modal" data-target="#staticModal" data-popup="tooltip" data-placement="top" title="Simpan Data"> Simpan </a>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </form>
         <!-- /.container-fluid -->
-    </form>
-
     </div>
     <!-- End of Main Content -->
 </div>
 
 <div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static" style="position:absolute;left:0%; top:60%;">
     <div class="modal-dialog modal-sm" role="document">
-       
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="staticModalLabel">Konfirmasi Penyimpanan</h5>

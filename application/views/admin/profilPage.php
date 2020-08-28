@@ -109,9 +109,9 @@
                                     <th scope="col"><?= $user['RT']; ?></th>
                                     <th scope="col"><?= $user['RW']; ?></th>
                                     <th scope="col">
-                                        <a style="-moz-tab-size: 2;" class="btn btn-primary text-white" href="<?php echo base_url('admin/detail_warga/' . $user['id']); ?>"> <u> Detail </u> </a>
+                                        <a style="-moz-tab-size: 2;" class="btn btn-sm btn-primary text-white" href="<?php echo base_url('admin/detail_warga/' . $user['id']); ?>"> <u> Detail </u> </a>
                                         &emsp;
-                                        <a style="-moz-tab-size: 2;" class="btn btn-danger m-1 text-white "> Hapus </a> <!-- fungsi hapus belum masuk controller -->
+                                        <a style="-moz-tab-size: 2;" class="btn btn-sm btn-danger m-1 text-white "> Hapus </a> <!-- fungsi hapus belum masuk controller -->
                                     </th>
                                 </tr>
                             <?php endforeach; ?>

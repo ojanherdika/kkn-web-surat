@@ -107,9 +107,9 @@ class User extends CI_Controller
             $this->load->view('layout/userFooter');
         } else {
             $password = $this->input->post('password');
-            $password_hash = password_hash($password, PASSWORD_DEFAULT);
+            // $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-            $this->db->set('password', $password_hash);
+            $this->db->set('password', $password);
             $this->db->where('no_nik', $this->session->userdata('no_nik'));
             $this->db->update('user');
             redirect('user');
