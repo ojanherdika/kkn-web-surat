@@ -219,10 +219,7 @@
                                 <input type="text" name="kewarganegaraan_ayah" class="form-control" id="kearbga " placeholder="Masukan Tanggal Lahir Ayah">
                             </div>
                         </div>
-                        <div class="form-check mb-3 mt-2">
-                            <input type="checkbox" class="form-check-input" id="check">
-                            <label class="form-check-label">Alamat Ayah sama dengan tempat tinggal saya saat ini</label>
-                        </div>
+                       
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Provinsi</label>
@@ -342,10 +339,7 @@
                                 <input type="text" class="form-control" id="kearbga " name="kewarganegaraan_ibu" placeholder="Masukan Tanggal Lahir Ayah">
                             </div>
                         </div>
-                        <div class="form-check mb-3 mt-2">
-                            <input type="checkbox" class="form-check-input" id="check">
-                            <label class="form-check-label">Alamat Ibu sama dengan tempat tinggal saya saat ini</label>
-                        </div>
+                        
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Provinsi</label>
@@ -638,10 +632,7 @@
                                     <input type="text" name="kewarganegaraan_ayah" class="form-control" id="kearbga " placeholder="Masukan Tanggal Lahir Ayah">
                                 </div>
                             </div>
-                            <div class="form-check mb-3 mt-2">
-                                <input type="checkbox" class="form-check-input" id="check">
-                                <label class="form-check-label">Alamat Ayah sama dengan tempat tinggal saya saat ini</label>
-                            </div>
+                            
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label>Provinsi</label>
@@ -761,10 +752,7 @@
                                         <input type="text" class="form-control" id="kearbga " name="kewarganegaraan_ibu" placeholder="Masukan Tanggal Lahir Ayah">
                                     </div>
                                 </div>
-                                <div class="form-check mb-3 mt-2">
-                                    <input type="checkbox" class="form-check-input" id="check">
-                                    <label class="form-check-label">Alamat Ibu sama dengan tempat tinggal saya saat ini</label>
-                                </div>
+                               
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label>Provinsi</label>
@@ -1054,10 +1042,6 @@
                                 <input type="text" name="kewarganegaraan_ayah" class="form-control" id="kearbga " placeholder="Masukan Tanggal Lahir Ayah">
                             </div>
                         </div>
-                        <div class="form-check mb-3 mt-2">
-                            <input type="checkbox" class="form-check-input" id="check">
-                            <label class="form-check-label">Alamat Ayah sama dengan tempat tinggal saya saat ini</label>
-                        </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Provinsi</label>
@@ -1177,10 +1161,7 @@
                                 <input type="text" class="form-control" id="kearbga " name="kewarganegaraan_ibu" placeholder="Masukan Tanggal Lahir Ayah">
                             </div>
                         </div>
-                        <div class="form-check mb-3 mt-2">
-                            <input type="checkbox" class="form-check-input" id="check">
-                            <label class="form-check-label">Alamat Ibu sama dengan tempat tinggal saya saat ini</label>
-                        </div>
+                        
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Provinsi</label>
