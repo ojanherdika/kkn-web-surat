@@ -7,49 +7,47 @@
 
 	<div class="row">
 		<div class="col-md-12">
-			<?php echo form_open_multipart('admin/tambah_admin'); ?>
-		</div>
-		<form action="<?php echo site_url('.....') ?>" method="post" enctype="multipart/form-data">
-			<div class="col-md-8">
-				<div class="form-group">
-					<label>Username</label>
-					<input class="form-control" type="text" name="....." />
-					<div class="invalid-feedback">
+			<form action="<?= base_url('admin/add') ?>" method="post">
+				<div class="col-md-8">
+					<div class="form-group">
+						<label>Username</label>
+						<input class="form-control" type="text" name="username" id="username" />
+						<div class="invalid-feedback">
+						</div>
 					</div>
-				</div>
 
-				<div class="form-group">
-					<label for="....">Password</label>
-					<input class="form-control" type="text" name="...." />
-					<div class="invalid-feedback">
+					<div class="form-group">
+						<label for="....">Password</label>
+						<input class="form-control" type="password" name="password" id="password" />
+						<div class="invalid-feedback">
+						</div>
 					</div>
-				</div>
 
-				<div class="form-group">
-					<label>Nama Lengkap</label>
-					<input class="form-control" type="text" name="....." />
-					<div class="invalid-feedback">
-						
-					</div>
-				</div>
+					<div class="form-group">
+						<label>Nama Lengkap</label>
+						<input class="form-control" type="text" name="nama_lengkap" id="nama_lengkap" />
+						<div class="invalid-feedback">
 
-				<div class="form-group">
-					<label>Jabatan</label>
-					<input class="form-control" type="text" name="....." />
-					<div class="invalid-feedback">
-						
+						</div>
 					</div>
-				</div>
 
-				<div class="form-group">
-					<label>No HP</label>
-					<input class="form-control" type="text" name="....." />
-					<div class="invalid-feedback">
-						
+					<div class="form-group">
+						<label>Jabatan</label>
+						<input class="form-control" type="text" name="jabatan" id="jabatan" />
+						<div class="invalid-feedback">
+
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label>No HP</label>
+						<input class="form-control" type="text" name="no_hp" id="no_hp" />
+						<div class="invalid-feedback">
+
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- <div class="col-md-4">
+				<!-- <div class="col-md-4">
 				<div class="form-group">
 					<img src="<?= base_url('assets/admin/img/profile/') . $user['image']; ?>" class="img-thumbnail">
 				</div>
@@ -60,14 +58,14 @@
 					</div>
 				</div>
 			</div> -->
-			<div class="col-md-12">
-				<button type="submit" class="btn btn-primary">Simpan</button>
-			</div>
-		</form>
+				<div class="col-md-12">
+					<button type="submit" class="btn btn-primary">Simpan</button>
+				</div>
+			</form>
+		</div>
+
+		<br>
+		<br>
 	</div>
-
-	<br>
-	<br>
-
 </div>
 <!-- /.container-fluid -->

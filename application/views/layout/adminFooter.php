@@ -1,7 +1,7 @@
 <!-- Footer -->
 <div>
   <div>
-    <footer class="sticky-footer bg-warning" style="background-color: #FDDD5C; margin-top: 20px; ">
+    <footer class="sticky-footer bg-warning" style="background-color: #FDDD5C; margin-top: 20px; position:relative; height:auto;">
       <div class="container my-auto">
         <div class="copyright text-center my-auto" style="color:black">
           <span>Copyright &copy; by Developers UIN Bandung </span>

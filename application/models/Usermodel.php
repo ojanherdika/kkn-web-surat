@@ -3,18 +3,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Usermodel extends CI_Model
 {
-    function query($query)
-    {
-        global $db;
-        $result = mysqli_query($db, $query);
-        $rows = [];
-
-        while ($row = mysqli_fetch_assoc($result)) {
-            $rows[] = $row;
-        }
-
-        return $rows;
-    }
     public function getAll()
     {
         return $this->db->get('user');

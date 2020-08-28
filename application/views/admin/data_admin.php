@@ -47,7 +47,7 @@
 									<th scope="col"><?= $admin['nama_lengkap']; ?></th>
 									<th scope="col"><?= $admin['jabatan']; ?></th>
 									<th scope="col"><?= $admin['no_hp']; ?></th>
-									<th scope="col"><a href="<?= base_url('admin/detail_admin') ?>" class="btn btn-success m-1"> Detail <i class="fas fa-search"></i></a> </th>
+									<th scope="col"><a href="<?= base_url('admin/detail_admin/' . $admin['id']) ?>" class="btn btn-success m-1"> Detail <i class="fas fa-search"></i></a> </th>
 								</tr>
 							<?php endforeach; ?>
 						</tbody>

@@ -25,6 +25,8 @@ if (!isset($_SESSION["admin"])) {
 
   <!-- Custom styles for this template-->
   <link href="<?= base_url('assets/'); ?>admin/css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="<?= base_url('assets/'); ?>/user/styles/password.css" rel="stylesheet" type="text/css">
+
 
 </head>
 
