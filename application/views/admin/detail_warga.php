@@ -12,7 +12,6 @@
                 </div>
                 <div class="card-body">
                     <?php foreach ($user as $user) : ?>
-                        <input type="hidden" name="id" id="id"> value="<?php echo $user->id ?>">
                         <div class="form-group">
                             <label for="nama">Nama Lengkap</label>
                             <input class="form-control" type="text" id="nama" name="nama" value="<?php echo $user->nama; ?>"  />
