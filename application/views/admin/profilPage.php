@@ -90,10 +90,11 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">No.KK</th>
-                                <th scope="col">No.NIK</th>
-                                <th scope="col">Nama Lengkap</th>
+                                <th scope="col">NIK</th>
+                                <th scope="col">Nama</th>
                                 <th scope="col">RT</th>
                                 <th scope="col">RW</th>
+                                <th scope="col">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -131,41 +132,6 @@
     </script>
 
 
-    </div>
-    <div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticModalLabel">Konfirmasi Hapus</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Yakin Ingin Menghapus Dari Daftar ??
-                    </p>
-                </div>
-                <input type="hidden" name="action" id="act_value">
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <a type="button" class="btn btn-primary" href="<?php echo site_url('admin/hapus_warga/' . $user['id']); ?>">Ya, Hapus</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function confirm_modal(delete_url, title) {
-            jQuery('#modal_delete_m_n').modal('show', {
-                backdrop: 'static',
-                keyboard: false
-            });
-            jQuery("#modal_delete_m_n .grt").text(title);
-            document.getElementById('delete_link_m_n').setAttribute("href", delete_url);
-            document.getElementById('delete_link_m_n').focus();
-        }
-    </script>
 
 </body>
 
