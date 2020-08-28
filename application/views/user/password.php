@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="block-heading">
-                    <h2>Ganti Passowrd</h2>
+                    <h2>Ganti Password</h2>
                 </div>
             </div>
         </div>
