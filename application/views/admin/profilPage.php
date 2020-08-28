@@ -117,10 +117,16 @@
 								<th scope="col"><?= $user['RT']; ?></th>
                                 <th scope="col"><?= $user['RW']; ?></th>
                                 <th scope="col">
+<<<<<<< HEAD
+                                    <a style="-moz-tab-size: 2;" class = "btn btn-info m-1 " href="<?= base_url('admin/detail_warga/' .$user['id']); ?>"> Detail </a>
+                                    <a style="-moz-tab-size: 2;" class = "btn btn-danger m-1 " onclick="" class="btn btn-small" data-toggle="modal"data-target="#staticModal" data-popup="tooltip" data-placement="top" title="Hapus Data"> Hapus </a>
+                                    
+=======
                                     <a style="-moz-tab-size: 2;" href="<?php echo base_url('admin/detail_warga' .$user->id); ?>"> <u> Detail </u> </a>
                                     
                                     &emsp;
                                     <a style="-moz-tab-size: 2;" class = "btn btn-danger m-1 "> Hapus </a> <!-- fungsi hapus belum masuk controller -->
+>>>>>>> 5ec9604add477b87a22c4f6aa1a0be2071718170
                                 </th>
                             </tr>
                         <?php endforeach; ?>
@@ -136,6 +142,40 @@
 <!-- /.container-fluid -->
 
 </div>
+<div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticModalLabel">Konfirmasi Hapus</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Yakin Ingin Menghapus Dari Daftar ??
+        </p>
+      </div>
+      <input type="hidden" name="action" id="act_value">
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+        <a type="button" class="btn btn-primary" href="<?php echo site_url('admin/hapus_warga/' . $user['id']); ?>">Ya, Hapus</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    function confirm_modal(delete_url, title) {
+        jQuery('#modal_delete_m_n').modal('show', {
+            backdrop: 'static',
+            keyboard: false
+        });
+        jQuery("#modal_delete_m_n .grt").text(title);
+        document.getElementById('delete_link_m_n').setAttribute("href", delete_url);
+        document.getElementById('delete_link_m_n').focus();
+    }
+</script>
 
     <script src = "https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src = "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
