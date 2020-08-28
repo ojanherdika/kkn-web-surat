@@ -9,11 +9,7 @@ class Admin extends CI_Controller
         parent::__construct();
         $this->load->model("M_surat_n1_n6");
         $this->load->model('M_surat_n6');
-<<<<<<< HEAD
         $this->load->model('Usermodel');
-=======
-
->>>>>>> 5ec9604add477b87a22c4f6aa1a0be2071718170
     }
     public function index()
     {
@@ -149,7 +145,6 @@ class Admin extends CI_Controller
         $this->load->view('admin/detail_menu', $data);
         $this->load->view('layout/adminFooter');
     }
-<<<<<<< HEAD
 
     public function hapus_warga($id)
     {
@@ -157,7 +152,6 @@ class Admin extends CI_Controller
         $this->Usermodel->hapus_warga($where, 'user');
         redirect('admin/profile');
     }
-=======
 	
 	    public function tambah_admin()
     {
@@ -171,6 +165,4 @@ class Admin extends CI_Controller
         $this->load->view('admin/tambah_admin', $data);
         $this->load->view('layout/adminFooter');
     }
-	
->>>>>>> 5ec9604add477b87a22c4f6aa1a0be2071718170
 }

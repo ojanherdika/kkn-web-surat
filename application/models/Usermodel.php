@@ -25,6 +25,6 @@ class Usermodel extends CI_Model
     function update_warga($where,$data,$table)
     {
        $this->db->where($where);
-       $this->db->update ('user',$data);       
+       $this->db->update ($table,$data);       
     }
 }

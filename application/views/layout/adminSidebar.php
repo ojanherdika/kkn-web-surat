@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap-datepicker3.css')?>"/>
 <!-- Sidebar <link rel="stylesheet" href="<?php echo base_url() ?>admin/login/css/style.css"> -->
 <ul class="navbar-nav bg-gradient-warning sidebar sidebar-dark shadow accordion" id="accordionSidebar">
 
@@ -72,3 +73,12 @@
 
 </ul>
 <!-- End of Sidebar -->
+    <script src="<?php echo base_url('assets/js/bootstrap-datepicker.js');?>"></script>
+    <script>
+        $(document).ready(function () {
+            $('.tanggal').datepicker({
+                format: "yyyy-mm-dd",
+                autoclose:true
+            });
+        });
+    </script>

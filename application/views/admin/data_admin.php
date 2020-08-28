@@ -25,19 +25,6 @@
 
 
 		<div class="card mb-3">
-
-<<<<<<< HEAD
-						</tr>
-					</thead>
-					<tbody>
-						<th scope="col">1.</th>
-						<th scope="col">001</th>
-						<th scope="col">Dadan Nazril</th>
-						<th scope="col">Komplek Permata Biru blok V no 119 RT 04 RW 14</th>
-						<th scope="col">
-							<a class = "btn btn-info m-1 " href="<?= base_url('admin/detail_admin')?>"> Detail </a>
-						</th>
-=======
 			<div class="card-body">
 				<div class="table-responsive">
 					<table class="table table-striped table bordered mydatatable" id="dataTable" width="100%"
@@ -51,7 +38,6 @@
 								<th scope="col">Aksi</th>
 							</tr>
 						</thead>
->>>>>>> 5ec9604add477b87a22c4f6aa1a0be2071718170
 
 						<tbody>
 							<?php

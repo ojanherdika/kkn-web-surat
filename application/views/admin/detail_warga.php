@@ -12,6 +12,7 @@
                 </div>
                 <div class="card-body">
                     <?php foreach ($user as $user) : ?>
+                        <input type="hidden" name="id" id="id"> value="<?php echo $user->id ?>">
                         <div class="form-group">
                             <label for="nama">Nama Lengkap</label>
                             <input class="form-control" type="text" id="nama" name="nama" value="<?php echo $user->nama; ?>"  />
@@ -126,7 +127,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="....">RT</label>
-                                    <input class="form-control" type="text" name="RT" id="RT" value="<?php echo $user->RT; ?>" />
+                                    <input class="form-control" type="text" name="RT" id="RT" required value="<?php echo $user->RT; ?>" />
                                     <div class="invalid-feedback">
 
                                     </div>
@@ -136,7 +137,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="....">RW</label>
-                                    <input class="form-control" type="text" name="RW" id="RW" value="<?php echo $user->RW; ?>" />
+                                    <input class="form-control" type="text" name="RW" id="RW" required value="<?php echo $user->RW; ?>" />
                                     <div class="invalid-feedback">
 
                                     </div>
@@ -191,7 +192,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="....">Kode Pos</label>
-                                    <input class="form-control" type="text" name="kode_pos" id="kode_pos" value="<?php echo $user->kode_pos; ?>" readonly />
+                                    <input class="form-control" type="text" name="kode_pos" id="kode_pos" value="<?php echo $user->kode_pos; ?>"  />
                                     <div class="invalid-feedback">
 
                                     </div>
@@ -201,7 +202,7 @@
 
                         <div class="form-group">
                             <label for=".....">Kepala Keluarga</label>
-                            <input class="form-control" type="text" name="kepala_keluarga" id="kepala_keluarga" value="<?php echo $user->kepala_keluarga; ?>" readonly />
+                            <input class="form-control" type="text" name="kepala_keluarga" id="kepala_keluarga" value="<?php echo $user->kepala_keluarga; ?>"  />
                             <div class="invalid-feedback">
 
                             </div>
@@ -209,7 +210,7 @@
 
                         <div class="form-group">
                             <label for=".....">Status Pernikahan</label>
-                            <input class="form-control" type="text" id="status_nikah" name="status_nikah" value="<?php echo $user->status_nikah; ?>" readonly />
+                            <input class="form-control" type="text" id="status_nikah" name="status_nikah" value="<?php echo $user->status_nikah; ?>"  />
                             <div class="invalid-feedback">
 
                             </div>
@@ -217,7 +218,7 @@
 
                         <div class="form-group">
                             <label for=".....">Status Hubungan dalam Keluarga</label>
-                            <input class="form-control" type="text" id="status_keluarga" name="status_keluarga" value="<?php echo $user->status_keluarga; ?>" readonly />
+                            <input class="form-control" type="text" id="status_keluarga" name="status_keluarga" value="<?php echo $user->status_keluarga; ?>"  />
                             <div class="invalid-feedback">
 
                             </div>
@@ -227,7 +228,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="....">Nama Ayah</label>
-                                    <input class="form-control" type="text" name="nama_ayah" id="nama_ayah" value="<?php echo $user->nama_ayah; ?>" readonly />
+                                    <input class="form-control" type="text" name="nama_ayah" id="nama_ayah" value="<?php echo $user->nama_ayah; ?>"  />
                                     <div class="invalid-feedback">
 
                                     </div>
@@ -237,7 +238,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="....">Nama Ibu</label>
-                                    <input class="form-control" type="text" name="nama_ibu" id="nama_ibu" value="<?php echo $user->nama_ibu; ?>" readonly />
+                                    <input class="form-control" type="text" name="nama_ibu" id="nama_ibu" value="<?php echo $user->nama_ibu; ?>"  />
                                     <div class="invalid-feedback">
 
                                     </div>
@@ -270,7 +271,7 @@
 
 <div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static" style="position:absolute;left:0%; top:60%;">
   <div class="modal-dialog modal-sm" role="document">
-    <form action="<?= base_url('tambah_warga/update'); ?>" method="post"
+    <form action="<?= base_url('tambah_warga/update'); ?>" method="post" enctype="multipart/form-data">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="staticModalLabel">Konfirmasi Penyimpanan</h5>

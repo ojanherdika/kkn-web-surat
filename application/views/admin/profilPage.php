@@ -117,16 +117,8 @@
 								<th scope="col"><?= $user['RT']; ?></th>
                                 <th scope="col"><?= $user['RW']; ?></th>
                                 <th scope="col">
-<<<<<<< HEAD
                                     <a style="-moz-tab-size: 2;" class = "btn btn-info m-1 " href="<?= base_url('admin/detail_warga/' .$user['id']); ?>"> Detail </a>
                                     <a style="-moz-tab-size: 2;" class = "btn btn-danger m-1 " onclick="" class="btn btn-small" data-toggle="modal"data-target="#staticModal" data-popup="tooltip" data-placement="top" title="Hapus Data"> Hapus </a>
-                                    
-=======
-                                    <a style="-moz-tab-size: 2;" href="<?php echo base_url('admin/detail_warga' .$user->id); ?>"> <u> Detail </u> </a>
-                                    
-                                    &emsp;
-                                    <a style="-moz-tab-size: 2;" class = "btn btn-danger m-1 "> Hapus </a> <!-- fungsi hapus belum masuk controller -->
->>>>>>> 5ec9604add477b87a22c4f6aa1a0be2071718170
                                 </th>
                             </tr>
                         <?php endforeach; ?>

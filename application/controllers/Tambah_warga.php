@@ -72,6 +72,7 @@ class Tambah_warga extends CI_Controller
 
     public function update()
     {
+        $id = $this->input->post('id');
         $no_kk = $this->input->post('no_kk');
         $no_nik = $this->input->post('no_nik');
         $nama = $this->input->post('nama');
@@ -97,6 +98,9 @@ class Tambah_warga extends CI_Controller
         $nama_ayah = $this->input->post('nama_ayah');
         $nama_ibu = $this->input->post('nama_ibu');
 
+        $where = [
+            'id' => $id
+        ];
         $data = [
             'no_kk' => $no_kk,
             'no_nik' => $no_nik,
@@ -123,10 +127,8 @@ class Tambah_warga extends CI_Controller
             'nama_ayah'=> $nama_ayah,
             'nama_ibu' => $nama_ibu
         ];
-        $where = [
-            'id' => $id
-        ];
-        $this->Usermodel->update_warga($where, $data, 'user');
+        $this->Usermodel->update_data($where, $data, 'user');
+        //$this->Usermodel->update_warga($where, $data, 'user');
         redirect('admin/profile');
     }
     public function update_n1_terima($id_surat_n1)
