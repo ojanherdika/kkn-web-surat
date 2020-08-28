@@ -24,13 +24,22 @@ class Usermodel extends CI_Model
         $this->db->where($where);
         $this->db->update($table, $data);
     }
-    function cari($keyword)
+    function get_data($where, $table)
     {
-        $query = "SELECT * FROM user
-                    WHERE 
-                    rt LIKE '%$keyword%' OR
-                    rw LIKE '%$keyword%' OR
-                ";
-        return $this->query($query);
+        return $this->db->get_where($table, $where);
+    }
+    function get_data_($where, $table)
+    {
+        return $this->db->get_where($table, $where);
+    }
+    function hapus_warga($where, $table)
+    {
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
+    function update_warga($where, $data, $table)
+    {
+        $this->db->where($where);
+        $this->db->update($table, $data);
     }
 }

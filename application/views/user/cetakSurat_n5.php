@@ -219,9 +219,11 @@
         $pdf->Cell(43,5,':',0,0,'R');
         $pdf->Cell(20,5,$surat->alamat_calon.", RT ".$surat->rt_calon." RW ".$surat->rw_calon,0,0);
         $pdf->ln(10);
-        $pdf->Cell(20,5,'Demikian surat izin ini dibuat dengan kesadaran tanpa ada paksaan dari siapapun',0,0);
+        $pdf->SetMargins(25, 10 , 25);
         $pdf->ln();
-        $pdf->Cell(20,5,'dan untuk digunakan seperlunya.',0,0);
+        $pdf->Cell(20,5,'Demikian surat izin ini dibuat dengan kesadaran tanpa ada paksaan dari siapapun dan untuk',0,0);
+        $pdf->ln();
+        $pdf->Cell(20,5,'digunakan seperlunya.',0,0);
         $pdf->AddPage();
         $pdf->setY(25);
         $pdf->setX(122);

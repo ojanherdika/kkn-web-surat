@@ -48,7 +48,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<!-- <div class="col-md-4">
 				<div class="form-group">
 					<img src="<?= base_url('assets/admin/img/') . $admin['image']; ?>" class="img-thumbnail">
 				</div>
@@ -58,7 +58,7 @@
 						<label class="custom-file-label" for="image">Choose file</label>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="col-md-4">
 				<button type="submit" class="btn btn-success">Edit</button>
 			</div>

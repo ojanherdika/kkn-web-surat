@@ -25,7 +25,6 @@
 
 
 		<div class="card mb-3">
-
 			<div class="card-body">
 				<div class="table-responsive">
 					<table class="table table-striped table bordered mydatatable" id="dataTable" width="100%" cellspacing="0">
