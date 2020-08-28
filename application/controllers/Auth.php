@@ -72,7 +72,7 @@ class Auth extends CI_Controller
             }
         } else {
             $this->session->set_flashdata('message', '<div class="alert
-            alert-danger" role="alert">Nomor Kartu Keluarga milik anda tidak terdaftar!</div>');
+            alert-danger" role="alert">Username yang anda masukan salah!</div>');
             redirect('auth/adlog');
         }
     }

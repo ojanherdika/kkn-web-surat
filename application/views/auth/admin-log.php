@@ -5,8 +5,8 @@
             <div class="card-body text-center">
                 <img src="<?= base_url('assets/'); ?>/user/images/logo.png" alt="" style="width:70px; height:auto;" class="text-center pb-3">
             <h5 class="card-title text-center">Masuk sebagai Admin</h5>
-            <?php $this->session->flashdata('message'); ?>
-            <form class="user form-signin text-left" action="<?php base_url('auth'); ?>" method="POST">
+            <?= $this->session->flashdata('message'); ?>
+            <form class="user form-signin text-left" action="<?= base_url('auth/adlog'); ?>" method="POST">
 
                 <div class="form-label-group">
                 <input type="username" class="form-control " name="username" id="username" placeholder="Masukkan Username" value="<?= set_value('username'); ?>">

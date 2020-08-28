@@ -5,8 +5,8 @@
             <div class="card-body text-center">
                 <img src="<?= base_url('assets/'); ?>/user/images/logo.png" alt="" style="width:70px; height:auto;" class="text-center pb-3">
             <h5 class="card-title text-center">Masuk sebagai Masyarakat</h5>
-            <?php $this->session->flashdata('message'); ?>
-            <form class="user form-signin text-left" action="<?php base_url('auth'); ?>" method="POST">
+            <?= $this->session->flashdata('message'); ?>
+            <form class="user form-signin text-left" action="<?= base_url('auth'); ?>" method="POST">
 
                 <div class="form-label-group">
                     <input type="no_kk" class="form-control" name="no_kk" id="no_kk" placeholder="Masukkan No. KK">
