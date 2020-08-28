@@ -95,24 +95,27 @@ class User extends CI_Controller
     {
         $data['title'] = 'User Page | Ganti Password';
         $data['user'] = $this->db->get_where('user', ['no_nik' => $this->session->userdata('no_nik')])->row_array();
-        $this->load->view('layout/userHeader', $data);
-        $this->load->view('user/password', $data);
-        $this->load->view('layout/userFooter');
+        $this->form_validation->set_rules('password', 'password', 'trim|required|min_length[8]', [
+            'required' => 'Password harus di isi',
+            'min_length[8]' => 'Password kurang dari 8'
+        ]);
+
+        if ($this->form_validation->run() == false) {
+
+            $this->load->view('layout/userHeader', $data);
+            $this->load->view('user/password', $data);
+            $this->load->view('layout/userFooter');
+        } else {
+            $password = $this->input->post('password');
+            $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+            $this->db->set('password', $password_hash);
+            $this->db->where('no_nik', $this->session->userdata('no_nik'));
+            $this->db->update('user');
+            redirect('user');
+        }
     }
 
-    public function update_password($no_nik)
-    {
-        $password = $this->input->post('password');
-        $data = [
-            'password' => $password
-        ];
-        $where = array(
-            'no_nik' => $no_nik
-        );
-
-        $this->Usermodel->update_data($where, $data, 'user');
-        redirect('user');
-    }
 
 
     public function p_n1()

@@ -31,8 +31,6 @@ class Admin extends CI_Controller
         $data['title'] = 'Detail Pengajuan Surat';
         $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
-
-
         $this->load->view('layout/adminHeader', $data);
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
@@ -47,7 +45,6 @@ class Admin extends CI_Controller
         $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
         $data['user'] = $this->M_surat_n6->getUser()->result_array();
-
         $this->load->view('layout/adminHeader', $data);
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
@@ -61,7 +58,7 @@ class Admin extends CI_Controller
         $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
         $where = array('id' => $id);
-        $data['user'] = $this->Usermodel->get_data($where,'user')->result();
+        $data['user'] = $this->Usermodel->get_data($where, 'user')->result();
 
         $this->load->view('layout/adminHeader', $data);
         $this->load->view('layout/adminSidebar', $data);
@@ -73,7 +70,7 @@ class Admin extends CI_Controller
     public function edit_detail_warga($id)
     {
         $where = array('id' => $id);
-        $data['user'] = $this->Usermodel->get_data_($where,'user')->result();
+        $data['user'] = $this->Usermodel->get_data_($where, 'user')->result();
         $data['title'] = 'Edit Detail Warga';
         $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
@@ -152,8 +149,8 @@ class Admin extends CI_Controller
         $this->Usermodel->hapus_warga($where, 'user');
         redirect('admin/profile');
     }
-	
-	    public function tambah_admin()
+
+    public function tambah_admin()
     {
         $data['title'] = 'Tambah Admin';
         $data['admin'] = $this->db->get_where('admin', ['username' =>
