@@ -6,9 +6,6 @@
 
     <div class="row">
         <div class="col-lg-8">
-
-
-
             <div class="card mb-3">
                 <div class="card-header">
                     <a href="<?= base_url('admin/profile'); ?>"><i class="fas fa-arrow-left"></i> Back</a>
@@ -82,8 +79,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="....">Tanggal Lahir</label>
-                                    <input class="form-control type="date"
-                                        name="tanggal_lahir" id="tanggal_lahir" />
+                                    <input class="form-control type="date" id="datepicker" placeholder="yyyy-mm-dd"
+                                        name="tanggal_lahir" />
                                     <div class="invalid-feedback">
                                         
                                     </div>
@@ -256,7 +253,7 @@
 
                         <div class="form-group">
                             <label>Alamat</label>
-                            <textarea class="form-control" type="text" name="alamat" id="alamat" min="0" style="height : 100px"></textarea>
+                            <input class="form-control" type="text" name="alamat" id="alamat" min="0" style="height : 100px"></textarea>
                             <div class="invalid-feedback">
 
                             </div>
