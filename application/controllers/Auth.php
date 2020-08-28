@@ -88,7 +88,7 @@ class Auth extends CI_Controller
         //jika usernya ada
         if ($no_kk == $user['no_kk']) {
             if ($no_nik == $user['no_nik']) {
-                if ($password == $user['password']) {
+                if (password_verify($password, $user['password'])) {
                     $data = [
                         'title' => 'WEB Persuratan Desa Cinunuk',
                         'no_nik' => $user['no_nik'],

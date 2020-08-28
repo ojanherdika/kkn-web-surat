@@ -8,7 +8,7 @@ class Tambah_warga extends CI_Controller
         parent::__construct();
         $this->load->library('pdf');
         $this->load->model("M_surat_n1_n6");
-         $this->load->model("Usermodel");
+        $this->load->model("Usermodel");
         $this->load->helper('date');
     }
 
@@ -21,9 +21,9 @@ class Tambah_warga extends CI_Controller
         $agama = $this->input->post('agama');
         $tempat_lahir = $this->input->post('tempat_lahir');
         $tanggal_lahir = $this->input->post('tanggal_lahir');
-        $jenis_kelamin =$this->input->post('jenis_kelamin');
-        $pendidikan = $this->input->post('pendidikan');
+        $jenis_kelamin = $this->input->post('jenis_kelamin');
         $pekerjaan = $this->input->post('pekerjaan');
+        $pendidikan = $this->input->post('pendidikan');
         $kepala_keluarga = $this->input->post('kepala_keluarga');
         $kewarganegaraan = $this->input->post('kewarganegaraan');
         $provinsi = $this->input->post('provinsi');
@@ -51,18 +51,18 @@ class Tambah_warga extends CI_Controller
             'pendidikan' => $pendidikan,
             'pekerjaan' => $pekerjaan,
             'kewarganegaraan' => $kewarganegaraan,
-            'provinsi'=> $provinsi,
-            'kab_kota'=> $kab_kota,
+            'provinsi' => $provinsi,
+            'kab_kota' => $kab_kota,
             'kecamatan' => $kecamatan,
-            'desa'=> $desa ,
+            'desa' => $desa,
             'RT' => $RT,
             'RW' => $RW,
             'kode_pos' => $kode_pos,
             'alamat' => $alamat,
-            'kepala_keluarga'=> $kepala_keluarga,
+            'kepala_keluarga' => $kepala_keluarga,
             'status_nikah' => $status_nikah,
             'status_keluarga' => $status_keluarga,
-            'nama_ayah'=> $nama_ayah,
+            'nama_ayah' => $nama_ayah,
             'nama_ibu' => $nama_ibu
         ];
         $this->db->insert('user', $data);
@@ -80,7 +80,7 @@ class Tambah_warga extends CI_Controller
         $agama = $this->input->post('agama');
         $tempat_lahir = $this->input->post('tempat_lahir');
         $tanggal_lahir = $this->input->post('tanggal_lahir');
-        $jenis_kelamin =$this->input->post('jenis_kelamin');
+        $jenis_kelamin = $this->input->post('jenis_kelamin');
         $pendidikan = $this->input->post('pendidikan');
         $pekerjaan = $this->input->post('pekerjaan');
         $kepala_keluarga = $this->input->post('kepala_keluarga');
@@ -113,18 +113,18 @@ class Tambah_warga extends CI_Controller
             'pendidikan' => $pendidikan,
             'pekerjaan' => $pekerjaan,
             'kewarganegaraan' => $kewarganegaraan,
-            'provinsi'=> $provinsi,
-            'kab_kota'=> $kab_kota,
+            'provinsi' => $provinsi,
+            'kab_kota' => $kab_kota,
             'kecamatan' => $kecamatan,
-            'desa'=> $desa ,
+            'desa' => $desa,
             'RT' => $RT,
             'RW' => $RW,
             'kode_pos' => $kode_pos,
             'alamat' => $alamat,
-            'kepala_keluarga'=> $kepala_keluarga,
+            'kepala_keluarga' => $kepala_keluarga,
             'status_nikah' => $status_nikah,
             'status_keluarga' => $status_keluarga,
-            'nama_ayah'=> $nama_ayah,
+            'nama_ayah' => $nama_ayah,
             'nama_ibu' => $nama_ibu
         ];
         $this->Usermodel->update_data($where, $data, 'user');
@@ -142,7 +142,8 @@ class Tambah_warga extends CI_Controller
         $this->M_surat_n1_n6->update_data($where, $data, 'surat_n1');
         redirect('admin');
     }
-    public function update_n6_terima($id_surat_n6){
+    public function update_n6_terima($id_surat_n6)
+    {
         $where = array(
             'id_surat_n6' => $id_surat_n6
         );
@@ -152,7 +153,8 @@ class Tambah_warga extends CI_Controller
         $this->M_surat_n1_n6->update_data($where, $data, 'surat_n6');
         redirect('admin');
     }
-    public function update_n6_tolak($id_surat_n6){
+    public function update_n6_tolak($id_surat_n6)
+    {
         $where = array(
             'id_surat_n6' => $id_surat_n6
         );
