@@ -49,9 +49,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<!-- <div class="col-md-4">
 				<div class="form-group">
-					<img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="img-thumbnail">
+					<img src="<?= base_url('assets/admin/img/profile/') . $user['image']; ?>" class="img-thumbnail">
 				</div>
 				<div class="form-group">
 					<div class="custom-file">
@@ -59,7 +59,7 @@
 						<label class="custom-file-label" for="image">Choose file</label>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="col-md-12">
 				<button type="submit" class="btn btn-primary">Simpan</button>
 			</div>
