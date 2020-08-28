@@ -21,6 +21,7 @@ if (!isset($_SESSION["login"])) {
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url('assets/'); ?>/user/styles/styles.css" rel="stylesheet" type="text/css">
+    <link href="<?= base_url('assets/'); ?>/user/styles/password.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url('assets/'); ?>/user/styles/custom-responsive-styles.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>/user/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>/user/bootstrap/css/bootstrap.min.css">
@@ -72,7 +73,6 @@ if (!isset($_SESSION["login"])) {
             }
         }
     </script>
-
 </head>
 
 <body id="page-top">

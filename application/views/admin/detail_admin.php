@@ -13,14 +13,14 @@
 			<div class="col-md-8">
 				<div class="form-group">
 					<label>Username</label>
-					<input class="form-control" type="text" name="username" value ="s" readonly />
+					<input class="form-control" type="text" name="username" value="s" readonly />
 				</div>
 
 				<div class="form-group">
 					<label for="....">Password</label>
 					<input class="form-control" type="text" name="password" value="●●●●●●" readonly />
 					<div class="invalid-feedback">
-					
+
 					</div>
 				</div>
 
@@ -28,29 +28,29 @@
 					<label>Nama Lengkap</label>
 					<input class="form-control" type="text" name="nama_lengkap" value="Dadan Nazril" readonly />
 					<div class="invalid-feedback">
-						
+
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label>Jabatan</label>
-					<input class="form-control" type="text" name="jabatan" value="Staff Desa Cinunuk" readonly/>
+					<input class="form-control" type="text" name="jabatan" value="Staff Desa Cinunuk" readonly />
 					<div class="invalid-feedback">
-						
+
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label>No HP</label>
-					<input class="form-control" type="text" name="no_hp" value="0892132122" readonly/>
+					<input class="form-control" type="text" name="no_hp" value="0892132122" readonly />
 					<div class="invalid-feedback">
-						
+
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="form-group">
-					<img src="<?= base_url('assets/admin/img/profile/') . $admin['image']; ?>" class="img-thumbnail">
+					<img src="<?= base_url('assets/admin/img/') . $admin['image']; ?>" class="img-thumbnail">
 				</div>
 				<div class="form-group">
 					<div class="custom-file">
@@ -63,7 +63,7 @@
 				<button type="submit" class="btn btn-success">Edit</button>
 			</div>
 
-            <div class="col-md-4">
+			<div class="col-md-4">
 				<button type="submit" class="btn btn-primary">Simpan</button>
 			</div>
 		</form>

@@ -22,7 +22,7 @@
             <hr class="bg-light ml-3 mr-3">
         </li>
         <li class="sidebar-nav-item text-white text-center">
-            <img class="img-circle smooth-scroll ml-3 mr-3" src="<?= base_url('assets/'); ?>/user/images/default.jpg" alt="" style="width: 40px; border-radius: 50%;">
+            <img class="img-circle smooth-scroll ml-3 mr-3" src="<?= base_url('assets/'); ?>user/images/default.jpg" alt="" style="width: 40px; border-radius: 50%;">
             <strong><?= $user['nama']; ?></strong>
         </li>
         <li>
@@ -203,34 +203,34 @@
 
             <!-- Modal -->
             <div class="modal fade" id="modalDetail" tabindex="-1" role="dialog" aria-labelledby="modalDetail" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalDetailTitle">Informasi</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                Untuk melakukan pencetakan, silahkan datang ke bagian Tata Usaha Kantor Desa Cinunuk dengan menyebutkan Nama Lengkap Anda. <br><br>
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalDetailTitle">Informasi</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Untuk melakukan pencetakan, silahkan datang ke bagian Tata Usaha Kantor Desa Cinunuk dengan menyebutkan Nama Lengkap Anda. <br><br>
 
-                Berkas-berkas yang harus dibawa pada saat pengambilan Surat Pengantar Nikah (N1) adalah: <br>
-                •	Surat Persetujuan Dua Calon Pengantin <a href="<?= base_url('user/p_n4'); ?>">buat N4</a> <br>
-                •	Surat pengatar dari RT/RW <br>
-                •	Fotokopi KTP <br>
-                •	Fotokopi akta kelahiran atau ijazah terakhir <br>
-                •	Fotokopi kartu keluarga <br>
-                •	Pasfoto 2x3 = 3 lembar berlatar belakang biru <br>
-                •	pasfoto 3x4 = 4 lembar berlatar belakang biru <br>
-                •	Surat pernyataan belum pernah menikah (Bagi Anda yang belum pernah menikah ) <br>
-                •	Surat Izin Orang tua (Bagi anda yang masih dibawah umur, Laki-laki < 25th | Perempuan < 21th) <a href="<?= base_url('user/p_n5'); ?>">buat N5</a> <br>
-                •	Fotokopi Akta Cerai (Bagi Anda yang berstatus pernikahan Cerai Hidup ) <br>
-                •	Fotokopi Akta Kematian (Bagi Anda yang berstatus pernikahan Cerai Mati ) <br><br>
+                            Berkas-berkas yang harus dibawa pada saat pengambilan Surat Pengantar Nikah (N1) adalah: <br>
+                            • Surat Persetujuan Dua Calon Pengantin <a href="<?= base_url('user/p_n4'); ?>">buat N4</a> <br>
+                            • Surat pengatar dari RT/RW <br>
+                            • Fotokopi KTP <br>
+                            • Fotokopi akta kelahiran atau ijazah terakhir <br>
+                            • Fotokopi kartu keluarga <br>
+                            • Pasfoto 2x3 = 3 lembar berlatar belakang biru <br>
+                            • pasfoto 3x4 = 4 lembar berlatar belakang biru <br>
+                            • Surat pernyataan belum pernah menikah (Bagi Anda yang belum pernah menikah ) <br>
+                            • Surat Izin Orang tua (Bagi anda yang masih dibawah umur, Laki-laki < 25th | Perempuan < 21th) <a href="<?= base_url('user/p_n5'); ?>">buat N5</a> <br>
+                                • Fotokopi Akta Cerai (Bagi Anda yang berstatus pernikahan Cerai Hidup ) <br>
+                                • Fotokopi Akta Kematian (Bagi Anda yang berstatus pernikahan Cerai Mati ) <br><br>
 
-                Terima Kasih atas perhatiannya, silahkan datang kembali.
+                                Terima Kasih atas perhatiannya, silahkan datang kembali.
+                        </div>
+                    </div>
                 </div>
-                </div>
-            </div>
             </div>
 
         </table>

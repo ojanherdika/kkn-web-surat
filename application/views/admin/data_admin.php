@@ -17,7 +17,7 @@
 
 		<div class="row">
 			<div class="col-md-7">
-				<a class="btn btn-primary" href="<?= base_url('admin/tambah_admin')?>">+ Tambah Admin</a>
+				<a class="btn btn-primary" href="<?= base_url('admin/tambah_admin') ?>">+ Tambah Admin</a>
 			</div>
 		</div>
 
@@ -28,8 +28,7 @@
 
 			<div class="card-body">
 				<div class="table-responsive">
-					<table class="table table-striped table bordered mydatatable" id="dataTable" width="100%"
-						cellspacing="0">
+					<table class="table table-striped table bordered mydatatable" id="dataTable" width="100%" cellspacing="0">
 						<thead>
 							<tr>
 								<th scope="col">No</th>
@@ -42,15 +41,15 @@
 
 						<tbody>
 							<?php
-                        	$i = 1;
+							$i = 1;
 							foreach ($admin as $admin) : ?>
-							<tr>
-							<th scope="col"><?= $i++; ?></th>
-							<th scope="col"><?= $admin['nama_lengkap']; ?></th>
-							<th scope="col"><?= $admin['jabatan']; ?></th>
-							<th scope="col"><?= $admin['no_hp']; ?></th>
-							<th scope="col"><a href="<?= base_url('admin/detail_admin')?>" class="btn btn-success m-1">  Detail <i class="fas fa-search"></i></a> </th>
-							</tr>
+								<tr>
+									<th scope="col"><?= $i++; ?></th>
+									<th scope="col"><?= $admin['nama_lengkap']; ?></th>
+									<th scope="col"><?= $admin['jabatan']; ?></th>
+									<th scope="col"><?= $admin['no_hp']; ?></th>
+									<th scope="col"><a href="<?= base_url('admin/detail_admin') ?>" class="btn btn-success m-1"> Detail <i class="fas fa-search"></i></a> </th>
+								</tr>
 							<?php endforeach; ?>
 						</tbody>
 					</table>

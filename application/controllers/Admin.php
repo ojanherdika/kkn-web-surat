@@ -9,7 +9,7 @@ class Admin extends CI_Controller
         parent::__construct();
         $this->load->model("M_surat_n1_n6");
         $this->load->model('M_surat_n6');
-
+        $this->load->model('Usermodel');
     }
     public function index()
     {
@@ -31,8 +31,6 @@ class Admin extends CI_Controller
         $data['title'] = 'Detail Pengajuan Surat';
         $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
-
-
         $this->load->view('layout/adminHeader', $data);
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
@@ -47,7 +45,6 @@ class Admin extends CI_Controller
         $data['admin'] = $this->db->get_where('admin', ['username' =>
         $this->session->userdata('username')])->row_array();
         $data['user'] = $this->M_surat_n6->getUser()->result_array();
-
         $this->load->view('layout/adminHeader', $data);
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
@@ -144,8 +141,8 @@ class Admin extends CI_Controller
         $this->load->view('admin/detail_menu', $data);
         $this->load->view('layout/adminFooter');
     }
-	
-	    public function tambah_admin()
+
+    public function tambah_admin()
     {
         $data['title'] = 'Tambah Admin';
         $data['admin'] = $this->db->get_where('admin', ['username' =>
@@ -157,5 +154,4 @@ class Admin extends CI_Controller
         $this->load->view('admin/tambah_admin', $data);
         $this->load->view('layout/adminFooter');
     }
-	
 }

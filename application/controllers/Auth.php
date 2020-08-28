@@ -79,13 +79,14 @@ class Auth extends CI_Controller
     private function _login()
     {
         session_start();
+        $no_kk = $this->input->post('no_kk');
         $no_nik = $this->input->post('no_nik');
         $password = $this->input->post('password');
 
         $user = $this->db->get_where('user', ['no_nik' => $no_nik])->row_array();
 
         //jika usernya ada
-        if ($user) {
+        if ($no_kk == $user['no_kk']) {
             if ($no_nik == $user['no_nik']) {
                 if ($password == $user['password']) {
                     $data = [
