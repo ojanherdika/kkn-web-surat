@@ -10,41 +10,39 @@
                 <div class="card-header">
                     <a href="<?= base_url('admin/profile'); ?>"><i class="fas fa-arrow-left"></i> Kembali </a>
                 </div>
-                <div class="card-body">
-                    <input type="hidden" name="id" id="id"> value="<?php echo $user->id ?>">
+                <form action="<?= base_url('Tambah_warga/update'); ?>" method="POST">
+                    <div class="card-body">
+                        <?php foreach ($user as $user) : ?>
+                            <input type="hidden" name="id" id="id" value="<?php echo $user->id ?>">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="no_kk">NKK</label>
+                                        <input class="form-control" type="text" name="no_kk" id="no_kk" value="<?php echo $user->no_kk; ?>" />
+                                        <div class="invalid-feedback">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group"></div>
+                                    <label for="no_nik">NIK</label>
+                                    <input class="form-control" type="text" name="no_nik" id="no_nik" value="<?php echo $user->no_nik; ?>" />
+                                    <div class="invalid-feedback">
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
                     <div class="form-group">
                         <label for="nama">Nama Lengkap</label>
                         <input class="form-control" type="text" id="nama" name="nama" value="<?php echo $user->nama; ?>" />
                         <div class="invalid-feedback"></div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="no_nik">NIK</label>
-                                <input class="form-control" type="text" name="no_nik" id="no_nik" value="<?php echo $user->no_nik; ?>" />
-                                <div class="invalid-feedback">
 
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="no_kk">NKK</label>
-                                <input class="form-control" type="text" name="no_kk" id="no_kk" value="<?php echo $user->no_kk; ?>" />
-                                <div class="invalid-feedback">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input class="form-control" type="text" name="password" id="password" value="<?php echo $user->password; ?>" />
-                        <div class="invalid-feedback"></div>
-                    </div>
 
                     <div class="row">
                         <div class="col-md-6">
@@ -252,42 +250,20 @@
                                 <a class="btn btn-primary m-1" href="<?= base_url('admin/profile'); ?>">Batal</a>
 
                                 &emsp;
-                                <a class="btn btn-success m-1 " onclick="" class="btn btn-small" data-toggle="modal" data-target="#staticModal" data-popup="tooltip" data-placement="top" title="Simpan Data"> Simpan </a>
+                                <button class="btn btn-success m-1 " class="btn btn-small text-white" data-toggle="modal" data-target="#staticModal" data-popup="tooltip" data-placement="top" title="Simpan Data"> Simpan </button>
                             </div>
                         </div>
                     </div>
 
-                </div>
             </div>
+        <?php endforeach; ?>
 
-        </div>
-        <!-- /.container-fluid -->
-
-    </div>
-    <!-- End of Main Content -->
-</div>
-
-<div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true" data-backdrop="static" style="position:absolute;left:0%; top:60%;">
-    <div class="modal-dialog modal-sm" role="document">
-        <form action="<?= base_url('tambah_warga/update'); ?>" method="post" enctype="multipart/form-data">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticModalLabel">Konfirmasi Penyimpanan</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        Yakin Ingin Menyimpan Data Terbaru ?
-                    </p>
-                </div>
-                <input type="hidden" name="action" id="act_value">
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                    <button type="submit" class="btn btn-success" value="Simpan">Ya, Simpan</button>
-                </div>
-            </div>
         </form>
+        </div>
+
     </div>
+    <!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
 </div>
