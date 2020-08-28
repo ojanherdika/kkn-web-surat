@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Agu 2020 pada 18.57
--- Versi server: 10.1.28-MariaDB
--- Versi PHP: 7.3.12
+-- Generation Time: Aug 28, 2020 at 04:57 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -41,7 +40,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `nama_lengkap`, `jabatan`, `no_hp`, `image`, `created_at`, `updated_at`) VALUES
@@ -50,7 +49,7 @@ INSERT INTO `admin` (`id`, `username`, `password`, `nama_lengkap`, `jabatan`, `n
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `surat_n1`
+-- Table structure for table `surat_n1`
 --
 
 CREATE TABLE `surat_n1` (
@@ -113,7 +112,7 @@ CREATE TABLE `surat_n1` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `surat_n1`
+-- Dumping data for table `surat_n1`
 --
 
 INSERT INTO `surat_n1` (`id_surat_n1`, `nama`, `no_nik`, `tempat_lahir`, `binti`, `agama`, `tanggal_lahir`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `rt`, `rw`, `kode_pos`, `alamat`, `status_nikah`, `nama_suami_istri`, `nama_ayah`, `binti_ayah`, `status_hidup_ayah`, `nik_ayah`, `agama_ayah`, `tempat_lahir_ayah`, `tanggal_lahir_ayah`, `pekerjaan_ayah`, `kewarganegaraan_ayah`, `alamat_ayah`, `provinsi_ayah`, `kab_kota_ayah`, `rt_ayah`, `rw_ayah`, `kode_pos_ayah`, `nama_ibu`, `binti_ibu`, `status_hidup_ibu`, `nik_ibu`, `agama_ibu`, `tempat_lahir_ibu`, `tanggal_lahir_ibu`, `pekerjaan_ibu`, `kewarganegaraan_ibu`, `alamat_ibu`, `provinsi_ibu`, `kab_kota_ibu`, `kecamatan_ibu`, `desa_ibu`, `desa_ayah`, `rt_ibu`, `rw_ibu`, `kode_pos_ibu`, `jenis_kelamin`, `jenis_surat`, `status_surat`, `tgl_ajukan_surat`) VALUES
@@ -123,7 +122,7 @@ INSERT INTO `surat_n1` (`id_surat_n1`, `nama`, `no_nik`, `tempat_lahir`, `binti`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `surat_n4`
+-- Table structure for table `surat_n4`
 --
 
 CREATE TABLE `surat_n4` (
@@ -168,7 +167,7 @@ CREATE TABLE `surat_n4` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `surat_n4`
+-- Dumping data for table `surat_n4`
 --
 
 INSERT INTO `surat_n4` (`id_surat_n4`, `nama`, `no_nik`, `tanggal_lahir`, `binti`, `agama`, `tempat_lahir`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `rt`, `rw`, `kode_pos`, `alamat`, `jenis_kelamin`, `nama_calon`, `nik_calon`, `jenis_kelamin_calon`, `tempat_lahir_calon`, `tanggal_lahir_calon`, `kewarganegaraan_calon`, `agama_calon`, `pekerjaan_calon`, `alamat_calon`, `provinsi_calon`, `kab_kota_calon`, `tgl_ajukan_surat`, `kecamatan_calon`, `desa_calon`, `rt_calon`, `rw_calon`, `kode_pos_calon`, `jenis_surat`, `status_surat`, `binti_calon`) VALUES
@@ -178,7 +177,7 @@ INSERT INTO `surat_n4` (`id_surat_n4`, `nama`, `no_nik`, `tanggal_lahir`, `binti
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `surat_n5`
+-- Table structure for table `surat_n5`
 --
 
 CREATE TABLE `surat_n5` (
@@ -253,7 +252,7 @@ CREATE TABLE `surat_n5` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `surat_n5`
+-- Dumping data for table `surat_n5`
 --
 
 INSERT INTO `surat_n5` (`id_surat_n5`, `nama_ayah`, `binti_ayah`, `agama_ayah`, `tempat_lahir_ayah`, `tanggal_lahir_ayah`, `pekerjaan_ayah`, `alamat_ayah`, `provinsi_ayah`, `kab_kota_ayah`, `rt_ayah`, `rw_ayah`, `kode_pos_ayah`, `kewarganegaraan_ayah`, `nama_ibu`, `binti_ibu`, `nik_ibu`, `agama_ibu`, `tempat_lahir_ibu`, `tanggal_lahir_ibu`, `pekerjaan_ibu`, `kewarganegaraan_ibu`, `alamat_ibu`, `provinsi_ibu`, `kab_kota_ibu`, `kecamatan_ibu`, `desa_ibu`, `rt_ibu`, `rw_ibu`, `kode_pos_ibu`, `nama`, `no_nik`, `tempat_lahir`, `binti`, `agama`, `tanggal_lahir`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `rt`, `rw`, `kode_pos`, `alamat`, `nama_calon`, `binti_calon`, `nik_calon`, `tempat_lahir_calon`, `tanggal_lahir_calon`, `kewarganegaraan_calon`, `agama_calon`, `pekerjaan_calon`, `alamat_calon`, `provinsi_calon`, `kab_kota_calon`, `kecamatan_calon`, `desa_calon`, `rt_calon`, `rw_calon`, `kode_pos_calon`, `jenis_surat`, `tgl_ajukan_surat`, `status_surat`, `kecamatan_ayah`, `desa_ayah`, `nik_ayah`) VALUES
@@ -262,7 +261,7 @@ INSERT INTO `surat_n5` (`id_surat_n5`, `nama_ayah`, `binti_ayah`, `agama_ayah`, 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `surat_n6`
+-- Table structure for table `surat_n6`
 --
 
 CREATE TABLE `surat_n6` (
@@ -310,7 +309,7 @@ CREATE TABLE `surat_n6` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `surat_n6`
+-- Dumping data for table `surat_n6`
 --
 
 INSERT INTO `surat_n6` (`id_surat_n6`, `nama`, `no_nik`, `tempat_lahir`, `binti`, `agama`, `tanggal_lahir`, `pekerjaan`, `kewarganegaraan`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `rt`, `rw`, `kode_pos`, `alamat`, `status_nikah`, `jenis_kelamin`, `nama_mati`, `binti_mati`, `nik_mati`, `tempat_lahir_mati`, `tanggal_lahir_mati`, `kewarganegaraan_mati`, `agama_mati`, `pekerjaan_mati`, `alamat_mati`, `provinsi_mati`, `kab_kota_mati`, `kecamatan_mati`, `desa_mati`, `rt_mati`, `rw_mati`, `kode_pos_mati`, `tgl_meninggal`, `tempat_meninggal`, `jenis_surat`, `tgl_ajukan_surat`, `status_surat`, `nama_suami_istri`) VALUES
@@ -319,7 +318,7 @@ INSERT INTO `surat_n6` (`id_surat_n6`, `nama`, `no_nik`, `tempat_lahir`, `binti`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -352,17 +351,42 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `no_kk`, `no_nik`, `nama`, `password`, `agama`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `pendidikan`, `pekerjaan`, `kewarganegaraan`, `kepala_keluarga`, `provinsi`, `kab_kota`, `kecamatan`, `desa`, `RT`, `RW`, `kode_pos`, `alamat`, `status_nikah`, `status_keluarga`, `nama_ayah`, `nama_ibu`, `image`) VALUES
 (1, 3204050000000000, 3204050000000000, 'Fauzan', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-Laki', '', '', '', '0', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 0, '', 'lajang', 'kepala_keluarga', '', '', 'default.jpg'),
-(2, 1234, 1234, 'Fauzan Herdika Tubagus Putra', 'Gilardino29', 'Islam', '', '0000-00-00', 'Laki-Laki', '', '', '', '0', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 0, '', 'lajang', 'kepala_keluarga', '', '', 'default.jpg');
+(2, 1234, 1234, 'Fauzan Herdika Tubagus Putra', 'Gilardino29', 'Islam', '', '0000-00-00', 'Laki-Laki', '', '', '', '0', 'Jawa Barat', 'Kota Bandung', 'Cileunyi', 'Cinunuk', '', '', 0, '', 'lajang', 'kepala_keluarga', '', '', 'default.jpg'),
+(3, 3204052504056006, 3204052504000003, 'NUR AZMI AULIA SOLIHIN', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'SLTA/Sederajat', 'Pelajar/Mahasiswa', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '6', '19', 40624, 'KOMP. PERMATA  BIRU BLOK F NO. 4', '', 'Anak', '', '', 'default.jpg'),
+(4, 3204052504056009, 3204050405980003, 'M ADITYA RIZKA FADHILA', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'Tamat SD/Sederajat', 'Pelajar/Mahasiswa', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '6', '19', 40624, 'MEKARWANGI PERMATA BIRU F. 62', '', 'Anak', '', '', 'default.jpg'),
+(5, 3204052504056013, 3204051606500001, 'DADAN KARDANA', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'SLTA/Sederajat', 'Wiraswasta', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '6', '19', 40624, 'KOMP. PERMATA BIRU BLOK F NO.', '', 'Kepala Keluarga', '', '', 'default.jpg'),
+(6, 3204052504056013, 3204056208580002, 'JUBAEDAH', 'Changeme1', 'Islam', '', '0000-00-00', 'Perempuan', 'SLTA/Sederajat', 'Mengurus rumah tangga', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '6', '19', 40624, 'KOMP. PERMATA BIRU BLOK F NO.', '', 'Istri', '', '', 'default.jpg'),
+(7, 3204052504056029, 3204056510710003, 'SUTINAH', 'Changeme1', 'Islam', '', '0000-00-00', 'Perempuan', 'Diploma IV/Strata I', 'Mengurus rumah tangga', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '6', '19', 40624, 'KOMP. PERMATA BIRU BLOK F 141', '', 'Istri', '', '', 'default.jpg'),
+(8, 3204050611120052, 3204056905910004, 'ARIANDHINI LESTARI HARYADI', 'Changeme1', 'Islam', '', '0000-00-00', 'Perempuan', 'Akademi/Diploma III/S.Muda', 'Karyawan BUMN', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '2', '23', 40624, 'KOMP. PERMATA BIRU BLOK U NO.', '', 'Anak', '', '', 'default.jpg'),
+(9, 3204050611120053, 3204050101710012, 'EDED SUCIPTO', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'SLTA/Sederajat', 'Karyawan Swasta', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '2', '23', 40624, 'KOMP. PERMATA BIRU BLOK U-43', '', 'Kepala Keluarga', '', '', 'default.jpg'),
+(10, 3204050611120053, 3204055705990007, 'MELANI NURUL MUDYAWATI', 'Changeme1', 'Islam', '', '0000-00-00', 'Perempuan', 'SLTP/Sederajat', 'Pelajar/Mahasiswa', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '2', '23', 40624, 'KOMP. PERMATA BIRU BLOK U-43', '', 'Anak', '', '', 'default.jpg'),
+(11, 3204050611120053, 3204053112080004, 'SYAAMIL RAIHAN MUDYANTO', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'Tidak/Belum Sekolah', 'Belum/Tidak Bekerja', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '2', '23', 40624, 'KOMP. PERMATA BIRU BLOK U-43', '', 'Anak', '', '', 'default.jpg'),
+(12, 3204050808170001, 3509243004850001, 'MOCH. IRWAN GOZALI', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'SLTA/Sederajat', 'Karyawan Swasta', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '2', '23', 40624, 'KOMP. PERMATA BIRU BLOK U NO.', '', 'Kepala Keluarga', '', '', 'default.jpg'),
+(13, 3204051006053421, 3204051712750003, 'ERWIN HAMDANI HARAHAP', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'Strata II', 'Dosen', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '3', '23', 40624, 'KOMP. PERMATA BIRU BLOK AS NO.', '', 'Kepala Keluarga', '', '', 'default.jpg'),
+(14, 3204051006053421, 3204052008050004, 'ARIASATYA RIZAL HARAHAP', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'Belum Tamat SD/Sederajat', 'Pelajar/Mahasiswa', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '3', '23', 40624, 'KOMP. PERMATA BIRU BLOK AS NO.', '', 'Anak', '', '', 'default.jpg'),
+(15, 3204051006053421, 3204051101990005, 'AKBAR HIDAYATULLAH HARAHAP', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'SLTP/Sederajat', 'Pelajar/Mahasiswa', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '3', '23', 40624, 'KOMP. PERMATA BIRU BLOK AS NO.', '', 'Anak', '', '', 'default.jpg'),
+(16, 3204051006053446, 3204054412790012, 'KURNIA FATIMAH ALLI', 'Changeme1', 'Islam', '', '0000-00-00', 'Perempuan', 'Diploma IV/Strata I', 'Mengurus rumah tangga', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '3', '23', 40624, 'KOMP. PERMATA BIRU BLOK AL NO.', '', 'Istri', '', '', 'default.jpg'),
+(17, 3204051006053453, 3204051810770006, 'JOKO SUGIHARTO,ST', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'Diploma IV/Strata I', 'Industri', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '3', '23', 40624, 'KOMP PERMATA BIRU BLOK. AL  NO.', '', 'Kepala Keluarga', '', '', 'default.jpg'),
+(18, 3204052604053286, 3204050712640001, 'ASEP HASIM', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'SLTA/Sederajat', 'Wiraswasta', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '3', '24', 40624, 'KOMP. PERMATA BIRU BLOK AE NO.', '', 'Kepala Keluarga', '', '', 'default.jpg'),
+(19, 3204052604053286, 3204055607690005, 'HENI ELINAWATI', 'Changeme1', 'Islam', '', '0000-00-00', 'Perempuan', 'SLTA/Sederajat', 'Mengurus rumah tangga', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '3', '24', 40624, 'KOMP. PERMATA BIRU BLOK AE NO.', '', 'Istri', '', '', 'default.jpg'),
+(20, 3204052604053286, 3204052303990002, 'PEBRI ALKAUTSAR', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'SLTP/Sederajat', 'Pelajar/Mahasiswa', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '3', '24', 40624, 'KOMP. PERMATA BIRU BLOK AE NO.', '', 'Anak', '', '', 'default.jpg'),
+(21, 3204052604054132, 3206385011650008, 'DADAH', 'Changeme1', 'Islam', '', '0000-00-00', 'Perempuan', 'Tamat SD/Sederajat', 'Mengurus rumah tangga', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '3', '24', 40624, 'KOMP. PERMATA BIRU BLOK AE  NO', '', 'Istri', '', '', 'default.jpg'),
+(22, 3204052604054132, 3204052909980006, 'YOGA WIRA SEPTIANA GUMELAR', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'SLTA/Sederajat', 'Pelajar/Mahasiswa', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '3', '24', 40624, 'KOMP. PERMATA BIRU BLOK AE  NO', '', 'Anak', '', '', 'default.jpg'),
+(23, 3204051106050505, 3204054611960009, 'TIARA RAHMANAFI SUGANDI', 'Changeme1', 'Islam', '', '0000-00-00', 'Perempuan', 'SLTA/Sederajat', 'Pelajar/Mahasiswa', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '5', '24', 40624, 'KOMP. PERMATA BIRU BLOK AG NO.', '', 'Anak', '', '', 'default.jpg'),
+(24, 3204051106050522, 3204051405690004, 'ATU BAGUS ASEP TATANG KURNIA', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'DIPLOMA I/II', 'Karyawan BUMN', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '5', '24', 40624, 'KOMP. PERMATA BIRU BLOK AG NO.', '', 'Kepala Keluarga', '', '', 'default.jpg'),
+(25, 3204051106050522, 3204051610990003, 'FAUZAN HERDIKA TUBAGUS PUTRA', 'Changeme1', 'Islam', '', '0000-00-00', 'Laki-laki', 'SLTA/Sederajat', 'Pelajar/Mahasiswa', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '5', '24', 40624, 'KOMP. PERMATA BIRU BLOK AG NO.', '', 'Anak', '', '', 'default.jpg'),
+(26, 3204051106050522, 3204056010010008, 'FAUZIA OKTAVIANA DWI RIZKY', 'Changeme1', 'Islam', '', '0000-00-00', 'Perempuan', 'SLTP/Sederajat', 'Pelajar/Mahasiswa', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '5', '24', 40624, 'KOMP. PERMATA BIRU BLOK AG NO.', '', 'Anak', '', '', 'default.jpg'),
+(27, 3204051106050522, 3204055004040007, 'ALIFA NURKHANZA GHANIYA', 'Changeme1', 'Islam', '', '0000-00-00', 'Perempuan', 'Tamat SD/Sederajat', 'Pelajar/Mahasiswa', 'WNI', '', 'Jawa Barat', 'Kab. Bandung', 'Cileunyi', 'Cinunuk', '5', '24', 40624, 'KOMP. PERMATA BIRU BLOK AG NO.', '', 'Famili Lain', '', '', 'default.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `wilayah_desa`
+-- Table structure for table `wilayah_desa`
 --
 
 CREATE TABLE `wilayah_desa` (
@@ -372,7 +396,7 @@ CREATE TABLE `wilayah_desa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `wilayah_desa`
+-- Dumping data for table `wilayah_desa`
 --
 
 INSERT INTO `wilayah_desa` (`id`, `kecamatan_id`, `nama`) VALUES
@@ -80143,7 +80167,7 @@ INSERT INTO `wilayah_desa` (`id`, `kecamatan_id`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `wilayah_kabupaten`
+-- Table structure for table `wilayah_kabupaten`
 --
 
 CREATE TABLE `wilayah_kabupaten` (
@@ -80153,7 +80177,7 @@ CREATE TABLE `wilayah_kabupaten` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `wilayah_kabupaten`
+-- Dumping data for table `wilayah_kabupaten`
 --
 
 INSERT INTO `wilayah_kabupaten` (`id`, `provinsi_id`, `nama`) VALUES
@@ -80660,7 +80684,7 @@ INSERT INTO `wilayah_kabupaten` (`id`, `provinsi_id`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `wilayah_kecamatan`
+-- Table structure for table `wilayah_kecamatan`
 --
 
 CREATE TABLE `wilayah_kecamatan` (
@@ -80670,7 +80694,7 @@ CREATE TABLE `wilayah_kecamatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `wilayah_kecamatan`
+-- Dumping data for table `wilayah_kecamatan`
 --
 
 INSERT INTO `wilayah_kecamatan` (`id`, `kabupaten_id`, `nama`) VALUES
@@ -87560,7 +87584,7 @@ INSERT INTO `wilayah_kecamatan` (`id`, `kabupaten_id`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `wilayah_provinsi`
+-- Table structure for table `wilayah_provinsi`
 --
 
 CREATE TABLE `wilayah_provinsi` (
@@ -87569,7 +87593,7 @@ CREATE TABLE `wilayah_provinsi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `wilayah_provinsi`
+-- Dumping data for table `wilayah_provinsi`
 --
 
 INSERT INTO `wilayah_provinsi` (`id`, `nama`) VALUES
@@ -87613,37 +87637,37 @@ INSERT INTO `wilayah_provinsi` (`id`, `nama`) VALUES
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `surat_n1`
+-- Indexes for table `surat_n1`
 --
 ALTER TABLE `surat_n1`
   ADD PRIMARY KEY (`id_surat_n1`) USING BTREE;
 
 --
--- Indeks untuk tabel `surat_n4`
+-- Indexes for table `surat_n4`
 --
 ALTER TABLE `surat_n4`
   ADD PRIMARY KEY (`id_surat_n4`);
 
 --
--- Indeks untuk tabel `surat_n5`
+-- Indexes for table `surat_n5`
 --
 ALTER TABLE `surat_n5`
   ADD PRIMARY KEY (`id_surat_n5`);
 
 --
--- Indeks untuk tabel `surat_n6`
+-- Indexes for table `surat_n6`
 --
 ALTER TABLE `surat_n6`
   ADD PRIMARY KEY (`id_surat_n6`);
 
 --
--- Indeks untuk tabel `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
@@ -87651,65 +87675,65 @@ ALTER TABLE `user`
   ADD KEY `no_kk` (`no_kk`) USING BTREE;
 
 --
--- Indeks untuk tabel `wilayah_desa`
+-- Indexes for table `wilayah_desa`
 --
 ALTER TABLE `wilayah_desa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `wilayah_kabupaten`
+-- Indexes for table `wilayah_kabupaten`
 --
 ALTER TABLE `wilayah_kabupaten`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `wilayah_kecamatan`
+-- Indexes for table `wilayah_kecamatan`
 --
 ALTER TABLE `wilayah_kecamatan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `wilayah_provinsi`
+-- Indexes for table `wilayah_provinsi`
 --
 ALTER TABLE `wilayah_provinsi`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `surat_n1`
+-- AUTO_INCREMENT for table `surat_n1`
 --
 ALTER TABLE `surat_n1`
   MODIFY `id_surat_n1` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
--- AUTO_INCREMENT untuk tabel `surat_n4`
+-- AUTO_INCREMENT for table `surat_n4`
 --
 ALTER TABLE `surat_n4`
   MODIFY `id_surat_n4` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT untuk tabel `surat_n5`
+-- AUTO_INCREMENT for table `surat_n5`
 --
 ALTER TABLE `surat_n5`
   MODIFY `id_surat_n5` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `surat_n6`
+-- AUTO_INCREMENT for table `surat_n6`
 --
 ALTER TABLE `surat_n6`
   MODIFY `id_surat_n6` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1196;
