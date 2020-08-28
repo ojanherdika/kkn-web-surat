@@ -117,10 +117,9 @@
 								<th scope="col"><?= $user['RT']; ?></th>
                                 <th scope="col"><?= $user['RW']; ?></th>
                                 <th scope="col">
-                                    <a style="-moz-tab-size: 2;" href="<?php echo base_url('admin/detail_warga' .$user->id); ?>"> <u> Detail </u> </a>
-                                    
+                                    <a style="-moz-tab-size: 2;" href="<?php echo base_url('admin/detail_warga/').$user['id']; ?>"> <u> Detail </u> </a>
                                     &emsp;
-                                    <a style="-moz-tab-size: 2;" class = "btn btn-danger m-1 "> Hapus </a> <!-- fungsi hapus belum masuk controller -->
+                                    <a type="button" style="-moz-tab-size: 2;" class = "btn btn-danger m-1 text-white"> Hapus </a> <!-- fungsi hapus belum masuk controller -->
                                 </th>
                             </tr>
                         <?php endforeach; ?>
