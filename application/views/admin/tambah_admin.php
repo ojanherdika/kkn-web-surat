@@ -11,21 +11,21 @@
 				<div class="col-md-8">
 					<div class="form-group">
 						<label>Username</label>
-						<input class="form-control" type="text" name="username" id="username" />
+						<input class="form-control" type="text" name="username" id="username" required />
 						<div class="invalid-feedback">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label for="....">Password</label>
-						<input class="form-control" type="password" name="password" id="password" />
+						<input class="form-control" type="password" name="password" id="password" required />
 						<div class="invalid-feedback">
 						</div>
 					</div>
 
 					<div class="form-group">
 						<label>Nama Lengkap</label>
-						<input class="form-control" type="text" name="nama_lengkap" id="nama_lengkap" />
+						<input class="form-control" type="text" name="nama_lengkap" id="nama_lengkap" required />
 						<div class="invalid-feedback">
 
 						</div>
@@ -33,7 +33,7 @@
 
 					<div class="form-group">
 						<label>Jabatan</label>
-						<input class="form-control" type="text" name="jabatan" id="jabatan" />
+						<input class="form-control" type="text" name="jabatan" id="jabatan" required />
 						<div class="invalid-feedback">
 
 						</div>
@@ -41,7 +41,7 @@
 
 					<div class="form-group">
 						<label>No HP</label>
-						<input class="form-control" type="text" name="no_hp" id="no_hp" />
+						<input class="form-control" type="text" name="no_hp" id="no_hp" required />
 						<div class="invalid-feedback">
 
 						</div>
