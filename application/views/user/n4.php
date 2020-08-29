@@ -32,7 +32,7 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label>NIK</label>
-                                    <input class="form-control" type="text"  name="no_nik" placeholder="Masukan NIK Calon Suami" >
+                                    <input class="form-control" type="text"  name="no_nik" name="no_nik" value="<?= $user['no_nik']; ?>" readonly >
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Agama</label>
