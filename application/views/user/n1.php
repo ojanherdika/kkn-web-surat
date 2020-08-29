@@ -169,11 +169,11 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Nama Lengkap</label>
-                                <input type="text" name="nama_ayah" class="form-control" id="namaayah" placeholder="Masukan Nama Ayah anda">
+                                <input type="text" name="nama_ayah" class="form-control" id="namaayah" placeholder="Masukan Nama Ayah anda" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Bin/Binti</label>
-                                <input type="text" name="binti_ayah" class="form-control" id="binayah" placeholder="Masukan Bin/Binti">
+                                <input type="text" name="binti_ayah" class="form-control" id="binayah" placeholder="Masukan Bin/Binti" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -186,7 +186,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>NIK</label>
-                                <input class="form-control" name="nik_ayah" type="text" placeholder="Masukan NIK Ayah">
+                                <input class="form-control" name="nik_ayah" type="text" placeholder="Masukan NIK Ayah" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Agama</label>
@@ -202,21 +202,21 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Tempat Lahir</label>
-                                <input type="text" name="tempat_lahir_ayah" class="form-control" id="tempatla" placeholder="Masukan Tempat Lahir Ayah">
+                                <input type="text" name="tempat_lahir_ayah" class="form-control" id="tempatla" placeholder="Masukan Tempat Lahir Ayah" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Tanggal Lahir</label>
-                                <input type="date" name="tanggal_lahir_ayah" class="form-control" id="tgllhra" placeholder="Masukan Tanggal Lahir Ayah">
+                                <input type="date" name="tanggal_lahir_ayah" class="form-control" id="tgllhra" placeholder="Masukan Tanggal Lahir Ayah" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Pekerjaan</label>
-                                <input type="text" name="pekerjaan_ayah" class="form-control" id="pekerjaana" placeholder="Masukan Tempat Lahir Ayah">
+                                <input type="text" name="pekerjaan_ayah" class="form-control" id="pekerjaana" placeholder="Masukan Tempat Lahir Ayah" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kewarganegaraan</label>
-                                <input type="text" name="kewarganegaraan_ayah" class="form-control" id="kearbga " placeholder="Masukan Tanggal Lahir Ayah">
+                                <input type="text" name="kewarganegaraan_ayah" class="form-control" id="kearbga " placeholder="Masukan Tanggal Lahir Ayah" required>
                             </div>
                         </div>
 
@@ -265,20 +265,20 @@
                         <div class="form-row">
                             <div class="form-group col-md-3">
                                 <label>RT</label>
-                                <input type="number" name="rt_ayah" class="form-control" id="rt" placeholder="">
+                                <input type="number" name="rt_ayah" class="form-control" id="rt" placeholder="" required>
                             </div>
                             <div class="form-group col-md-3">
                                 <label>RW</label>
-                                <input type="number" name="rw_ayah" class="form-control" id="rw" placeholder="">
+                                <input type="number" name="rw_ayah" class="form-control" id="rw" placeholder="" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kode Pos</label>
-                                <input type="number" name="kode_pos_ayah" class="form-control" id="kodepos" placeholder="Masukan Kode Pos">
+                                <input type="number" name="kode_pos_ayah" class="form-control" id="kodepos" placeholder="Masukan Kode Pos" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Alamat</label>
-                            <textarea class="form-control" name="alamat_ayah" id="alamat" rows="2" placeholder="Masukan Alamat Anda"></textarea>
+                            <textarea class="form-control" name="alamat_ayah" id="alamat" rows="2" placeholder="Masukan Alamat Anda" required></textarea>
                         </div>
 
                         <!-- informasi ibu kandung -->
@@ -289,11 +289,11 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Nama Lengkap</label>
-                                <input type="text" name="nama_ibu" class="form-control" id="namaibu" placeholder="Masukan Nama Ibu anda">
+                                <input type="text" name="nama_ibu" class="form-control" id="namaibu" placeholder="Masukan Nama Ibu anda" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Bin/Binti</label>
-                                <input type="text" name="binti_ibu" class="form-control" id="binibu" placeholder="Masukan Bin/Binti">
+                                <input type="text" name="binti_ibu" class="form-control" id="binibu" placeholder="Masukan Bin/Binti" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -306,7 +306,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>NIK</label>
-                                <input class="form-control" name="nik_ibu" type="text" placeholder="Masukan NIK Ibu">
+                                <input class="form-control" name="nik_ibu" type="text" placeholder="Masukan NIK Ibu" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Agama</label>
@@ -322,21 +322,21 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Tempat Lahir</label>
-                                <input type="text" class="form-control" name="tempat_lahir_ibu" id="tempatla" placeholder="Masukan Tempat Lahir Ayah">
+                                <input type="text" class="form-control" name="tempat_lahir_ibu" id="tempatla" placeholder="Masukan Tempat Lahir Ayah" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Tanggal Lahir</label>
-                                <input type="date" class="form-control" name="tanggal_lahir_ibu" id="tgllhra" placeholder="Masukan Tanggal Lahir Ayah">
+                                <input type="date" class="form-control" name="tanggal_lahir_ibu" id="tgllhra" placeholder="Masukan Tanggal Lahir Ayah" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Pekerjaan</label>
-                                <input type="text" class="form-control" name="pekerjaan_ibu" id="pekerjaana" placeholder="Masukan Tempat Lahir Ayah">
+                                <input type="text" class="form-control" name="pekerjaan_ibu" id="pekerjaana" placeholder="Masukan Tempat Lahir Ayah" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kewarganegaraan</label>
-                                <input type="text" class="form-control" id="kearbga " name="kewarganegaraan_ibu" placeholder="Masukan Tanggal Lahir Ayah">
+                                <input type="text" class="form-control" id="kearbga " name="kewarganegaraan_ibu" placeholder="Masukan Tanggal Lahir Ayah" required>
                             </div>
                         </div>
 
@@ -385,20 +385,20 @@
                         <div class="form-row">
                             <div class="form-group col-md-3">
                                 <label>RT</label>
-                                <input name="rt_ibu" type="number" class="form-control" id="rt" placeholder="">
+                                <input name="rt_ibu" type="number" class="form-control" id="rt" placeholder="" required>
                             </div>
                             <div class="form-group col-md-3">
                                 <label>RW</label>
-                                <input name="rw_ibu" type="number" class="form-control" id="rw" placeholder="">
+                                <input name="rw_ibu" type="number" class="form-control" id="rw" placeholder="" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kode Pos</label>
-                                <input name="kode_pos_ibu" type="number" class="form-control" id="kodepos" placeholder="Masukan Kode Pos">
+                                <input name="kode_pos_ibu" type="number" class="form-control" id="kodepos" placeholder="Masukan Kode Pos" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Alamat</label>
-                            <textarea name="alamat_ibu" class="form-control" id="alamat" rows="2" placeholder="Masukan Alamat Anda"></textarea>
+                            <textarea name="alamat_ibu" class="form-control" id="alamat" rows="2" placeholder="Masukan Alamat Anda" required></textarea>
                         </div>
                     </div>
                     <!-- end of isian form 3 -->
@@ -563,7 +563,7 @@
                     </div>
                     <div class="form-group" ;">
                         <label>Nama Suami/Istri Terdahulu</label>
-                        <input type="text" name="nama_suami_istri" class="form-control" placeholder="Masukan Nama Istri/Suami terdahulu">
+                        <input type="text" name="nama_suami_istri" class="form-control" placeholder="Masukan Nama Istri/Suami terdahulu" required>
                     </div>
 
                 </div>
@@ -581,11 +581,11 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>Nama Lengkap</label>
-                            <input type="text" name="nama_ayah" class="form-control" id="namaayah" placeholder="Masukan Nama Ayah anda">
+                            <input type="text" name="nama_ayah" class="form-control" id="namaayah" placeholder="Masukan Nama Ayah anda" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Bin/Binti</label>
-                            <input type="text" name="binti_ayah" class="form-control" id="binayah" placeholder="Masukan Bin/Binti">
+                            <input type="text" name="binti_ayah" class="form-control" id="binayah" placeholder="Masukan Bin/Binti" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -598,7 +598,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>NIK</label>
-                            <input class="form-control" name="nik_ayah" type="text" placeholder="Masukan NIK Ayah">
+                            <input class="form-control" name="nik_ayah" type="text" placeholder="Masukan NIK Ayah" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Agama</label>
@@ -614,21 +614,21 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>Tempat Lahir</label>
-                            <input type="text" name="tempat_lahir_ayah" class="form-control" id="tempatla" placeholder="Masukan Tempat Lahir Ayah">
+                            <input type="text" name="tempat_lahir_ayah" class="form-control" id="tempatla" placeholder="Masukan Tempat Lahir Ayah" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Tanggal Lahir</label>
-                            <input type="date" name="tanggal_lahir_ayah" class="form-control" id="tgllhra" placeholder="Masukan Tanggal Lahir Ayah">
+                            <input type="date" name="tanggal_lahir_ayah" class="form-control" id="tgllhra" placeholder="Masukan Tanggal Lahir Ayah" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>Pekerjaan</label>
-                            <input type="text" name="pekerjaan_ayah" class="form-control" id="pekerjaana" placeholder="Masukan Tempat Lahir Ayah">
+                            <input type="text" name="pekerjaan_ayah" class="form-control" id="pekerjaana" placeholder="Masukan Tempat Lahir Ayah" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Kewarganegaraan</label>
-                            <input type="text" name="kewarganegaraan_ayah" class="form-control" id="kearbga " placeholder="Masukan Tanggal Lahir Ayah">
+                            <input type="text" name="kewarganegaraan_ayah" class="form-control" id="kearbga " placeholder="Masukan Tanggal Lahir Ayah" required>
                         </div>
                     </div>
 
@@ -677,20 +677,20 @@
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label>RT</label>
-                            <input type="number" name="rt_ayah" class="form-control" id="rt" placeholder="">
+                            <input type="number" name="rt_ayah" class="form-control" id="rt" placeholder="" required>
                         </div>
                         <div class="form-group col-md-3">
                             <label>RW</label>
-                            <input type="number" name="rw_ayah" class="form-control" id="rw" placeholder="">
+                            <input type="number" name="rw_ayah" class="form-control" id="rw" placeholder="" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Kode Pos</label>
-                            <input type="number" name="kode_pos_ayah" class="form-control" id="kodepos" placeholder="Masukan Kode Pos">
+                            <input type="number" name="kode_pos_ayah" class="form-control" id="kodepos" placeholder="Masukan Kode Pos" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Alamat</label>
-                        <textarea class="form-control" name="alamat_ayah" id="alamat" rows="2" placeholder="Masukan Alamat Anda"></textarea>
+                        <textarea class="form-control" name="alamat_ayah" id="alamat" rows="2" placeholder="Masukan Alamat Anda" required></textarea>
                     </div>
 
                     <!-- informasi ibu kandung -->
@@ -701,11 +701,11 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>Nama Lengkap</label>
-                            <input type="text" name="nama_ibu" class="form-control" id="namaibu" placeholder="Masukan Nama Ibu anda">
+                            <input type="text" name="nama_ibu" class="form-control" id="namaibu" placeholder="Masukan Nama Ibu anda" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Bin/Binti</label>
-                            <input type="text" name="binti_ibu" class="form-control" id="binibu" placeholder="Masukan Bin/Binti">
+                            <input type="text" name="binti_ibu" class="form-control" id="binibu" placeholder="Masukan Bin/Binti" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -718,7 +718,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>NIK</label>
-                            <input class="form-control" name="nik_ibu" type="text" placeholder="Masukan NIK Ibu">
+                            <input class="form-control" name="nik_ibu" type="text" placeholder="Masukan NIK Ibu" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Agama</label>
@@ -734,21 +734,21 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>Tempat Lahir</label>
-                            <input type="text" class="form-control" name="tempat_lahir_ibu" id="tempatla" placeholder="Masukan Tempat Lahir Ayah">
+                            <input type="text" class="form-control" name="tempat_lahir_ibu" id="tempatla" placeholder="Masukan Tempat Lahir Ayah" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Tanggal Lahir</label>
-                            <input type="date" class="form-control" name="tanggal_lahir_ibu" id="tgllhra" placeholder="Masukan Tanggal Lahir Ayah">
+                            <input type="date" class="form-control" name="tanggal_lahir_ibu" id="tgllhra" placeholder="Masukan Tanggal Lahir Ayah" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>Pekerjaan</label>
-                            <input type="text" class="form-control" name="pekerjaan_ibu" id="pekerjaana" placeholder="Masukan Tempat Lahir Ayah">
+                            <input type="text" class="form-control" name="pekerjaan_ibu" id="pekerjaana" placeholder="Masukan Tempat Lahir Ayah" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Kewarganegaraan</label>
-                            <input type="text" class="form-control" id="kearbga " name="kewarganegaraan_ibu" placeholder="Masukan Tanggal Lahir Ayah">
+                            <input type="text" class="form-control" id="kearbga " name="kewarganegaraan_ibu" placeholder="Masukan Tanggal Lahir Ayah" required>
                         </div>
                     </div>
 
@@ -797,20 +797,20 @@
                     <div class="form-row">
                         <div class="form-group col-md-3">
                             <label>RT</label>
-                            <input name="rt_ibu" type="number" class="form-control" id="rt" placeholder="">
+                            <input name="rt_ibu" type="number" class="form-control" id="rt" placeholder="" required>
                         </div>
                         <div class="form-group col-md-3">
                             <label>RW</label>
-                            <input name="rw_ibu" type="number" class="form-control" id="rw" placeholder="">
+                            <input name="rw_ibu" type="number" class="form-control" id="rw" placeholder="" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Kode Pos</label>
-                            <input name="kode_pos_ibu" type="number" class="form-control" id="kodepos" placeholder="Masukan Kode Pos">
+                            <input name="kode_pos_ibu" type="number" class="form-control" id="kodepos" placeholder="Masukan Kode Pos" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Alamat</label>
-                        <textarea name="alamat_ibu" class="form-control" id="alamat" rows="2" placeholder="Masukan Alamat Anda"></textarea>
+                        <textarea name="alamat_ibu" class="form-control" id="alamat" rows="2" placeholder="Masukan Alamat Anda" required></textarea>
                     </div>
                 </div>
                 <!-- end of isian form 3 -->
@@ -974,7 +974,7 @@
                         </div>
                         <div class="form-group" ;">
                             <label>Nama Suami/Istri Terdahulu</label>
-                            <input type="text" name="nama_suami_istri" class="form-control" placeholder="Masukan Nama Istri/Suami terdahulu">
+                            <input type="text" name="nama_suami_istri" class="form-control" placeholder="Masukan Nama Istri/Suami terdahulu" required>
                         </div>
                     </div>
                     <!-- end of isian form 2 -->
@@ -990,11 +990,11 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Nama Lengkap</label>
-                                <input type="text" name="nama_ayah" class="form-control" id="namaayah" placeholder="Masukan Nama Ayah anda">
+                                <input type="text" name="nama_ayah" class="form-control" id="namaayah" placeholder="Masukan Nama Ayah anda" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Bin/Binti</label>
-                                <input type="text" name="binti_ayah" class="form-control" id="binayah" placeholder="Masukan Bin/Binti">
+                                <input type="text" name="binti_ayah" class="form-control" id="binayah" placeholder="Masukan Bin/Binti" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -1007,11 +1007,11 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>NIK</label>
-                                <input class="form-control" name="nik_ayah" type="text" placeholder="Masukan NIK Ayah">
+                                <input class="form-control" name="nik_ayah" type="text" placeholder="Masukan NIK Ayah" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Agama</label>
-                                <select id="agama" name="agama_ayah" class="form-control">
+                                <select id="agama" name="agama_ayah" class="form-control" required>
                                     <option selected>Islam</option>
                                     <option>Kristen</option>
                                     <option>Katholik</option>
@@ -1023,21 +1023,21 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Tempat Lahir</label>
-                                <input type="text" name="tempat_lahir_ayah" class="form-control" id="tempatla" placeholder="Masukan Tempat Lahir Ayah">
+                                <input type="text" name="tempat_lahir_ayah" class="form-control" id="tempatla" required placeholder="Masukan Tempat Lahir Ayah">
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Tanggal Lahir</label>
-                                <input type="date" name="tanggal_lahir_ayah" class="form-control" id="tgllhra" placeholder="Masukan Tanggal Lahir Ayah">
+                                <input type="date" name="tanggal_lahir_ayah" class="form-control" id="tgllhra" required placeholder="Masukan Tanggal Lahir Ayah">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Pekerjaan</label>
-                                <input type="text" name="pekerjaan_ayah" class="form-control" id="pekerjaana" placeholder="Masukan Tempat Lahir Ayah">
+                                <input type="text" name="pekerjaan_ayah" class="form-control" id="pekerjaana" required placeholder="Masukan Tempat Lahir Ayah">
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kewarganegaraan</label>
-                                <input type="text" name="kewarganegaraan_ayah" class="form-control" id="kearbga " placeholder="Masukan Tanggal Lahir Ayah">
+                                <input type="text" name="kewarganegaraan_ayah" class="form-control" id="kearbga " placeholder="Masukan Tanggal Lahir Ayah" required>
                             </div>
                         </div>
                         <div class="form-row">
@@ -1085,20 +1085,20 @@
                         <div class="form-row">
                             <div class="form-group col-md-3">
                                 <label>RT</label>
-                                <input type="number" name="rt_ayah" class="form-control" id="rt" placeholder="">
+                                <input type="number" name="rt_ayah" class="form-control" id="rt" placeholder="" required>
                             </div>
                             <div class="form-group col-md-3">
                                 <label>RW</label>
-                                <input type="number" name="rw_ayah" class="form-control" id="rw" placeholder="">
+                                <input type="number" name="rw_ayah" class="form-control" id="rw" placeholder="" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kode Pos</label>
-                                <input type="number" name="kode_pos_ayah" class="form-control" id="kodepos" placeholder="Masukan Kode Pos">
+                                <input type="number" name="kode_pos_ayah" class="form-control" id="kodepos" placeholder="Masukan Kode Pos" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Alamat</label>
-                            <textarea class="form-control" name="alamat_ayah" id="alamat" rows="2" placeholder="Masukan Alamat Anda"></textarea>
+                            <textarea class="form-control" name="alamat_ayah" id="alamat" rows="2" placeholder="Masukan Alamat Anda" required></textarea>
                         </div>
 
                         <!-- informasi ibu kandung -->
@@ -1109,11 +1109,11 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Nama Lengkap</label>
-                                <input type="text" name="nama_ibu" class="form-control" id="namaibu" placeholder="Masukan Nama Ibu anda">
+                                <input type="text" name="nama_ibu" class="form-control" id="namaibu" placeholder="Masukan Nama Ibu anda" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Bin/Binti</label>
-                                <input type="text" name="binti_ibu" class="form-control" id="binibu" placeholder="Masukan Bin/Binti">
+                                <input type="text" name="binti_ibu" class="form-control" id="binibu" placeholder="Masukan Bin/Binti" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -1126,7 +1126,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>NIK</label>
-                                <input class="form-control" name="nik_ibu" type="text" placeholder="Masukan NIK Ibu">
+                                <input class="form-control" name="nik_ibu" type="text" placeholder="Masukan NIK Ibu" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Agama</label>
@@ -1142,21 +1142,21 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Tempat Lahir</label>
-                                <input type="text" class="form-control" name="tempat_lahir_ibu" id="tempatla" placeholder="Masukan Tempat Lahir Ayah">
+                                <input type="text" class="form-control" name="tempat_lahir_ibu" id="tempatla" placeholder="Masukan Tempat Lahir Ayah" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Tanggal Lahir</label>
-                                <input type="date" class="form-control" name="tanggal_lahir_ibu" id="tgllhra" placeholder="Masukan Tanggal Lahir Ayah">
+                                <input type="date" class="form-control" name="tanggal_lahir_ibu" id="tgllhra" placeholder="Masukan Tanggal Lahir Ayah" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Pekerjaan</label>
-                                <input type="text" class="form-control" name="pekerjaan_ibu" id="pekerjaana" placeholder="Masukan Tempat Lahir Ayah">
+                                <input type="text" class="form-control" name="pekerjaan_ibu" id="pekerjaana" placeholder="Masukan Tempat Lahir Ayah" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kewarganegaraan</label>
-                                <input type="text" class="form-control" id="kearbga " name="kewarganegaraan_ibu" placeholder="Masukan Tanggal Lahir Ayah">
+                                <input type="text" class="form-control" id="kearbga " name="kewarganegaraan_ibu" placeholder="Masukan Tanggal Lahir Ayah" required>
                             </div>
                         </div>
 
@@ -1205,20 +1205,20 @@
                         <div class="form-row">
                             <div class="form-group col-md-3">
                                 <label>RT</label>
-                                <input name="rt_ibu" type="number" class="form-control" id="rt" placeholder="">
+                                <input name="rt_ibu" type="number" class="form-control" id="rt" placeholder="" required>
                             </div>
                             <div class="form-group col-md-3">
                                 <label>RW</label>
-                                <input name="rw_ibu" type="number" class="form-control" id="rw" placeholder="">
+                                <input name="rw_ibu" type="number" class="form-control" id="rw" placeholder="" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kode Pos</label>
-                                <input name="kode_pos_ibu" type="number" class="form-control" id="kodepos" placeholder="Masukan Kode Pos">
+                                <input name="kode_pos_ibu" type="number" class="form-control" id="kodepos" placeholder="Masukan Kode Pos" required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Alamat</label>
-                            <textarea name="alamat_ibu" class="form-control" id="alamat" rows="2" placeholder="Masukan Alamat Anda"></textarea>
+                            <textarea name="alamat_ibu" class="form-control" id="alamat" rows="2" placeholder="Masukan Alamat Anda" required></textarea>
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-danger mr-2"><i class="fas fa-times mr-2"></i>Batal</button>
