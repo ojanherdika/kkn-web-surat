@@ -15,7 +15,7 @@
                     <form action="<?= base_url('Tambah_warga/add'); ?>" method="post">
                         <div class="form-group">
                             <label>No. Kartu Keluarga</label>
-                            <input class="form-control" type="text" name="no_kk" id="no_kk" />
+                            <input class="form-control" type="text" name="no_kk" id="no_kk" required />
                             <div class="invalid-feedback">
 
                             </div>
@@ -23,7 +23,7 @@
 
                         <div class="form-group">
                             <label>NIK</label>
-                            <input class="form-control" type="text" name="no_nik" id="no_nik" />
+                            <input class="form-control" type="text" name="no_nik" id="no_nik" required />
                             <div class="invalid-feedback">
 
                             </div>
@@ -31,7 +31,7 @@
 
                         <div class="form-group">
                             <label>Nama Lengkap</label>
-                            <input class="form-control" type="text" name="nama" id="nama" />
+                            <input class="form-control" type="text" name="nama" id="nama" required />
                             <div class="invalid-feedback">
 
                             </div>
@@ -39,39 +39,38 @@
 
                         <div class="row">
                             <div class="col-md-6">
-                                    <label for="....">Jenis Kelamin</label>
-                                    <select class="custom-select" id="jenis_kelamin" name="jenis_kelamin">
-                                        <option value="0">Pilih Jenis Kelamin</option>
-                                        <option value="Laki-Laki">Laki-Laki</option>
-                                        <option value="Perempuan">Perempuan</option>
-                                    </select>
+                                <label for="....">Jenis Kelamin</label>
+                                <select class="custom-select" id="jenis_kelamin" name="jenis_kelamin">
+                                    <option value="0">Pilih Jenis Kelamin</option>
+                                    <option value="Laki-Laki">Laki-Laki</option>
+                                    <option value="Perempuan">Perempuan</option>
+                                </select>
                             </div>
 
                             <div class="col-md-6">
-                                    <label for="....">Agama</label>
-                                    <select class="custom-select" id="agama" name="agama">
-                                        <option value="0">Pilih Agama</option>
-                                        <option value="Islam">Islam</option>
-                                        <option value="Kristen">Kristen</option>
-                                        <option value="Katholik">Katholik</option>
-                                        <option value="Hindu">Hindu</option>
-                                        <option value="Budha">Budha</option>
-                                        <option value="Kepercayaan Pribadi">Kepercayaan Pribadi</option>
-                                    </select>
+                                <label for="....">Agama</label>
+                                <select class="custom-select" id="agama" name="agama">
+                                    <option value="0">Pilih Agama</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Katholik">Katholik</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Budha">Budha</option>
+                                    <option value="Kepercayaan Pribadi">Kepercayaan Pribadi</option>
+                                </select>
                             </div>
                             <div class="invalid-feedback">
 
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="....">Tempat Lahir</label>
-                                    <input class="form-control type="text"
-                                        id="tempat_lahir" name="tempat_lahir" />
+                                    <input class="form-control" type="text" id="tempat_lahir" name="tempat_lahir" required />
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -79,53 +78,51 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="....">Tanggal Lahir</label>
-                                    <input class="form-control type="date" id="datepicker" placeholder="yyyy-mm-dd"
-                                        name="tanggal_lahir" />
+                                    <input class="form-control type=" date" id="datepicker" placeholder="yyyy-mm-dd" name="tanggal_lahir" required />
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                            <div class="form-group">
-                                    <label for=".....">Pendidikan</label>
-                                    <select class="custom-select" id="pendidikan" name="pendidikan">
-                                        <option value="0">Pilih Pendidikan</option>
-                                        <option value="Belum Sekolah">Belum Sekolah</option>
-                                        <option value="Belum Tamat SD Sederajat">Belum Tamat SD Sederajat</option>
-                                        <option value="SD Sederajat">SD Sederajat</option>
-                                        <option value="SLTP Sederajat">SLTP Sederajat</option>
-                                        <option value="SLTA Sederajat">SLTA Sederajat</option>
-                                        <option value="Diploma IV / Strata I">Diploma IV / Strata I</option>
-                                        <option value="Akademi / Diploma III">Akademi / Diploma III</option>
-                                        <option value="Diploma I / II">Diploma I / II</option>
-                                        <option value="Strata II">Strata II</option>
-                                        <option value="Strata III">Strata III</option>
-                                    </select>
-                                    <div class="invalid-feedback">
-                                        
-                                    </div>
-                            </div>
-                           
+                        <div class="form-group">
+                            <label for=".....">Pendidikan</label>
+                            <select class="custom-select" id="pendidikan" name="pendidikan">
+                                <option value="0">Pilih Pendidikan</option>
+                                <option value="Belum Sekolah">Belum Sekolah</option>
+                                <option value="Belum Tamat SD Sederajat">Belum Tamat SD Sederajat</option>
+                                <option value="SD Sederajat">SD Sederajat</option>
+                                <option value="SLTP Sederajat">SLTP Sederajat</option>
+                                <option value="SLTA Sederajat">SLTA Sederajat</option>
+                                <option value="Diploma IV / Strata I">Diploma IV / Strata I</option>
+                                <option value="Akademi / Diploma III">Akademi / Diploma III</option>
+                                <option value="Diploma I / II">Diploma I / II</option>
+                                <option value="Strata II">Strata II</option>
+                                <option value="Strata III">Strata III</option>
+                            </select>
+                            <div class="invalid-feedback">
 
-                            <div class="form-group">
-                                <label for=".....">Pekerjaan</label>
-                                <input class="form-control type="text"
-                                    name="pekerjaan" id="pekerjaan" />
-                                <div class="invalid-feedback">
-                                </div>
                             </div>
-                         
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for=".....">Pekerjaan</label>
+                            <input class="form-control type=" text" name="pekerjaan" id="pekerjaan" required />
+                            <div class="invalid-feedback">
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <label for=".....">Kewarganegaraan</label>
-                             <select class="custom-select" id="kewarganegaraan" name="kewarganegaraan">
+                            <select class="custom-select" id="kewarganegaraan" name="kewarganegaraan">
                                 <option value="0">Pilih Kewarganegaraan</option>
                                 <option value="WNI">Warga Negara Indonesia (WNI)</option>
                                 <option value="WNA">Warga Negara Asing (WNA)</option>
                             </select>
                             <div class="invalid-feedback">
-                                
+
                             </div>
                         </div>
 
@@ -133,10 +130,9 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="....">Provinsi</label>
-                                    <input class="form-control type="text"
-                                        name="provinsi" id="provinsi" />
+                                    <input class="form-control" type=" text" name="provinsi" id="provinsi" required />
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -144,10 +140,9 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="....">Kabupaten/Kota</label>
-                                    <input class="form-control type="text"
-                                        name="kab_kota" id="kab_kota" />
+                                    <input class="form-control" type="text" name="kab_kota" id="kab_kota" required />
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -157,10 +152,9 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="....">Kecamatan</label>
-                                    <input class="form-control type="text"
-                                        name="kecamatan" id="kecamatan" />
+                                    <input class="form-control" type=" text" name="kecamatan" id="kecamatan" required />
                                     <div class="invalid-feedback">
-                                       
+
                                     </div>
                                 </div>
                             </div>
@@ -168,10 +162,9 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="....">Desa</label>
-                                    <input class="form-control type="text"
-                                        name="desa" id="desa" />
+                                    <input class="form-control" type=" text" name="desa" id="desa" required />
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -242,10 +235,9 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="....">Kode Pos</label>
-                                    <input class="form-control type="text"
-                                        name="kode_pos" id="kode_pos" />
+                                    <input class="form-control" type=" text" name="kode_pos" id="kode_pos" required />
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -253,7 +245,7 @@
 
                         <div class="form-group">
                             <label>Alamat</label>
-                            <input class="form-control" type="text" name="alamat" id="alamat" min="0" style="height : 100px"></textarea>
+                            <input class="form-control" type="text" name="alamat" id="alamat" min="0" style="height : 100px" required></textarea>
                             <div class="invalid-feedback">
 
                             </div>
@@ -261,10 +253,9 @@
 
                         <div class="form-group">
                             <label for=".....">Kepala Keluarga</label>
-                            <input class="form-control type="text"
-                                name="kepala_keluarga" id="kepala_keluarga" />
+                            <input class="form-control" type=" text" name="kepala_keluarga" id="kepala_keluarga" required />
                             <div class="invalid-feedback">
-                               
+
                             </div>
                         </div>
 
@@ -297,10 +288,9 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="....">Nama Ayah</label>
-                                    <input class="form-control type="text"
-                                        name="nama_ayah" id="nama_ayah" />
+                                    <input class="form-control" required type=" text" name="nama_ayah" id="nama_ayah" />
                                     <div class="invalid-feedback">
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -308,10 +298,9 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="....">Nama Ibu</label>
-                                    <input class="form-control type="text"
-                                        name="nama_ibu" id="nama_ibu" />
+                                    <input class="form-control" required type=" text" name="nama_ibu" id="nama_ibu" />
                                     <div class="invalid-feedback">
-                                    
+
                                     </div>
                                 </div>
                             </div>
