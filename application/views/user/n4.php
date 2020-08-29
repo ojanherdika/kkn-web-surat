@@ -18,7 +18,7 @@
                             <form action="<?php echo base_url() . 'Surat_n4/add'; ?>" method="post"">
                     <!-- Isian Form 1-->
                     <div class=" container-fluid shadow p-3 mb-3 bg-white rounded">
-                                <p class="text-left" style="font-size: 25px;">Form 1 Identitas Calon Suami</p>
+                                <p class="text-left" style="font-size: 25px;">Form 1 Identitas Calon</p>
                                 <hr>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -33,7 +33,7 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label>NIK</label>
-                                        <input class="form-control" type="text" name="no_nik" placeholder="Masukan NIK Calon Suami" value="<?= $user['no_nik']; ?>" required>
+                                        <input class="form-control" type="text" name="no_nik" value="<?= $user['no_nik']; ?>" readonly>
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label>Agama</label>
@@ -137,7 +137,7 @@
 
                         <!-- Isian Form 2-->
                         <div class="container-fluid shadow p-3  mb-3 bg-white rounded mt-5">
-                            <p class="text-left" style="font-size: 25px;">Form 2 Identitas Calon Istri</p>
+                            <p class="text-left" style="font-size: 25px;">Form 2 Identitas Calon</p>
                             <hr>
                             <div class="form-row">
                                 <div class="form-group col-md-6">
