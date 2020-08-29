@@ -219,7 +219,7 @@ public function add(){
 
         $this->M_surat_n1_n6->save($data,'surat_n6');
         $this->session->set_flashdata('success', 'Berhasil disimpan');
-        redirect('user'); 
+        redirect('user/#riwayat'); 
     }
     function hapus($id_surat_n1){
 		$where = array('id_surat_n1' => $id_surat_n1);

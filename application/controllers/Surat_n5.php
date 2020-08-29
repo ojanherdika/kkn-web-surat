@@ -157,7 +157,7 @@ class Surat_n5 extends CI_Controller
         );
         $this->M_surat_n1_n6->save($data, 'surat_n5');
         $this->session->set_flashdata('success', 'Berhasil disimpan');
-        redirect('user');
+        redirect('user/#riwayat');
     }
     function hapus($id_surat_n5)
     {
