@@ -22,15 +22,15 @@
             <hr class="bg-light ml-3 mr-3 p-0">
         </li>
         <li class="sidebar-nav-item text-white text-center">
-        <div class="row">
-        <div class="col-md-3 col-lg-3 p-0">
-            <img class="img-circle smooth-scroll ml-3 mr-3" src="<?= base_url('assets/'); ?>user/images/default.jpg" alt="" style="width: 40px; border-radius: 50%;">
-            
+            <div class="row">
+                <div class="col-md-3 col-lg-3 p-0">
+                    <img class="img-circle smooth-scroll ml-3 mr-3" src="<?= base_url('assets/'); ?>user/images/default.jpg" alt="" style="width: 40px; border-radius: 50%;">
+
+                </div>
+                <div class="col-md-9 col-lg-9 text-left p-0 mr-10">
+                    <strong><?= $user['nama']; ?></strong>
+                </div>
             </div>
-            <div class="col-md-9 col-lg-9 text-left p-0 mr-10">
-            <strong><?= $user['nama']; ?></strong>
-            </div>
-        </div>
         </li>
         <li>
             <hr class="bg-light ml-3 mr-3">
@@ -157,10 +157,17 @@
                         <th scope="row"><?= $i++ ?></th>
                         <td><?= $data_n6['jenis_surat'] ?></td>
                         <td><?= $data_n6['tgl_ajukan_surat'] ?></td>
-                        <td><span class="badge badge-<?= ($data_n6['status_surat'] == 'Diterima') ? 'success' : (($data_n6['status_surat'] == 'Ditolak') ? 'danger' : 'warning'); ?>"><?= $data_n6['status_surat'] ?></span></td>
-                        <td>
-                            <button type="button" class="btn btn-sm bg-primary mr-2 text-white" data-toggle="modal" data-target="#modalDetail"><i class="fas fa-search-plus"></i> Detail</button>
-                        </td>
+                        <td><span class="badge badge-<?= ($data_n6['status_surat'] == 'Diterima') ? 'success' : (($data_n6['status_surat'] == 'Ditolak' || $data_n6['status_surat'] == 'Dibatalkan') ? 'danger' : 'warning'); ?>"><?= $data_n6['status_surat'] ?></span></td>
+                        <?php if ($data_n6['status_surat'] == 'Pending') : ?>
+                            <td>
+                                <button class="btn btn-sm bg-primary mr-2 text-white"><i class="fas fa-search-plus"></i> Detail</button>
+                                <a href="<?= base_url('Tambah_warga/update_n6_batal/' . $data_n6['id_surat_n6']); ?>" class="btn btn-sm bg-danger text-white"><i class="fas fa-window-close"></i> Batalkan</a>
+                            </td>
+                        <?php else : ?>
+                            <td>
+                                <button type="button" class="btn btn-sm bg-primary mr-2 text-white" data-toggle="modal" data-target="#modalDetail"><i class="fas fa-search-plus"></i> Detail</button>
+                            </td>
+                        <?php endif; ?>
                     </tr>
                 <?php endforeach; ?>
                 <?php foreach ($data_n4 as $data_n4) : ?>

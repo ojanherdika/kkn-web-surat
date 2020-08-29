@@ -81,7 +81,11 @@
         $pdf->SetFont('Times','',12);
         $pdf->Cell(20,5,'Yang bertanda tangan di bawah ini:',0,0);
         $pdf->ln();
-        $pdf->Cell(20,5,'A. Calon Suami:',0,0);
+        if($surat->jenis_kelamin=="Laki-Laki"){
+            $pdf->Cell(20,5,'A. Calon Suami:',0,0);
+        }else{
+            $pdf->Cell(20,5,'A. Calon Istri:',0,0);
+        }
         $pdf->SetMargins(30, 10 , 25);
         $pdf->ln(); 
         $pdf->Cell(20,5,'1. Nama',0,0);
@@ -118,7 +122,11 @@
         $pdf->SetMargins(25, 10 , 25);
         $pdf->ln(10);
         
-        $pdf->Cell(20,5,'B. Calon Istri:',0,0);
+        if($surat->jenis_kelamin_calon=="Perempuan"){
+            $pdf->Cell(20,5,'B. Calon Istri:',0,0);
+        }else{
+            $pdf->Cell(20,5,'B. Calon Suami:',0,0);
+        }
         $pdf->SetMargins(30, 10 , 25);
         $pdf->ln();
         $pdf->Cell(20,5,'1. Nama',0,0);
