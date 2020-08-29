@@ -50,11 +50,11 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label>Tempat Lahir</label>
-            <input type="text" name="tempat_lahir" class="form-control" id="tempat" placeholder="Masukan Tempat Lahir Anda">
+            <input type="text" name="tempat_lahir" class="form-control" id="tempat" placeholder="Masukan Tempat Lahir Anda" required>
           </div>
           <div class="form-group col-md-3">
             <label>Tanggal Lahir</label>
-            <input type="date" name="tanggal_lahir" class="form-control" id="tgl">
+            <input type="date" name="tanggal_lahir" class="form-control" id="tgl" required>
           </div>
           <div class="form-group col-md-3">
             <label>Jenis Kelamin</label>
@@ -66,11 +66,11 @@
         </div>
         <div class="form-group">
           <label>Pekerjaan</label>
-          <input type="text" name="pekerjaan" class="form-control" id="pekerjaan" placeholder="Masukan Pekerjaan Anda">
+          <input type="text" name="pekerjaan" class="form-control" id="pekerjaan" placeholder="Masukan Pekerjaan Anda" required>
         </div>
         <div class="form-group">
           <label>Kewarganegaraan</label>
-          <input type="text" name="kewarganegaraan" class="form-control" id="kewarganegaraan" placeholder="Masukan Kewarganegaraan Anda">
+          <input type="text" name="kewarganegaraan" class="form-control" id="kewarganegaraan" placeholder="Masukan Kewarganegaraan Anda" required>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
@@ -117,20 +117,20 @@
         <div class="form-row">
           <div class="form-group col-md-3">
             <label>RT</label>
-            <input type="number" name="rt" class="form-control" id="rt" placeholder="">
+            <input type="number" name="rt" class="form-control" id="rt" placeholder="" required>
           </div>
           <div class="form-group col-md-3">
             <label>RW</label>
-            <input type="number" name="rw" class="form-control" id="rw" placeholder="">
+            <input type="number" name="rw" class="form-control" id="rw" placeholder="" required>
           </div>
           <div class="form-group col-md-6">
             <label>Kode Pos</label>
-            <input type="number" name="kode_pos" class="form-control" id="kodepos" placeholder="Masukan Kode Pos">
+            <input type="number" name="kode_pos" class="form-control" id="kodepos" placeholder="Masukan Kode Pos" required>
           </div>
         </div>
         <div class="form-group">
           <label>Alamat</label>
-          <textarea class="form-control" name="alamat" id="alamat" rows="2" placeholder="Masukan Alamat Anda"></textarea>
+          <textarea class="form-control" name="alamat" id="alamat" rows="2" placeholder="Masukan Alamat Anda" required></textarea>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
@@ -151,14 +151,14 @@
           </div>
         </div>
         <!-- end of isian form 1 -->
-        <div class="form-row">
+        <div class="form-group">
           <div class="form-group col-md-6">
             <label>Nama Ayah</label>
-            <input type="text" name="nama_ayah" class="form-control" id="nama_ayah" placeholder="Nama Ayah">
+            <input type="text" name="nama_ayah" class="form-control" id="nama_ayah" placeholder="Nama Ayah" required>
           </div>
           <div class="form-group col-md-6">
             <label>Nama Ibu</label>
-            <input type="text" name="nama_ibu" class="form-control" id="nama_ibu" placeholder="Nama Ibu">
+            <input type="text" name="nama_ibu" class="form-control" id="nama_ibu" placeholder="Nama Ibu" required>
           </div>
         </div>
 

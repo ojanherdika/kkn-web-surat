@@ -2,7 +2,7 @@
 
 	"PHP Tag": {
 		"prefix": "php",
-		"body": "<?php ?>"
+		"body": "<?php ;?>"
 	},
 	"Inline Echo": {
 		"prefix": "phpp",
