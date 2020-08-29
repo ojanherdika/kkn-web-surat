@@ -72,7 +72,7 @@
         $pdf->Cell(0,10,'FORMULIR PENGANTAR NIKAH',0,2,'C');
         $pdf->ln();
         $pdf->Cell(0,5,'KANTOR DESA/KELURAHAN  :  Cinunuk',0,2);
-        $pdf->Cell(0,5,'KECAMATAN                                :  Cileunyi',0,2,);
+        $pdf->Cell(0,5,'KECAMATAN                                :  Cileunyi',0,2);
         $pdf->Cell(0,5,'KABUPATEN/KOTA                     :  Kabupaten Bandung',0,2);
         $pdf->SetFont('Times','BU',12);
         $pdf->ln();
