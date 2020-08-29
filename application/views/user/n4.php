@@ -18,7 +18,7 @@
                             <form action="<?php echo base_url() . 'Surat_n4/add'; ?>" method="post"">
                     <!-- Isian Form 1-->
                     <div class=" container-fluid shadow p-3 mb-3 bg-white rounded">
-                                <p class="text-left" style="font-size: 25px;">Form 1 Identitas Calon</p>
+                                <p class="text-left" style="font-size: 25px;">Form 1 Identitas Pengaju</p>
                                 <hr>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Kewarganegaraan</label>
-                                    <input name="kewarganegaraan" type="text" class="form-control" id="kewarganegaraan" placeholder="Masukan Kewarganegaraan Anda" value="<?= $user['kewarganegaaraan']; ?>" required>
+                                    <input name="kewarganegaraan" type="text" class="form-control" id="kewarganegaraan" placeholder="Masukan Kewarganegaraan Anda" value="<?= $user['kewarganegaraan']; ?>" required>
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
