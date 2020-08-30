@@ -98,9 +98,6 @@ class Tambah_warga extends CI_Controller
         $nama_ayah = $this->input->post('nama_ayah');
         $nama_ibu = $this->input->post('nama_ibu');
 
-        $where = [
-            'id' => $id
-        ];
         $data = [
             'no_kk' => $no_kk,
             'no_nik' => $no_nik,
@@ -127,6 +124,9 @@ class Tambah_warga extends CI_Controller
             'nama_ayah' => $nama_ayah,
             'nama_ibu' => $nama_ibu
         ];
+        $where = array(
+            'id' => $id
+        );
         $this->Usermodel->update_data($where, $data, 'user');
         //$this->Usermodel->update_warga($where, $data, 'user');
         redirect('admin/profile');
