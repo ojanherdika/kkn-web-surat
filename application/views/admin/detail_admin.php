@@ -6,14 +6,15 @@
 
 
 	<div class="row">
+		<?php foreach ($admin as $admin) : ?>
 		<div class="col-md-12">
-			<?php echo form_open_multipart('admin/detail_admin'); ?>
 		</div>
-		<form action="<?php echo site_url('.....') ?>" method="post" enctype="multipart/form-data">
+		<form action="<?= base_url('/admin/update/'); ?>" method="post" enctype="multipart/form-data">
 			<div class="col-md-8">
 				<div class="form-group">
 					<label>Username</label>
-					<input class="form-control" type="text" name="username" value="s" readonly />
+					<input class="form-control" type="text" name="username" value="<?php echo $admin->username; ?>" />
+					<div class="col-12 col-md-9"><input type="hidden" id="id" name="id" value="<?php echo $admin->id; ?>" class="form-control"></div>
 				</div>
 
 				<div class="form-group">
@@ -26,15 +27,15 @@
 
 				<div class="form-group">
 					<label>Nama Lengkap</label>
-					<input class="form-control" type="text" name="nama_lengkap" value="Dadan Nazril" readonly />
+					<input class="form-control" type="text" name="nama_lengkap" value="<?php echo $admin->nama_lengkap; ?>" />
 					<div class="invalid-feedback">
 
 					</div>
-				</div>
+				
 
 				<div class="form-group">
 					<label>Jabatan</label>
-					<input class="form-control" type="text" name="jabatan" value="Staff Desa Cinunuk" readonly />
+					<input class="form-control" type="text" name="jabatan" value="<?= $admin->jabatan; ?>"/>
 					<div class="invalid-feedback">
 
 					</div>
@@ -42,11 +43,17 @@
 
 				<div class="form-group">
 					<label>No HP</label>
-					<input class="form-control" type="text" name="no_hp" value="0892132122" readonly />
+					<input class="form-control" type="text" name="no_hp" value="<?= $admin->no_hp; ?>" />
 					<div class="invalid-feedback">
 
 					</div>
 				</div>
+				<div class="row">
+				
+					&emsp;
+					<button type="submit" class="btn btn-primary">Simpan</button>
+				</div>
+				<?php endforeach; ?>
 			</div>
 			<!-- <div class="col-md-4">
 				<div class="form-group">
@@ -59,18 +66,10 @@
 					</div>
 				</div>
 			</div> -->
-			<div class="col-md-4">
-				<button type="submit" class="btn btn-success">Edit</button>
-			</div>
 
-			<div class="col-md-4">
-				<button type="submit" class="btn btn-primary">Simpan</button>
-			</div>
-		</form>
+		
 	</div>
-
-	<br>
-	<br>
-
+</form>
+</div>
 </div>
 <!-- /.container-fluid -->
