@@ -5,19 +5,23 @@
         <a href="<?= base_url('user'); ?>" class="btn float-right bg-primary btn-sm text-white"><strong><i class="fas fa-home mr-1"></i>Beranda</strong></a>
     </div>
 </nav>
-
+<p hidden><?= $user['jenis_kelamin']; ?></p>
 <section class="mt-5">
     <div class="container text-center">
         <div class="form-group">
             <label>Status Pernikahan</label>
             <select id="sp" name="status_nikah" class="form-control" onchange="yesnoCheck(this);">
                 <option value="...">...</option>
-                <option value="lajang">Lajang</option>
+                <?php if ($user['jenis_kelamin'] == 'Laki-Laki') : ?>
+                    <option value="lajang">Perjaka</option>
+                <?php elseif ($user['jenis_kelamin'] == 'Perempuan') : ?>
+                    <option value="lajang">Perawan</option>
+                <?php endif; ?>
                 <option value="cerai_hidup">Cerai Hidup</option>
                 <option value="cerai_mati">Cerai Mati</option>
             </select>
         </div>
-        <!-- form n1 lajang -->
+
         <form action="<?php echo base_url() . 'Surat_n1_n6/add'; ?>" method="post">
             <div class="row text-left" id="lajang" style="display:none;">
                 <div class="col-lg-12">
@@ -52,6 +56,7 @@
                                     <option>Katholik</option>
                                     <option>Hindu</option>
                                     <option>Budha</option>
+                                    <option>Aliran Kepercayaan</option>
                                 </select>
                             </div>
                         </div>
@@ -66,10 +71,7 @@
                             </div>
                             <div class="form-group col-md-3">
                                 <label>Jenis Kelamin</label>
-                                <select name="jenis_kelamin" id="jk" class="form-control">
-                                    <option>Laki-Laki</option>
-                                    <option>Perempuan</option>
-                                </select>
+                                <input name="jenis_kelamin" id="jk" class="form-control" value="<?= $user['jenis_kelamin']; ?>" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -83,57 +85,31 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Provinsi</label>
-                                <select id="provinsi" name="provinsi" class="form-control">
-                                    <option>Jawa Barat</option>
-                                    <option>Jawa Timur</option>
-                                    <option>Jawa Tengah</option>
-                                    <option>Banten</option>
-                                    <option>DKI Jakarta</option>
-                                </select>
+                                <input id="provinsi" name="provinsi" class="form-control" value="<?= $user['provinsi']; ?>" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kabupaten/Kota</label>
-                                <select id="kabupaten" name="kab_kota" class="form-control">
-                                    <option>Kota Bandung</option>
-                                    <option>Bandung</option>
-                                    <option>Sumedang</option>
-                                    <option>Majalengka</option>
-                                </select>
+                                <input id="kabupaten" name="kab_kota" class="form-control" value="<?= $user['kab_kota']; ?>" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Kecamatan</label>
-                                <select id="kecamatan" name="kecamatan" class="form-control">
-                                    <option>Cileunyi</option>
-                                    <option>Cicalengka</option>
-                                    <option>Ibun</option>
-                                    <option>Margahayu</option>
-                                    <option>Pangalengan</option>
-                                </select>
+                                <input id="kecamatan" name="kecamatan" class="form-control" value="<?= $user['kecamatan']; ?>" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kelurahan/Desa</label>
-                                <select id="desa" name="desa" class="form-control">
-                                    <option>Cinunuk</option>
-                                    <option>Cileunyi</option>
-                                    <option>Cibiru Wetan</option>
-                                    <option>Cimekar</option>
-                                </select>
+                                <input id="desa" name="desa" class="form-control" value="<?= $user['desa']; ?>" required>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-md-6">
                                 <label>RT</label>
                                 <input type="number" name="rt" class="form-control" id="rt" placeholder="" required>
                             </div>
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-md-6">
                                 <label>RW</label>
                                 <input type="number" name="rw" class="form-control" id="rw" placeholder="" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label>Kode Pos</label>
-                                <input type="number" name="kode_pos" class="form-control" id="kodepos" placeholder="Masukan Kode Pos" value="<?= $user['kode_pos']; ?>" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -150,7 +126,7 @@
                         <hr>
                         <div class="form-group">
                             <label>Status Pernikahan</label>
-                            <input id="sp" name="status_nikah" class="form-control" value="Lajang" readonly>
+                            <input id="sp" name="status_nikah" class="form-control" value="<?= ($user['jenis_kelamin'] == 'Laki-Laki') ? 'Perjaka' : 'Perawan'; ?>" readonly>
                             </input>
                         </div>
 
@@ -196,6 +172,8 @@
                                     <option>Katholik</option>
                                     <option>Hindu</option>
                                     <option>Budha</option>
+                                    <option>Aliran Kepercayaan</option>
+                                    <option></option>
                                 </select>
                             </div>
                         </div>
@@ -223,57 +201,31 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Provinsi</label>
-                                <select id="provinsi" name="provinsi_ayah" class="form-control">
-                                    <option>Jawa Barat</option>
-                                    <option>Jawa Timur</option>
-                                    <option>Jawa Tengah</option>
-                                    <option>Banten</option>
-                                    <option>DKI Jakarta</option>
-                                </select>
+                                <input id="provinsi" name="provinsi_ayah" class="form-control" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kabupaten/Kota</label>
-                                <select id="kabupaten" name="kab_kota_ayah" class="form-control">
-                                    <option>Kota Bandung</option>
-                                    <option>Bandung</option>
-                                    <option>Sumedang</option>
-                                    <option>Majalengka</option>
-                                </select>
+                                <input id="kabupaten" name="kab_kota_ayah" class="form-control" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Kecamatan</label>
-                                <select id="kecamatan" name="kecamatan_ayah" class="form-control">
-                                    <option>Cileunyi</option>
-                                    <option>Cicalengka</option>
-                                    <option>Ibun</option>
-                                    <option>Margahayu</option>
-                                    <option>Pangalengan</option>
-                                </select>
+                                <input id="kecamatan" name="kecamatan_ayah" class="form-control" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kelurahan/Desa</label>
-                                <select id="desa" name="desa_ayah" class="form-control">
-                                    <option>Cinunuk</option>
-                                    <option>Cileunyi</option>
-                                    <option>Cibiru Wetan</option>
-                                    <option>Cimekar</option>
-                                </select>
+                                <input id="desa" name="desa_ayah" class="form-control" required>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-md-6">
                                 <label>RT</label>
                                 <input type="number" name="rt_ayah" class="form-control" id="rt" placeholder="" required>
                             </div>
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-md-6">
                                 <label>RW</label>
                                 <input type="number" name="rw_ayah" class="form-control" id="rw" placeholder="" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label>Kode Pos</label>
-                                <input type="number" name="kode_pos_ayah" class="form-control" id="kodepos" placeholder="Masukan Kode Pos" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -316,6 +268,7 @@
                                     <option>Katholik</option>
                                     <option>Hindu</option>
                                     <option>Budha</option>
+                                    <option>Aliran Kepercayaan</option>
                                 </select>
                             </div>
                         </div>
@@ -343,57 +296,31 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Provinsi</label>
-                                <select id="provinsi" name="provinsi_ibu" class="form-control">
-                                    <option>Jawa Barat</option>
-                                    <option>Jawa Timur</option>
-                                    <option>Jawa Tengah</option>
-                                    <option>Banten</option>
-                                    <option>DKI Jakarta</option>
-                                </select>
+                                <input id="provinsi" name="provinsi_ibu" class="form-control" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kabupaten/Kota</label>
-                                <select id="kabupaten" name="kab_kota_ibu" class="form-control">
-                                    <option>Kota Bandung</option>
-                                    <option>Bandung</option>
-                                    <option>Sumedang</option>
-                                    <option>Majalengka</option>
-                                </select>
+                                <input id="kabupaten" name="kab_kota_ibu" class="form-control" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Kecamatan</label>
-                                <select id="kecamatan" name="kecamatan_ibu" class="form-control">
-                                    <option>Cileunyi</option>
-                                    <option>Cicalengka</option>
-                                    <option>Ibun</option>
-                                    <option>Margahayu</option>
-                                    <option>Pangalengan</option>
-                                </select>
+                                <input id="kecamatan" name="kecamatan_ibu" class="form-control" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Kelurahan/Desa</label>
-                                <select id="desa" name="desa_ibu" class="form-control">
-                                    <option>Cinunuk</option>
-                                    <option>Cileunyi</option>
-                                    <option>Cibiru Wetan</option>
-                                    <option>Cimekar</option>
-                                </select>
+                                <input id="desa" name="desa_ibu" class="form-control" required>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-md-6">
                                 <label>RT</label>
                                 <input name="rt_ibu" type="number" class="form-control" id="rt" placeholder="" required>
                             </div>
-                            <div class="form-group col-md-3">
+                            <div class="form-group col-md-6">
                                 <label>RW</label>
                                 <input name="rw_ibu" type="number" class="form-control" id="rw" placeholder="" required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label>Kode Pos</label>
-                                <input name="kode_pos_ibu" type="number" class="form-control" id="kodepos" placeholder="Masukan Kode Pos" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -425,7 +352,6 @@
 
             </div>
         </form>
-
         <!-- form n1 cerai hidup -->
         <form action="<?php echo base_url() . 'Surat_n1_n6/add'; ?>" method="post">
             <div class="row text-left" id="cerai_hidup" style="display:none;">
@@ -460,6 +386,7 @@
                                 <option>Katholik</option>
                                 <option>Hindu</option>
                                 <option>Budha</option>
+                                <option>Aliran Kepercayaan</option>
                             </select>
                         </div>
                     </div>
@@ -491,43 +418,21 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>Provinsi</label>
-                            <select id="provinsi" name="provinsi" class="form-control">
-                                <option>Jawa Barat</option>
-                                <option>Jawa Timur</option>
-                                <option>Jawa Tengah</option>
-                                <option>Banten</option>
-                                <option>DKI Jakarta</option>
-                            </select>
+                            <input id="provinsi" name="provinsi" class="form-control" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Kabupaten/Kota</label>
-                            <select id="kabupaten" name="kab_kota" class="form-control">
-                                <option>Kota Bandung</option>
-                                <option>Bandung</option>
-                                <option>Sumedang</option>
-                                <option>Majalengka</option>
-                            </select>
+                            <input id="kabupaten" name="kab_kota" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label>Kecamatan</label>
-                            <select id="kecamatan" name="kecamatan" class="form-control">
-                                <option>Cileunyi</option>
-                                <option>Cicalengka</option>
-                                <option>Ibun</option>
-                                <option>Margahayu</option>
-                                <option>Pangalengan</option>
-                            </select>
+                            <input id="kecamatan" name="kecamatan" class="form-control" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Kelurahan/Desa</label>
-                            <select id="desa" name="desa" class="form-control">
-                                <option>Cinunuk</option>
-                                <option>Cileunyi</option>
-                                <option>Cibiru Wetan</option>
-                                <option>Cimekar</option>
-                            </select>
+                            <input id="desa" name="desa" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-row">
@@ -561,7 +466,7 @@
                         <input id="sp" name="status_nikah" class="form-control" value="Cerai Hidup" readonly>
                         </input>
                     </div>
-                    <div class="form-group" ;">
+                    <div class="form-group">
                         <label>Nama Suami/Istri Terdahulu</label>
                         <input type="text" name="nama_suami_istri" class="form-control" placeholder="Masukan Nama Istri/Suami terdahulu" required>
                     </div>
