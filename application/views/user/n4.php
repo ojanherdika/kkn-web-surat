@@ -41,6 +41,7 @@
                                     <option>Katholik</option>
                                     <option>Hindu</option>
                                     <option>Budha</option>
+                                    <option>Aliran Kepercayaan</option>
                                 </select>
                             </div>
                         </div>
@@ -160,6 +161,7 @@
                                 <option>Katholik</option>
                                 <option>Hindu</option>
                                 <option>Budha</option>
+                                <option>Aliran Kepercayaan</option>
                             </select>
                         </div>
                     </div>
