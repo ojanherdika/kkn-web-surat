@@ -68,21 +68,6 @@ class Admin extends CI_Controller
         $this->load->view('layout/adminFooter');
     }
 
-    public function edit_detail_warga($id)
-    {
-        $where = array('id' => $id);
-        $data['user'] = $this->Usermodel->get_data_($where, 'user')->result();
-        $data['title'] = 'Edit Detail Warga';
-        $data['admin'] = $this->db->get_where('admin', ['username' =>
-        $this->session->userdata('username')])->row_array();
-
-        $this->load->view('layout/adminHeader', $data);
-        $this->load->view('layout/adminSidebar', $data);
-        $this->load->view('layout/adminTopbar', $data);
-        $this->load->view('admin/edit_detail_warga', $data);
-        $this->load->view('layout/adminFooter');
-    }
-
     public function tambah_warga()
     {
         $data['title'] = 'Tambah Warga';
@@ -114,6 +99,8 @@ class Admin extends CI_Controller
         $data['title'] = 'Detail Data Admin';
         $where = array('id' => $id);
         $data['admin'] = $this->Usermodel->get_data($where, 'admin')->row_array();
+        $data['admin'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
+        $data['admin'] = $this->Usermodel->get_data_($where, 'admin')->result();
         $this->load->view('layout/adminHeader', $data);
         $this->load->view('layout/adminSidebar', $data);
         $this->load->view('layout/adminTopbar', $data);
@@ -152,6 +139,13 @@ class Admin extends CI_Controller
         redirect('admin/profile');
     }
 
+    public function hapus_admin($id)
+    {
+        $where = array('id' => $id);
+        $this->Usermodel->hapus_admin($where, 'admin');
+        redirect('admin/data_admin');
+    }
+
     public function tambah_admin()
     {
         $data['title'] = 'Tambah Admin';
@@ -179,9 +173,31 @@ class Admin extends CI_Controller
             'no_hp' => $no_hp
         ];
         $this->db->insert('admin', $data);
-
-        redirect('admin');
+        redirect('admin/data_admin');
     }
+
+    public function update()
+    {
+        $id = $this->input->post('id');
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+        $nama_lengkap = $this->input->post('nama_lengkap');
+        $jabatan = $this->input->post('jabatan');
+        $no_hp = $this->input->post('no_hp');
+        $data = [
+            'username' => $username,
+            'password' => $password,
+            'nama_lengkap' => $nama_lengkap,
+            'jabatan' => $jabatan,
+            'no_hp' => $no_hp
+        ];
+        $where = array(
+            'id' => $id
+        );
+        $this->Usermodel->update_admin($where, $data, 'admin');
+        redirect('admin/data_admin');
+    }
+
     public function ganti_password()
     {
         $data['title'] = 'Admin Page | Ganti Password';

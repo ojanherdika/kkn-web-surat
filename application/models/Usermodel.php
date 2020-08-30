@@ -25,7 +25,12 @@ class Usermodel extends CI_Model
         $this->db->where($where);
         $this->db->delete($table);
     }
-    function update_warga($where, $data, $table)
+    function hapus_admin($where, $table)
+    {
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
+    function update_admin($where, $data, $table)
     {
         $this->db->where($where);
         $this->db->update($table, $data);
