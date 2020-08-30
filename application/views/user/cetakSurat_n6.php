@@ -69,11 +69,11 @@
         $pdf->SetMargins(25, 10 , 25);
         $pdf->SetFont('Times','B',12);
         $pdf->ln(10);
-        $pdf->Cell(0,10,'FORMULIR SURAT KETERANGAN KEMATIAN',0,2,'C');
+        $pdf->Cell(0,5,'N6',0,2,'R');
         $pdf->ln();
         $pdf->Cell(0,5,'KANTOR DESA/KELURAHAN  :  Cinunuk',0,2);
-        $pdf->Cell(0,5,'KECAMATAN                                :  Cinunuk',0,2);
-        $pdf->Cell(0,5,'KABUPATEN/KOTA                     :  Kabupaten Bandung',0,2);
+        $pdf->Cell(0,5,'KECAMATAN                                :  Cileunyi',0,2);
+        $pdf->Cell(0,5,'KABUPATEN/KOTA                     :  Bandung',0,2);
         $pdf->SetFont('Times','BU',12);
         $pdf->ln();
         $pdf->Cell(0,5,'SURAT KETERANGAN KEMATIAN',0,2,'C'); 
@@ -83,7 +83,7 @@
         $romawi = getRomawi($bulan);
         $tahun=mdate('%Y', now());
         $today=mdate('%Y-%m-%d', now());
-        $pdf->Cell(0,1,'Nomor:  '."474.2/"."             /DS/".$romawi."/".$tahun,0,0,'C');
+        $pdf->Cell(0,1,'Nomor:  '."474.2/"."                      /DS/".$romawi."/".$tahun,0,0,'C');
         $pdf->ln(10);
         $pdf->SetFont('Times','',12);
         $pdf->Cell(20,5,'Yang bertanda tangan di bawah ini menerangkan dengan sesungguhnya bahwa:',0,0);
@@ -171,7 +171,7 @@
         $pdf->ln();
         $pdf->setY(240);
         $pdf->setX(122);
-        $pdf->Cell(20,5,"Kepala Desa/Lurah",0,0,'L');
+        $pdf->Cell(20,5,"Kepala Desa Cinunuk",0,0,'L');
         $pdf->SetFont('Times','BU',12);
         $pdf->setY(270);
         $pdf->setX(122);

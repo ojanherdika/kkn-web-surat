@@ -56,7 +56,7 @@
                                     <option value="Katholik">Katholik</option>
                                     <option value="Hindu">Hindu</option>
                                     <option value="Budha">Budha</option>
-                                    <option value="Kepercayaan Pribadi">Kepercayaan Pribadi</option>
+                                    <option value="Aliran Kepercayaan">Aliran Kepercayaan</option>
                                 </select>
                             </div>
                             <div class="invalid-feedback">
@@ -177,15 +177,15 @@
                                     <br>
                                     <select class="custom-select" name="RT" id="RT">
                                         <option value="0">Pilih RT</option>
-                                        <option value="1">RT 001</option>
-                                        <option value="2">RT 002</option>
-                                        <option value="3">RT 003</option>
-                                        <option value="4">RT 004</option>
-                                        <option value="5">RT 005</option>
-                                        <option value="6">RT 006</option>
-                                        <option value="7">RT 007</option>
-                                        <option value="8">RT 008</option>
-                                        <option value="9">RT 009</option>
+                                        <option value="1">RT 01</option>
+                                        <option value="2">RT 02</option>
+                                        <option value="3">RT 03</option>
+                                        <option value="4">RT 04</option>
+                                        <option value="5">RT 05</option>
+                                        <option value="6">RT 06</option>
+                                        <option value="7">RT 07</option>
+                                        <option value="8">RT 08</option>
+                                        <option value="9">RT 09</option>
                                         <option value="10">RT 10</option>
                                         <option value="11">RT 11</option>
                                         <option value="12">RT 12</option>
@@ -263,6 +263,7 @@
                             <label for=".....">Status Pernikahan</label>
                             <select class="custom-select" id="status_nikah" name="status_nikah">
                                 <option value="0">Pilih Status</option>
+                                <option value="Kawin">Kawin</option>
                                 <option value="Belum Kawin">Belum Kawin</option>
                                 <option value="Cerai Hidup">Cerai Hidup</option>
                                 <option value="Cerai Mati">Cerai Mati</option>

@@ -69,11 +69,11 @@
         $pdf->SetMargins(25, 10 , 25);
         $pdf->SetFont('Times','B',12);
         $pdf->ln(10);
-        $pdf->Cell(0,10,'FORMULIR PENGANTAR NIKAH',0,2,'C');
+        $pdf->Cell(0,5,'N1',0,2,'R');
         $pdf->ln();
         $pdf->Cell(0,5,'KANTOR DESA/KELURAHAN  :  Cinunuk',0,2);
         $pdf->Cell(0,5,'KECAMATAN                                :  Cileunyi',0,2);
-        $pdf->Cell(0,5,'KABUPATEN/KOTA                     :  Kabupaten Bandung',0,2);
+        $pdf->Cell(0,5,'KABUPATEN/KOTA                     :  Bandung',0,2);
         $pdf->SetFont('Times','BU',12);
         $pdf->ln();
         $pdf->Cell(0,5,'PENGANTAR NIKAH',0,2,'C'); 
@@ -83,7 +83,7 @@
         $romawi = getRomawi($bulan);
         $tahun=mdate('%Y', now());
         $today=mdate('%Y-%m-%d', now());
-        $pdf->Cell(0,1,'Nomor:  '."474.2/"."              /DS/".$romawi."/".$tahun,0,0,'C');
+        $pdf->Cell(0,1,'Nomor:  '."474.2/"."                       /DS/".$romawi."/".$tahun,0,0,'C');
         $pdf->ln(10);
         $pdf->SetFont('Times','',12);
         $pdf->Cell(20,5,'Yang bertanda tangan di bawah ini menjelaskan dengan sesungguhnya bahwa:',0,0);
@@ -118,7 +118,7 @@
         $pdf->ln();
         $pdf->Cell(20,5,'8. Alamat',0,0);
         $pdf->Cell(40,5,':',0,0,'R');
-        $pdf->Cell(20,5,$surat->alamat.", RT ".$surat->rt." RW ".$surat->rw.", ".$surat->kode_pos,0,0);
+        $pdf->Cell(20,5,$surat->alamat.", RT ".$surat->rt." RW ".$surat->rw,0,0);
         $pdf->ln();
         $pdf->Cell(20,5,'9. Status Pernikahan',0,0);
         $pdf->Cell(40,5,':',0,0,'R');
@@ -158,7 +158,7 @@
         $pdf->ln();
         $pdf->Cell(20,5,'Alamat',0,0);
         $pdf->Cell(40,5,':',0,0,'R');
-        $pdf->Cell(20,5,$surat->alamat_ayah.", RT ".$surat->rt_ayah." RW ".$surat->rw_ayah.", ".$surat->kode_pos_ayah,0,0);
+        $pdf->Cell(20,5,$surat->alamat_ayah.", RT ".$surat->rt_ayah." RW ".$surat->rw_ayah,0,0);
         $pdf->ln(10);
         $pdf->Cell(20,5,'dengan seorang wanita:',0,0);
         $pdf->ln();
@@ -188,7 +188,7 @@
         $pdf->ln();
         $pdf->Cell(20,5,'Alamat',0,0);
         $pdf->Cell(40,5,':',0,0,'R');
-        $pdf->Cell(20,5,$surat->alamat_ibu.", RT ".$surat->rt_ibu." RW ".$surat->rw_ibu.", ".$surat->kode_pos_ibu,0,0);
+        $pdf->Cell(20,5,$surat->alamat_ibu.", RT ".$surat->rt_ibu." RW ".$surat->rw_ibu,0,0);
         $pdf->ln(10);
         $pdf->Cell(20,5,'Demikian, surat pengantar ini dibuat dengan mengingat sumpah jabatan dan untuk dipergunkaan',0,0);
         $pdf->ln();
@@ -200,7 +200,7 @@
         $pdf->ln();
         $pdf->setY(245);
         $pdf->setX(135);
-        $pdf->Cell(20,5,"Kepala Desa/Lurah",0,0,'L');
+        $pdf->Cell(20,5,"Kepala Desa Cinunuk",0,0,'L');
         $pdf->setY(271);
         $pdf->setX(135);
         $pdf->SetFont('Times','BU',12);
