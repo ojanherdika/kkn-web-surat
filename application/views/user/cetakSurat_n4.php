@@ -69,7 +69,7 @@
         $pdf->SetMargins(25, 10 , 25);
         $pdf->SetFont('Times','B',12);
         $pdf->ln(10);
-        $pdf->Cell(0,10,'FORMULIR PERSETUJUAN CALON PENGANTIN',0,2,'C');
+        $pdf->Cell(0,5,'Model N4',0,2,'R');
         $pdf->SetFont('Times','BU',12);
         $pdf->ln();
         $pdf->Cell(0,5,'PERSETUJUAN CALON PENGANTIN',0,2,'C'); 
